@@ -355,7 +355,7 @@ Edebî Çengel, Flutter tabanlı çok platformlu yapısıyla tek kod tabanından
 - AI bulmaca üretimi için sunucu taraflı işlem akışı
 - Konu bazlı başarıya göre AI destekli soru/bulmaca oluşturma akışı
 - Konu bazlı başarı verilerini destekleyen veri kolonları
-- Sunucu sistemi: **1.0.1**
+- Sunucu sistemi: **1.0.2**
 - Offline-first yapı ile uyumlu senkronizasyon mantığı
 
 ### Veri ve İstatistik Yapısı
