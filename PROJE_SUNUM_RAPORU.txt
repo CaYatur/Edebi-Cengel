@@ -1,0 +1,179 @@
+ÇENGEL BULMACA OYUNU - PROJE SUNUM RAPORU
+
+1. PROJE HAKKINDA
+
+Çengel Bulmaca, Türk edebiyatı ve kültürü temalı bir bilgi-kültür oyunudur. Bu proje, kullanıcılara çeşitli konularda çengel bulmaca bulmacalarını çözmesi için bir platform sağlar. Proje, Windows, Android, iOS ve Web gibi birden fazla platformda çalışabilen bir çapraz platform uygulamasıdır. Uygulamanın en önemli özelliği, kullanıcıların internet bağlantısı olmadan tamamen offline olarak oyunları oynayabilmesidir. Bu, uygulamanın her yerde ve her koşulda erişilebilir olmasını sağlar.
+
+Projenin ana amacı, Türk kültürü hakkında bilgileri eğlenceli bir şekilde öğretmektir. Bulmacalar farklı zorluk seviyelerine ayrılmıştır ve kullanıcılar kendi seviyelerine göre uygun bulmacaları seçebilirler. Uygulama, öğrenciler, öğretmenler ve genel kullanıcılar tarafından kullanılabilecek şekilde tasarlanmıştır. Proje, eğitim ve eğlence arasında ideal bir denge oluşturmayı amaçlamaktadır.
+
+2. TEKNOLOJİ YÖNETİMİ VE KULLANIMLARI
+
+Proje, modern yazılım geliştirme teknolojilerini kullanarak oluşturulmuştur. İlk olarak, uygulamanın temel çatısı Flutter framework'ü ile yapılmıştır. Flutter, Google tarafından geliştirilen açık kaynaklı bir framework olup, Dart programlama dili kullanılarak yazılmıştır. Dart, type-safe bir dil olup, null safety özelliği sayesinde null pointer hatalarından önemli ölçüde korunmaktadır. Projenin Dart sürümü 3.9.0 ve üzeri olacak şekilde tasarlanmıştır.
+
+Uygulamanın farklı platformlarda çalışması için birden fazla teknoloji kullanılmıştır. Android platformu için Gradle build sistemi ve Kotlin yapısı kullanılmaktadır. iOS platformu için ise Apple'ın native framework'ü olan Swift ve Xcode IDE'si kullanılmıştır. Windows platformu için CMake build sistemi ve native Windows uygulaması yapısı kullanılmıştır. Web platformu ise HTML5, CSS3 ve JavaScript teknolojileri ile desteklenmektedir.
+
+Veri yönetimi açısından, uygulama JSON formatında veri dosyalarını kullanmaktadır. JSON, hafif ve insan tarafından okunabilir bir veri formatı olup, bulmaca verilerinin saklanması için ideal bir seçimdir. Ayrıca, projenin lokal veri depolama için SQLite veritabanı kütüphanesini kullanma potansiyeli vardır. Verilerin API aracılığıyla sunucudan yüklenmesi için de temel yapı hazırlanmıştır.
+
+3. MİMARİ VE YAPISAL TASARIM
+
+Projenin mimarı, Model-View-ViewModel (MVVM) tasarım deseni üzerine inşa edilmiştir. Bu deseni, Provider kütüphanesi aracılığıyla uygulanmıştır. Provider, Flutter'da state yönetimi için yaygın olarak kullanılan ve çok güvenilir bir çözümdür. MVVM deseni sayesinde, iş mantığı ile kullanıcı arayüzü ayrı tutulmuştur, bu da kodun bakımını ve test edilmesini kolaylaştırmıştır.
+
+Proje, üç ana katmana ayrılmıştır. Sunuş katmanı, kullanıcı arayüzünün tüm unsurlarını içerir. Bu katman, HomeScreen ve GameScreen gibi ekranlarla, ClueWidget, AnswerBoxesWidget gibi küçük UI bileşenleriyle oluşturulmuştur. İş mantığı katmanı, GameProvider sınıfında merkezi olarak yönetilmektedir. Bu sınıf, oyunun tüm durumlarını takip eder, bulmacaların doğru cevaplarının kontrol edilmesini yönetir ve skor hesaplamasını yapar. Veri katmanı ise DataService aracılığıyla JSON dosyalarından verilerin yüklenmesini ve yönetilmesini sağlar.
+
+Repository pattern kullanılarak, veri kaynağının değişmesi durumunda kodun geri kalanında minimum değişiklik yapılması sağlanmıştır. DataService sınıfı, bu pattern'in uygulanmasının temelini oluşturur. Bağımlılık enjeksiyonu (Dependency Injection) ise Provider framework'ü aracılığıyla otomatik olarak yapılmaktadır.
+
+4. KULLANILAN KÜTÜPHANELER VE PAKETLER
+
+Projenin geliştiminde kullanılan ana paketler şunlardır. Flutter SDK ve Dart SDK, projenin temel yapı taşlarıdır. Material Design sistem tasarımı için Flutter'ın yerleşik Material library'si kullanılmıştır. Kullanıcı arayüzünün responsive tasarımı için flutter_staggered_grid_view paketi kullanılmıştır, bu da dinamik grid layoutları sağlar.
+
+State yönetimi için Provider paketi (sürüm 6.1.5+1) kullanılmıştır. Provider, ChangeNotifier pattern'i kullanarak Reactive programming yaklaşımını sağlar. Bunun sayesinde, durumda herhangi bir değişiklik meydana geldiğinde, ilgili UI bileşenleri otomatik olarak güncellenir.
+
+Veri işleme için JSON serialization ve deserialization işlemleri gereklidir. json_annotation paketi anotasyonlar sağlarken, json_serializable paketi kod üretimini otomatik olarak yapar. build_runner paketi ise bu kod üretim işlemini yönetir. Tüm bu paketler birlikte, JSON verilerinin Dart nesnelerine ve tersi şekilde dönüştürülmesini hızlı ve güvenli bir şekilde yapar.
+
+Medya oynatma işlemleri için video_player ve audioplayers paketleri kullanılmıştır. Bunlar, uygulamanın video ve ses dosyalarını oynatabilmesini sağlar. Dosya sistemi işlemleri için path_provider paketi, platform spesifik dosya yollarını yönetir. sqflite paketi ise yerel SQLite veritabanı işlemleri için hazırdır.
+
+Kod kalitesi ve standartların uygulanması için flutter_lints paketi kullanılmıştır. Bu paket, Flutter ekibinin önerdiği linting kurallarını içerir ve kodun kalitesini artırır. cupertino_icons paketi ise iOS tarzı ikonları sağlar.
+
+5. VERI MODELLERİ VE YAPILAR
+
+Projenin veri modelleri, çengel bulmaca sisteminin temelini oluşturur. İlk olarak Topic modeli vardır. Bu model, bir konu veya kategoriyi temsil eder. Örneğin, "Türk Edebiyatı" veya "Tarih" gibi konular Topic olarak tanımlanır. Her Topic, bir kimlik, adı, açıklaması ve içerdiği PuzzleSet listesini tutar. Topic modeli, bir konu içindeki bulmacaları zorluk seviyesine göre filtrelemek veya rastgele seçmek gibi yararlı metodlar sağlar.
+
+PuzzleSet modeli, bir konunun altında gruplanan bulmacalar kümesini temsil eder. Her PuzzleSet, bir kimlik, başlık, 1 ile 5 arasında bir zorluk seviyesi ve PuzzleClue listesini içerir. Zorluk seviyeleri önemlidir çünkü skor hesaplamasında doğrudan kullanılır. Daha zor bulmacaları çözenler daha yüksek puan kazanırlar.
+
+PuzzleClue modeli, bir bulmacayı ve onun cevabını temsil eder. Bu model, soru metni, doğru cevap, görünür harf sayısı, belirli pozisyonlar ve opsiyonel olarak medya dosyası bilgisini tutar. PuzzleClue'nin en önemli özelliği, çengel bulmaca maskesini oluşturmakdır. Cevap metni, belirli harfler gözükmek üzere maskelenerek, kullanıcıya gösterilir. Maskeleme iki şekilde yapılabilir: ilk N harfi göstermek veya belirli pozisyonları göstermek.
+
+GameSession modeli ise bir oyun oturumunun tamamını temsil eder. Bir oyuncunun bir oyun başlattığı andan itibaren bitirdiğine kadar geçen süreyi, elde edilen puanları ve tamamlanan bulmacaları kayıt eder. Bu model, oyunun istatistiklerini takip etmek ve kullanıcının ilerleme durumunu göstermek için kullanılır.
+
+6. OYUN İŞLEYİŞİ VE CEVAP DOĞRULAMA
+
+Oyunun işleyişi oldukça sistematiktir. Uygulama başlatıldığında, HomeScreen görünür ve DataService, assets klasöründeki topics.json dosyasını yükler. Kullanıcı bir konu seçtiğinde, GameProvider.startNewGame() metodu çağrılır. Bu metod, seçilen konudan tüm zorluk seviyelerinden karışık olarak 10 rastgele bulmaca seçer.
+
+Seçilen bulmacalar GameScreen'de sıra ile gösterilir. Her bulmaca için, soru metni, görünür harfleriyle maskeli cevap ve cevap giriş alanı gösterilir. Kullanıcı cevabını yazıp gönderdiğinde, GameProvider.checkAnswer() metodu çağrılır. Bu metod, PuzzleClue.checkAnswer() aracılığıyla cevabı doğrular.
+
+Cevap doğrulama işlemi, basit bir dize karşılaştırması değildir. Kullanıcıdan gelen yanıt, Türkçe özelliklerine göre normalleştirilir. Tüm harfler küçük harfe çevrilir, başında ve sonunda boşluklar kaldırılır, tüm iç boşluklar silinir ve Türkçe karakterler standart harflere dönüştürülür. Örneğin, İ karakteri i'ye, ü karakteri u'ya, ş karakteri s'ye dönüştürülür. Bu işlemden sonra, iki dize karşılaştırılır ve eşitlik kontrol edilir.
+
+Cevap doğru ise, kullanıcıya hemen geri bildirim verilir ve otomatik olarak sonraki bulmacaya geçilir. Cevap yanlış ise, hata mesajı gösterilir ve kullanıcı yeniden deneme yapabilir. Doğru cevap verilen her bulmaca için, skor hesaplanır. Skor hesaplaması basittir: her doğru cevap için 10 puan ve bu puan zorluk seviyesiyle çarpılır. Örneğin, zorluk seviyesi 3 olan bir bulmacayı doğru çözmek 30 puan kazandırır.
+
+7. KULLANICI ARAYÜZÜ BİLEŞENLERİ
+
+Uygulamanın kullanıcı arayüzü, birçok küçük ve modüler bileşenden oluşur. HomeScreen, uygulamanın ana ekranıdır. Bu ekranda, mevcut konuların listesi gösterilir. Kullanıcı, başlamak istediği konuya tıklar ve oyun başlar. HomeScreen, veri yükleme sırasında bir yükleme göstergesi (spinner) gösterir ve hata durumunda uyarı mesajları gösterir.
+
+GameScreen, asıl oyunun oynadığı ekrandır. Bu ekrand, oyuncunun bulunduğu konunun adı, mevcut skoru, oynadığı bulmaca numarası ve toplam bulmaca sayısı gösterilir. Ekranın ana bölümünde, ClueWidget aracılığıyla bulmaca sorusu gösterilir. Altında, AnswerBoxesWidget ile cevabın maskeleme gösterimi görüntülenir. Daha altında, AnswerInputWidget aracılığıyla kullanıcı cevap girebilir.
+
+GameScreen'de navigasyon butonları bulunur. Önceki buton, bir önceki bulmacaya dönmeyi sağlar. Sonraki buton, manual olarak sonraki bulmacaya geçmeyi sağlar. İpucu buton, bir harfi daha fazla gösterir. Medya oynat buton, eğer bulmacaya medya dosyası eklenmiş ise, video veya ses dosyasını oynatır. ProgressIndicatorWidget, oyun ilerleme durumunu görsel olarak gösterir.
+
+Medya yönetimi için MediaPlayerWidget ve MediaDialog kullanılır. Bunlar, video ve ses dosyalarının oynatılmasını yönetir. CustomKeyboard ve KeyboardWidget, Türkçe karakterlerin kolay girişini sağlamak için tasarlanmıştır.
+
+8. VERİ YÖNETİMİ VE DEPOLAMA
+
+Proje, veri yönetimi açısından çok basit bir yapıya sahiptir. Tüm bulmaca verileri, assets klasöründeki topics.json dosyasında saklanır. Bu dosya, uygulama paketi ile birlikte gelir ve runtime'da okunur. DataService sınıfı, bu JSON dosyasını yükler ve Dart nesnelerine dönüştürür. Bu, JSON serialization kütüphaneleri (json_annotation ve json_serializable) aracılığıyla otomatik olarak yapılır.
+
+Veri yapısı hiyerarşik bir yapıdır. En üst seviyede topics array'i vardır. Her topic, birden fazla puzzleSets içerir. Her puzzleSet ise birden fazla clues (sorular) içerir. Bu yapı, veri organize etmeyi ve erişmeyi kolaylaştırır.
+
+Gelecekte, oyun seansları ve kullanıcı istatistikleri yerel bir SQLite veritabanında saklanabilir. sqflite paketi zaten bu amaç için import edilmiştir. Ayrıca, sunucudan dinamik olarak veri yüklemek için bir API bağlantısı eklenebilir.
+
+JSON dosyasının yapısı oldukça standart ve açıktır. Bir topic objesinin kimliği, adı, açıklaması ve puzzleSets listesi bulunur. Her puzzleSet objesinin de kimliği, başlığı, zorluk seviyesi, açıklaması ve clues listesi bulunur. Her clue objesinin kimliği, soru metni, cevap, görünür harf sayısı ve opsiyonel medya bilgileri bulunur.
+
+9. İÇERİK YÖNETİCİsİ - WEB ARAYÜZÜ
+
+Projenin bir diğer önemli bileşeni, web tabanlı içerik yöneticisidir. content_manager klasöründe bulunan index.html dosyası, HTML5, CSS3 ve JavaScript kullanılarak geliştirilmiş bir tek sayfa uygulamasıdır (Single Page Application). Bu arayüz, yöneticilerin yeni konuları, bulmaca setlerini ve soruları ekleme ve düzenleme imkanı sağlar.
+
+İçerik yöneticisi, tarayıcının LocalStorage özelliğini kullanarak verileri saklar. Kullanıcı, web arayüzünde konuları, bulmaca setlerini ve soruları yönetir. Tamamlandığında, verileri JSON formatında dışa aktarabilir ve bunu Flutter uygulamasının assets klasöründe topics.json dosyası olarak kaydedebilir. Tersine, mevcut JSON verisini içerik yöneticisine yükleyerek yapılan değişiklikleri doğrudan görebilirsiniz.
+
+İçerik yöneticisi, kullanıcı dostu bir arayüze sahiptir. Farklı sekmelerde konuları yönetme, bulmaca setleri ekleme ve soruları düzenleme seçenekleri vardır. Her bulmacayı eklerken, soruyu, cevabı, zorluk seviyesini ve opsiyonel olarak medya dosyalarını belirleyebilirsiniz. Canlı bir önizleme özelliği, hangi harflerin görüneceğini göstermektedir.
+
+10. PLATFORM DESTEĞI VE DERLEŞTİRME
+
+Proje, dört ana platform için derleme ayarlarına sahiptir. Android platformu için, gradle build sistemi kullanılmıştır. android klasöründe build.gradle.kts, settings.gradle.kts ve gradlew/gradlew.bat dosyaları bulunur. Android Studio veya Flutter command line tools aracılığıyla Android uygulaması derlenir.
+
+iOS platformu için, Xcode IDE ve Swift kullanılmıştır. ios klasöründe Runner.xcworkspace ve Runner.xcodeproj dosyaları bulunur. Xcode'da, AppDelegate.swift dosyası iOS uygulamasının giriş noktasıdır. iOS uygulaması, macOS ortamında Xcode aracılığıyla derlenir.
+
+Windows platformu için, CMake build sistemi kullanılmıştır. windows klasöründe CMakeLists.txt dosyası bulunur. Native Windows kodu, C++ ile yazılmış olup, Flutter'ın Windows backend'ini sağlar. Windows uygulaması, Visual Studio veya command line tools aracılığıyla derlenir.
+
+Web platformu, standart Flutter web desteği ile gerçekleştirilmiştir. web klasöründe index.html, manifest.json ve icons klasörü bulunur. Web versiyonu, tarayıcı ortamında çalışmak için derlenir ve statik web hosting servisi üzerinden sunulabilir.
+
+11. STATE YÖNETİMİ VE PROVIDER PATTERN
+
+GameProvider sınıfı, projenin tüm durumlarını merkezi olarak yönetir. Bu sınıf, ChangeNotifier'ı extend eder, bu da Flutter'ın reaktif state management sistemini sağlar. Oyunun durumu, özel değişkenlerle saklanır: konuları saklamak için _topics, seçilen konu için _currentTopic, seçilen sorular için _currentQuestions, şu anki soru indeksi için _currentQuestionIndex, ve kullanıcı cevapları saklamak için _userAnswers ve _userInputs.
+
+Provider pattern aracılığıyla, ChangeNotifierProvider'ın main.dart dosyasında sağlanması, uygulamanın tüm kısımlarının GameProvider'a erişebilmesini sağlar. Ekranlarda, Consumer widget'ları aracılığıyla GameProvider'in durumuna abone olunur ve herhangi bir değişiklik meydana geldiğinde, UI otomatik olarak güncellenir.
+
+GameProvider, ChangeNotifier'ın notifyListeners() metodunu çağırarak, dinleyen tüm widget'lara durumda bir değişiklik olduğunu bildirir. Bu sistem, state'in merkezileştirilmesini ve UI'ın tutarlı kalmasını sağlar.
+
+12. TÜRKÇE KARAKTER DESTEĞI VE NORMALİZASYON
+
+Proje, Türkçe metin işleme konusunda özel dikkat gösterir. PuzzleClue'deki checkAnswer() metodu, Türkçe karakterlerin düzgün şekilde işlenmesini sağlar. Normalizasyon işlemi, tüm Türkçe karakterleri İngilizce eşdeğerlerine dönüştürür. İ karakteri i'ye, Ş karakteri s'ye, Ç karakteri c'ye, Ğ karakteri g'ye, Ü karakteri u'ye, Ö karakteri o'ye dönüştürülür.
+
+Bu işlem, başında ve sonunda bulunan boşlukları kaldırıp, tüm çoklu boşlukları tek bir karakterle değiştirir. Bu sayede, kullanıcı bir cevabı yazarken fazladan boşluk bıraksa veya farklı kasa kullansa bile, sistem doğru cevapları algılayabilir.
+
+13. GELİŞTİRME ORTAMI VE ARAÇLAR
+
+Proje, Visual Studio Code editor'unda geliştirmek için optimize edilmiştir. VS Code'un Dart ve Flutter uzantıları kullanılmıştır. pubspec.yaml dosyası, tüm bağımlılıkları ve proje yapılandırmasını içerir.
+
+Kod üretimi için build_runner aracı kullanılmıştır. JSON serialization kodunu otomatik olarak oluşturur. Geliştirici, build_runner watch komutunu çalıştırarak, değişiklikleri izlemesini sağlayabilir. build_runner build komutu ise tek seferlik kod üretimini yapar.
+
+Linting kuralları flutter_lints paketi aracılığıyla uygulanır. analysis_options.yaml dosyası, linting yapılandırmasını içerir. Bu, kodun kalitesini ve okunabilirliğini sağlamaya yardımcı olur.
+
+13.1 KULLANIILAN ÜCRETLI ABONELİK VE HİZMETLER
+
+Proje geliştirme sürecinde, kod kalitesini artırmak ve geliştirme hızını maksimize etmek için çeşitli ücretli hizmetler ve abonelikler kullanılabilir. İlk olarak, GitHub Pro aboneliği, sınırsız private repository, advanced code search, ve code owners özelliklerini sağlar. GitHub Pro sayesinde, proje kodunun güvenli bir şekilde barındırılması ve geliştirilmesi mümkün olmaktadır. Ayrıca, Actions dakika limitinin artırılması, continuous integration ve deployment görevlerini daha verimli hale getirir.
+
+GitHub Copilot Pro, yapay zeka tabanlı kod yazma asistanıdır ve VS Code'da doğrudan entegre çalışır. Bu hizmet, kod tamamlama, hata düzeltme ve kod refactoring önerilerine yardımcı olur. Copilot Pro, Dart ve Flutter kodlarının yazılması sırasında önemli zaman tasarrufu sağlar. Karmaşık algoritmaların yazılması, test kodu üretimi ve dokumentasyon oluşturması gibi görevlerde, Copilot Pro'nun yapay zeka desteği yazılımcının verimliliğini önemli ölçüde artırır.
+
+JetBrains toolset, özellikle IntelliJ IDEA ve Android Studio'nun premium versiyonları, gelişmiş debugging, profiling ve code analysis özellikleri sağlar. Android geliştirme sırasında, IntelliJ IDEA'nın advanced refactoring tools ve code inspection özellikleri kodun kalitesini arttırır. Android Studio Professional sürümü, özellikle Android emülatör ayarlaması, device monitoring ve performance profiling konularında geliştirilmiş özellikler sunar.
+
+Visual Studio Community sürümü ücretsiz olsa da, Visual Studio Professional sürümü Windows geliştirme için ek kolaylıklar sağlar. Proje Windows platformu desteği için CMake kullanırken, Visual Studio Professional'ın advanced debugging capabilities değerlidir. Test Explorer, Performance Profiler ve Diagnostic Tools, Windows uygulaması geliştirme sırasında sorun gidermeyi hızlandırır.
+
+Firebase Blaze plan, sunucudan veri yükleme ve backend işlemleri eklendiğinde kullanılabilir. Cloud Firestore, Cloud Storage ve Cloud Functions gibi hizmetler, uygulamanın ölçeklenebilir bir arka ucu olmasını sağlar. Firebase Authentication, kullanıcı kimlik doğrulaması için güvenli bir çözüm sunar. Analytics ve Crashlytics, uygulamanın performansını ve stabilitesini izlemek için kritik veriler sağlar.
+
+App Store Connect (iOS) ve Google Play Console (Android) ücretleri, uygulamanın dağıtılması için gereklidir. iOS geliştirme için Apple Developer Account (yıllık 99 dolar), App Store'da yayınlamak için zorunludur. Android geliştirme için Google Play Developer Account (bir kerelik 25 dolar), Play Store'da uygulamayı yayınlamak için gereklidir.
+
+Sertifika ve SSL hizmetleri, web sunucusu barındırılması sırasında gerekli olabilir. AWS Certificate Manager, Azure Certification Services veya commercial SSL providers, güvenli HTTPS bağlantısı sağlar. İçerik yöneticisi web sunucusunda barındırılacaksa, HTTPS şifreleme zorunludur.
+
+Kod review ve collaboration araçları, takım geliştirmesi için önemlidir. Codacy, SonarQube Premium veya CodeFactor gibi hizmetler, kod kalitesini otomatik olarak kontrol eder ve raporlar oluşturur. Bu araçlar, security vulnerabilities ve code smells'i tespit eder.
+
+Testing ve monitoring araçları, uygulamanın güvenilirliğini sağlar. TestFlight (iOS), Google Play Beta, Firebase Test Lab gibi hizmetler, beta testing ve pre-release testing imkanları sunar. Sentry veya Rollbar gibi error tracking hizmetleri, production ortamında oluşan hataları otomatik olarak raporlar.
+
+14. PROJE YAPISI VE DOSYA ORGANİZASYONU
+
+Proje, çok iyi organize edilmiş bir dosya yapısına sahiptir. lib klasörü, tüm Dart kaynak kodunu içerir. models alt klasörü, veri modellerini saklar. Topic, PuzzleSet, PuzzleClue ve GameSession modellerinin yanı sıra, bunların .g.dart dosyaları (otomatik üretilen JSON serialization kodları) bulunur. services klasörü, DataService gibi iş mantığı servislerini içerir. providers klasörü, state yönetimi için GameProvider'ı içerir. screens klasörü, HomeScreen ve GameScreen gibi ana ekranları içerir. widgets klasörü, tüm UI bileşenlerini içerir.
+
+assets klasörü, statik veri dosyalarını içerir. assets/data alt klasörü, topics.json dosyasını içerir. assets/media alt klasörü, video ve ses dosyalarını içerebilir. Platform spesifik klasörler (android, ios, windows) her platform için gerekli yapılandırma dosyalarını içerir. build klasörü, derleme sırasında üretilen dosyaları içerir ve version control sistemine dahil edilmez.
+
+15. ZORLUK SEVİYELERİ VE OYUN DENGESİ
+
+Proje, 1 ile 5 arasında beş zorluk seviyesi tanımlar. Zorluk seviyesi 1, en kolay bulmacaları ifade eder ve daha fazla harf gösterilir. Zorluk seviyesi 5, en zor bulmacaları ifade eder ve daha az harf gösterilir. Her zorluk seviyesi için, PuzzleSet'in difficulty alanı ayarlanır.
+
+Oyun dengesinin sağlanması için, startNewGame() metodu, seçilen konudan tüm zorluk seviyelerinden karışık olarak 10 bulmaca seçer. Bu, oyuncuyu çeşitli zorluk seviyelerine maruz bırakar ve oyunu daha ilginç kılar. Puanlama sistemi, zorluk seviyesine göre ölçeklendirilir, böylece daha zor bulmacaları çözenler daha yüksek puan kazanırlar.
+
+16. PERFORMANS VE OPTİMİZASYON
+
+Proje, performans açısından çeşitli optimizasyonlar içerir. Hot Reload ve Hot Restart özelliği, geliştirme sırasında hızlı iterasyon sağlar. Flutter'ın otomatik image caching sistemi, medya dosyalarının verimli kullanılmasını sağlar.
+
+JSON dosyaları, sadece gerektiğinde yüklenir. Konular ilk olarak başlatılırken yüklenir, daha sonraki erişimler hızlı olmaktadır. StateManagement'ın verimli kullanımı, gereksiz widget yeniden renderlemelerini engeller. Provider pattern aracılığıyla, sadece ilgili widget'lar güncellenir.
+
+Büyük JSON dosyaları veya çok sayıda bulmaca durumunda, verileri sayfalar halinde yüklemek (pagination) veya sıkıştırmak faydalı olabilir. Medya dosyaları, kullanıcının gerçekten oynadığı bulmaca için yüklenmektedir, bu da bellek kullanımını optimize eder.
+
+17. GÜVENLIK KONULARI
+
+Proje, offline çalışması nedeniyle birçok internet güvenliği riskinden korunmuştur. Tüm veriler, cihaz içinde saklanır ve hiçbir zaman internete gönderilmez. JSON dosyaları, assets klasöründe statik olarak depolanır.
+
+Gelecekte, eğer sunucudan veri yükleme yapılacaksa, HTTPS kullanılmalı ve API'a yapılan istekler doğrulanmalıdır. İçerik yöneticisi, sunucu tarafında barındırılacak ise, kimlik doğrulama ve yetkilendirme mekanizmaları eklenmelidir. Veritabanında hassas veriler saklanacaksa, şifreleme kullanılmalıdır.
+
+18. GELIŞTIRME VE GELECEĞİ
+
+Projenin gelecek geliştirmesi için birçok imkan vardır. Çoklu oyuncu modu, oyunculuların arkadaşlarıyla rekabet etmesini sağlayabilir. Başarı sistemi (achievement), kullanıcıları motive edebilir. Ses arama özelliği, bulmacalarla ses dosyaları aracılığıyla etkileşimi artırabilir. Yapay zeka yardımıyla zorluk seviyesi, oyuncunun beceri seviyesine göre dinamik olarak ayarlanabilir.
+
+Sosyal paylaşım özellikleri, kullanıcıların skorlarını sosyal medyada paylaşmasını sağlayabilir. Animasyonlar ve görsel efektler, oyun deneyimini daha çekici hale getirebilir. Türkçe dışında diğer dillere çeviri yapılabilir. Kullanıcı profilleri ve tutarlılık takip sistemi, uzun vadeli katılım sağlayabilir.
+
+19. KURULUM VE ÇALIŞMA
+
+Projeyi çalıştırmak için, Flutter SDK sürümü 3.9.0 veya üzeri gereklidir. VS Code'da Dart ve Flutter uzantıları kurulmalıdır. Proje klasöründe terminal açılıp, flutter pub get komutu çalıştırılarak bağımlılıklar indirilir. Kod üretimi için dart run build_runner build komutu çalıştırılır.
+
+Android için emülatör veya fiziksel cihaz bağlanıp, flutter run komutu yapılır. iOS için, macOS'ta Xcode gereklidir ve flutter run komutu kullanılır. Windows ve Web için de benzer komutlar kullanılır. VSCode'da, hata ayıklamak için launch.json yapılandırılıp, F5 tuşu ile debug modu başlatılabilir.
+
+20. SONUÇ
+
+Çengel Bulmaca, modern yazılım geliştirme prensiplerini izleyerek, yüksek kaliteli bir eğitim oyunu olarak tasarlanmıştır. Çok platform desteği, offline çalışma, Türkçe karakter desteği ve kullanıcı dostu arayüzü, projeyi potansiyel kullanıcılar için çekici kılar. Provider pattern'i ve MVVM mimarısı, kodun bakımını ve genişletilmesini kolaylaştırır.
+
+Projenin temel kodunun temiz, modüler ve iyi organize edilmiş olması, gelecekteki geliştirmeleri kolaylaştıracaktır. Açık kaynaklı Flutter framework ve Dart dili, geniş bir topluluk desteği sağlar. Bu proje, Türk kültürü hakkında bilgileri eğlenceli bir şekilde yaymak için uygun bir platform oluşturmuştur.

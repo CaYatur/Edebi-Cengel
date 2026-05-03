@@ -1,0 +1,804 @@
+{
+  "version": "1.0",
+  "description": "Dil bilgisi çengel bulmaca verileri - kategorilere ayrılmış",
+  "categories": [
+    {
+      "id": "zarf_tumleci",
+      "name": "Zarf Tümleci",
+      "clues": [
+        {
+          "id": "zarf_tumleci_1",
+          "question": "Okuldan eve yürüyerek giderdim cümlesinin zarf tümleci nedir?",
+          "answer": "YÜRÜYEREK",
+          "difficulty": 1
+        },
+        {
+          "id": "zarf_tumleci_2",
+          "question": "Hava aydınlanmadan kararıverdi cümlesinin zarf tümleci nedir?",
+          "answer": "AYDINLANMADAN",
+          "difficulty": 1
+        },
+        {
+          "id": "zarf_tumleci_3",
+          "question": "Karnımız acıkınca eve koşardık cümlesinin zarf tümleci nedir?",
+          "answer": "KARNIMIZACIKINCA",
+          "difficulty": 1
+        },
+        {
+          "id": "zarf_tumleci_4",
+          "question": "Akşam çocukları dedelerine götüreceğim cümlesinin zarf tümleci nedir?",
+          "answer": "AKŞAM",
+          "difficulty": 1
+        },
+        {
+          "id": "zarf_tumleci_5",
+          "question": "Bu yolculuk bir ay kadar sürermiş cümlesinin zarf tümleci nedir?",
+          "answer": "BİRAYKADAR",
+          "difficulty": 1
+        },
+        {
+          "id": "zarf_tumleci_6",
+          "question": "Karlara bata çıka oyunlar oynardık cümlesinin zarf tümleci nedir?",
+          "answer": "KARLARABATAÇIKA",
+          "difficulty": 1
+        },
+        {
+          "id": "zarf_tumleci_7",
+          "question": "Sizin işyerinize birazdan gideceğiz cümlesinin zarf tümleci nedir?",
+          "answer": "BİRAZDAN",
+          "difficulty": 2
+        },
+        {
+          "id": "zarf_tumleci_8",
+          "question": "Yaşlı kadın sevinçten ağlıyordu cümlesinin zarf tümleci nedir?",
+          "answer": "SEVİNÇTEN",
+          "difficulty": 2
+        },
+        {
+          "id": "zarf_tumleci_9",
+          "question": "Hâlâ bursla ilgili bir haber bekliyoruz cümlesinin zarf tümleci nedir?",
+          "answer": "HL",
+          "difficulty": 2
+        },
+        {
+          "id": "zarf_tumleci_10",
+          "question": "Burası mayısta yemyeşil olur cümlesinin zarf tümleci nedir?",
+          "answer": "MAYISTA",
+          "difficulty": 2
+        },
+        {
+          "id": "zarf_tumleci_11",
+          "question": "Buradan otobüse zorlukla biniyorum cümlesinin zarf tümleci nedir?",
+          "answer": "ZORLUKLA",
+          "difficulty": 2
+        },
+        {
+          "id": "zarf_tumleci_12",
+          "question": "Otobüse ne zaman biniyorsun? cümlesinin zarf tümleci nedir?",
+          "answer": "NEZAMAN",
+          "difficulty": 2
+        },
+        {
+          "id": "zarf_tumleci_13",
+          "question": "Şehirde biraz gezdik cümlesinin zarf tümleci nedir?",
+          "answer": "BİRAZ",
+          "difficulty": 2
+        },
+        {
+          "id": "zarf_tumleci_14",
+          "question": "İşimiz bitince mi gezeceğiz? cümlesinin zarf tümleci nedir?",
+          "answer": "BİTİNCE",
+          "difficulty": 3
+        },
+        {
+          "id": "zarf_tumleci_15",
+          "question": "Seninle dışarı çıkalım cümlesinin zarf tümleci nedir?",
+          "answer": "DIŞARI",
+          "difficulty": 3
+        },
+        {
+          "id": "zarf_tumleci_16",
+          "question": "Lütfen yukarı gel cümlesinin zarf tümleci nedir?",
+          "answer": "YUKARI",
+          "difficulty": 3
+        },
+        {
+          "id": "zarf_tumleci_17",
+          "question": "Yüzüme anlamsız anlamsız baktı cümlesinin zarf tümleci nedir?",
+          "answer": "ANLAMSIZANLAMSIZ",
+          "difficulty": 3
+        },
+        {
+          "id": "zarf_tumleci_18",
+          "question": "Şimdilik cevapları söyleyemem cümlesinin zarf tümleci nedir?",
+          "answer": "ŞİMDİLİK",
+          "difficulty": 3
+        },
+        {
+          "id": "zarf_tumleci_19",
+          "question": "Sorunları konuşarak halledelim cümlesinin zarf tümleci nedir?",
+          "answer": "KONUŞARAK",
+          "difficulty": 3
+        },
+        {
+          "id": "zarf_tumleci_20",
+          "question": "Açınca gülünç duruma düştü cümlesinin zarf tümleci nedir?",
+          "answer": "AÇINCA",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "nesne",
+      "name": "Nesne",
+      "clues": [
+        {
+          "id": "nesne_1",
+          "question": "Kardeşim için bu saati beğendim cümlesinin nesnesi nedir?",
+          "answer": "BUSAATİ",
+          "difficulty": 1
+        },
+        {
+          "id": "nesne_2",
+          "question": "Babam kardeşimi bu okula yazdırmış cümlesinin nesnesi nedir?",
+          "answer": "KARDEŞİMİ",
+          "difficulty": 1
+        },
+        {
+          "id": "nesne_3",
+          "question": "Evden geç çıkınca yine otobüsü kaçırdım cümlesinin nesnesi nedir?",
+          "answer": "OTOBÜSÜ",
+          "difficulty": 1
+        },
+        {
+          "id": "nesne_4",
+          "question": "Yıllar önce bu filmi seyretmiştim cümlesinin nesnesi nedir?",
+          "answer": "BUFİLMİ",
+          "difficulty": 1
+        },
+        {
+          "id": "nesne_5",
+          "question": "Alışveriş listesini yazarken neyi unuttun? cümlesinin nesnesi nedir?",
+          "answer": "NEYİ",
+          "difficulty": 1
+        },
+        {
+          "id": "nesne_6",
+          "question": "Ünlü yazarı merakla bekliyoruz cümlesinin nesnesi nedir?",
+          "answer": "ÜNLÜYAZARI",
+          "difficulty": 1
+        },
+        {
+          "id": "nesne_7",
+          "question": "Bir görevli dışarı çıkmamızı söyledi cümlesinin nesnesi nedir?",
+          "answer": "DIŞARIÇIKMAMIZI",
+          "difficulty": 1
+        },
+        {
+          "id": "nesne_8",
+          "question": "Kardeşim için bir saat beğendim cümlesinin nesnesi nedir?",
+          "answer": "BİRSAAT",
+          "difficulty": 2
+        },
+        {
+          "id": "nesne_9",
+          "question": "Belediye her sokak başına çöp kutusu koydu cümlesinin nesnesi nedir?",
+          "answer": "ÇÖPKUTUSU",
+          "difficulty": 2
+        },
+        {
+          "id": "nesne_10",
+          "question": "Dedem bize yine ilginç bir anısını anlattı cümlesinin nesnesi nedir?",
+          "answer": "İLGİNÇBİRANISINI",
+          "difficulty": 2
+        },
+        {
+          "id": "nesne_11",
+          "question": "O sana yurtdışından kitap gönderecek cümlesinin nesnesi nedir?",
+          "answer": "KİTAP",
+          "difficulty": 2
+        },
+        {
+          "id": "nesne_12",
+          "question": "Tatilde polisiye romanlar okudum cümlesinin nesnesi nedir?",
+          "answer": "POLİSİYEROMANLAR",
+          "difficulty": 2
+        },
+        {
+          "id": "nesne_13",
+          "question": "Kuşlar bize hüzün dolu şarkılar söylüyor cümlesinin nesnesi nedir?",
+          "answer": "HÜZÜNDOLUŞARKILAR",
+          "difficulty": 2
+        },
+        {
+          "id": "nesne_14",
+          "question": "Ahmet çantasını getirmedi cümlesinin nesnesi nedir?",
+          "answer": "ÇANTASINI",
+          "difficulty": 2
+        },
+        {
+          "id": "nesne_15",
+          "question": "Çalıkuşu romanı mutlaka oku cümlesinin nesnesi nedir?",
+          "answer": "ÇALIKUŞUROMANI",
+          "difficulty": 2
+        },
+        {
+          "id": "nesne_16",
+          "question": "Köylülerden biri ocağın üstüne bir bakraç bırakmış cümlesinin nesnesi nedir?",
+          "answer": "BİRBAKRAÇ",
+          "difficulty": 3
+        },
+        {
+          "id": "nesne_17",
+          "question": "Atatürk Cumhuriyeti kurup çocuklara armağan etti cümlesinin nesnesi nedir?",
+          "answer": "CUMHURİYETİ",
+          "difficulty": 3
+        },
+        {
+          "id": "nesne_18",
+          "question": "Herkese tutumlu olmayı öğretmelisin cümlesinin nesnesi nedir?",
+          "answer": "TUTUMLUOLMAYI",
+          "difficulty": 3
+        },
+        {
+          "id": "nesne_19",
+          "question": "Adanın en yüksek tepesine gittiklerini gördüm cümlesinin nesnesi nedir?",
+          "answer": "GİTTİKLERİNİ",
+          "difficulty": 3
+        },
+        {
+          "id": "nesne_20",
+          "question": "Onun gibileri herkes sever cümlesinin nesnesi nedir?",
+          "answer": "ONUNGİBİLERİ",
+          "difficulty": 3
+        },
+        {
+          "id": "nesne_21",
+          "question": "Kuşlar pencerenin önünde yemlerini yiyorlar cümlesinin nesnesi nedir?",
+          "answer": "YEMLERİNİ",
+          "difficulty": 3
+        },
+        {
+          "id": "nesne_22",
+          "question": "Mutlu yıllarınızı unutmayınız cümlesinin nesnesi nedir?",
+          "answer": "MUTLUYILLARINIZI",
+          "difficulty": 3
+        },
+        {
+          "id": "nesne_23",
+          "question": "Gülfidan doktor olmak istiyor cümlesinin nesnesi nedir?",
+          "answer": "DOKTOROLMAK",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "fiilimsi",
+      "name": "Fiilimsi",
+      "clues": [
+        {
+          "id": "fiilimsi_1",
+          "question": "O şimdi romanını bitirmekle meşguldür cümlesindeki isim fiil eki almış sözcük hangisidir?",
+          "answer": "BİTİRMEK",
+          "difficulty": 1
+        },
+        {
+          "id": "fiilimsi_2",
+          "question": "Size gelmeyi ben de çok istemiştim cümlesindeki isim fiil eki almış sözcük hangisidir?",
+          "answer": "GELME",
+          "difficulty": 1
+        },
+        {
+          "id": "fiilimsi_3",
+          "question": "Onun yemek hazırlayışını gördün mü hiç? cümlesindeki isim fiil eki almış sözcük hangisidir?",
+          "answer": "HAZIRLAYIŞ",
+          "difficulty": 1
+        },
+        {
+          "id": "fiilimsi_4",
+          "question": "Biraz ekmek almak ister misiniz? cümlesindeki isim fiil eki almış sözcük hangisidir?",
+          "answer": "ALMAK",
+          "difficulty": 1
+        },
+        {
+          "id": "fiilimsi_5",
+          "question": "Kışta açan çiçeklerin ömrü az olur cümlesindeki sıfat fiil eki almış sözcük hangisidir?",
+          "answer": "AÇAN",
+          "difficulty": 1
+        },
+        {
+          "id": "fiilimsi_6",
+          "question": "Öpülesi elleri vardı analarımızın cümlesindeki sıfat fiil eki almış sözcük hangisidir?",
+          "answer": "ÖPÜLESİ",
+          "difficulty": 1
+        },
+        {
+          "id": "fiilimsi_7",
+          "question": "Senin ne bitmez çilen varmış böyle cümlesindeki sıfat fiil eki almış sözcük hangisidir?",
+          "answer": "BİTMEZ",
+          "difficulty": 1
+        },
+        {
+          "id": "fiilimsi_8",
+          "question": "Buralarda bir akar çeşme yok galiba cümlesindeki sıfat fiil eki almış sözcük hangisidir?",
+          "answer": "AKAR",
+          "difficulty": 1
+        },
+        {
+          "id": "fiilimsi_9",
+          "question": "Size biraz bilinmedik fıkralar anlatayım cümlesindeki sıfat fiil eki almış sözcük hangisidir?",
+          "answer": "BİLİNMEDİK",
+          "difficulty": 2
+        },
+        {
+          "id": "fiilimsi_10",
+          "question": "Bana gazetemi getirecek biri yok mu burada? cümlesindeki sıfat fiil eki almış sözcük hangisidir?",
+          "answer": "GETİRECEK",
+          "difficulty": 2
+        },
+        {
+          "id": "fiilimsi_11",
+          "question": "Onda ne yakası açılmamış sözcükler vardır cümlesindeki sıfat fiil eki almış sözcük hangisidir?",
+          "answer": "AÇILMAMIŞ",
+          "difficulty": 2
+        },
+        {
+          "id": "fiilimsi_12",
+          "question": "Çözdüklerini niçin yeniden soruyorsun? cümlesindeki sıfat fiil eki almış sözcük hangisidir?",
+          "answer": "ÇÖZDÜKLERİN",
+          "difficulty": 2
+        },
+        {
+          "id": "fiilimsi_13",
+          "question": "Beni arayanların adlarını almayı unutma cümlesindeki sıfat fiil eki almış sözcük hangisidir?",
+          "answer": "ARAYANLAR",
+          "difficulty": 2
+        },
+        {
+          "id": "fiilimsi_14",
+          "question": "Kapıyı açınca karşımda onu gördüm cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "AÇINCA",
+          "difficulty": 2
+        },
+        {
+          "id": "fiilimsi_15",
+          "question": "Soruları çözdükçe konuyu daha iyi anlıyorum cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "ÇÖZDÜKÇE",
+          "difficulty": 2
+        },
+        {
+          "id": "fiilimsi_16",
+          "question": "Bize haber vermeden gitmeyin sakın cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "VERMEDEN",
+          "difficulty": 2
+        },
+        {
+          "id": "fiilimsi_17",
+          "question": "Bu kâğıdı müdüre imzalatıp geri getirin cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "İMZALATIP",
+          "difficulty": 3
+        },
+        {
+          "id": "fiilimsi_18",
+          "question": "Televizyon seyrederken çoğu kez uyuyakalırdı cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "SEYREDERKEN",
+          "difficulty": 3
+        },
+        {
+          "id": "fiilimsi_19",
+          "question": "Gezdiği yerleri anlata anlata bitiremiyordu cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "ANLATAANLATA",
+          "difficulty": 3
+        },
+        {
+          "id": "fiilimsi_20",
+          "question": "Sınıfa girer girmez öğrencileri azarlamaya başladı cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "GİRERGİRMEZ",
+          "difficulty": 3
+        },
+        {
+          "id": "fiilimsi_21",
+          "question": "Sadece kitap okuyarak bu kadar bilgi kazanılamaz cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "OKUYARAK",
+          "difficulty": 3
+        },
+        {
+          "id": "fiilimsi_22",
+          "question": "Köyden ayrılalı yaklaşık on yıl oldu cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "AYRILALI",
+          "difficulty": 3
+        },
+        {
+          "id": "fiilimsi_23",
+          "question": "Ders çalışmaksızın sınavı kazanacağını mı sanıyorsun? cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "ÇALIŞMAKSIZIN",
+          "difficulty": 3
+        },
+        {
+          "id": "fiilimsi_24",
+          "question": "Annem küçükken acıkınca salça ekmek yermiş cümlesindeki zarf fiil eki almış sözcük hangisidir?",
+          "answer": "ACIKINCA",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "ses_olaylari_yazim",
+      "name": "Ses Olayları-Yazım",
+      "clues": [
+        {
+          "id": "ses_olaylari_yazim_1",
+          "question": "Yanlış, yalnız, oğlu, emredersin gibi kelimelerdeki ses olayı nedir?",
+          "answer": "ÜNLÜDÜŞMESİ",
+          "difficulty": 1
+        },
+        {
+          "id": "ses_olaylari_yazim_2",
+          "question": "Yiyecek, diyecek, okumuyor, bilmiyor gibi kelimelerdeki ses olayı nedir?",
+          "answer": "ÜNLÜDARALMASI",
+          "difficulty": 1
+        },
+        {
+          "id": "ses_olaylari_yazim_3",
+          "question": "Sütçü, kafeste, sabahçı, kitapçı gibi kelimelerdeki ses olayı nedir?",
+          "answer": "ÜNSÜZBENZEŞMESİ",
+          "difficulty": 1
+        },
+        {
+          "id": "ses_olaylari_yazim_4",
+          "question": "Soğuğa, kitabı, ağacın, öğüde gibi kelimelerdeki ses olayı nedir?",
+          "answer": "ÜNSÜZYUMUŞAMASI",
+          "difficulty": 1
+        },
+        {
+          "id": "ses_olaylari_yazim_5",
+          "question": "Affetmek, zannetme, sırrımız, hissi gibi kelimelerdeki ses olayı nedir?",
+          "answer": "ÜNSÜZTÜREMESİ",
+          "difficulty": 1
+        },
+        {
+          "id": "ses_olaylari_yazim_6",
+          "question": "Azıcık, biricik, daracık, gencecik gibi kelimelerdeki ses olayı nedir?",
+          "answer": "ÜNLÜTÜREMESİ",
+          "difficulty": 2
+        },
+        {
+          "id": "ses_olaylari_yazim_7",
+          "question": "Küçümseme, sıcacık, çabucak, alçalmak gibi kelimelerdeki ses olayı nedir?",
+          "answer": "ÜNSÜZDÜŞMESİ",
+          "difficulty": 2
+        },
+        {
+          "id": "ses_olaylari_yazim_8",
+          "question": "Berkay kedisi Boncuk için mama aldı cümlesinde yazımı yanlış olan sözcük hangisidir?",
+          "answer": "BONCUK",
+          "difficulty": 2
+        },
+        {
+          "id": "ses_olaylari_yazim_9",
+          "question": "Sen gelince dünya benim oldu cümlesinde yazımı yanlış olan sözcük hangisidir?",
+          "answer": "DÜNYA",
+          "difficulty": 2
+        },
+        {
+          "id": "ses_olaylari_yazim_10",
+          "question": "Teleskopla güneş gözlemi yapacaklardı cümlesinde yazımı yanlış olan sözcük hangisidir?",
+          "answer": "GÜNEŞ",
+          "difficulty": 2
+        },
+        {
+          "id": "ses_olaylari_yazim_11",
+          "question": "Bir anda orada kala kaldım cümlesinde yazımı yanlış olan sözcük hangisidir?",
+          "answer": "KALAKALDIM",
+          "difficulty": 3
+        },
+        {
+          "id": "ses_olaylari_yazim_12",
+          "question": "Çocuklar dersaneye gitti cümlesinde yazımı yanlış olan sözcüğün doğru yazımı nedir?",
+          "answer": "DERSHANE",
+          "difficulty": 3
+        },
+        {
+          "id": "ses_olaylari_yazim_13",
+          "question": "Karşısındakine emir etmek çok hoşuna gidiyor cümlesinde yazımı yanlış olan sözcüğün doğru yazımı nedir?",
+          "answer": "EMRETMEK",
+          "difficulty": 3
+        },
+        {
+          "id": "ses_olaylari_yazim_14",
+          "question": "Misafirlerine imam bayıldı ikram etti cümlesinde yazımı yanlış olan sözcüğün doğru yazımı nedir?",
+          "answer": "İMAMBAYILDI",
+          "difficulty": 3
+        },
+        {
+          "id": "ses_olaylari_yazim_15",
+          "question": "Bakamadığı köpeği sokağa terk etmiş cümlesinde yazımı yanlış olan sözcüğün doğru yazımı nedir?",
+          "answer": "TERKETMEK",
+          "difficulty": 3
+        },
+        {
+          "id": "ses_olaylari_yazim_16",
+          "question": "Kazılarda dinazor kemikleri bulundu cümlesinde yazımı yanlış olan sözcüğün doğru yazımı nedir?",
+          "answer": "DİNOZOR",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "ozne",
+      "name": "Özne",
+      "clues": [
+        {
+          "id": "ozne_1",
+          "question": "Öğrenciler sahnedeki arkadaşlarını alkışladılar cümlesinin öznesi nedir?",
+          "answer": "ÖĞRENCİLER",
+          "difficulty": 1
+        },
+        {
+          "id": "ozne_2",
+          "question": "Bütün raflar romanlarla doluydu cümlesinin öznesi nedir?",
+          "answer": "BÜTÜNRAFLAR",
+          "difficulty": 1
+        },
+        {
+          "id": "ozne_3",
+          "question": "Simitçi simitleri tablasına yerleştiriyor cümlesinin öznesi nedir?",
+          "answer": "SİMİTÇİ",
+          "difficulty": 1
+        },
+        {
+          "id": "ozne_4",
+          "question": "Onlar buraya yıllar önce taşınmış cümlesinin öznesi nedir?",
+          "answer": "ONLAR",
+          "difficulty": 1
+        },
+        {
+          "id": "ozne_5",
+          "question": "Bunları sana kim anlattı? cümlesinin öznesi nedir?",
+          "answer": "KİM",
+          "difficulty": 1
+        },
+        {
+          "id": "ozne_6",
+          "question": "Bu sorunun cevabını çoğumuz bilemedik cümlesinin öznesi nedir?",
+          "answer": "ÇOĞUMUZ",
+          "difficulty": 1
+        },
+        {
+          "id": "ozne_7",
+          "question": "Eskiler köy okulunun yapılış yıllarını hatırlıyor cümlesinin öznesi nedir?",
+          "answer": "ESKİLER",
+          "difficulty": 1
+        },
+        {
+          "id": "ozne_8",
+          "question": "Kitabın kapağı hemen dikkat çekiyordu cümlesinin öznesi nedir?",
+          "answer": "KİTABINKAPAĞI",
+          "difficulty": 2
+        },
+        {
+          "id": "ozne_9",
+          "question": "Uçak biletleri daha da ucuzlayacakmış cümlesinin öznesi nedir?",
+          "answer": "UÇAKBİLETLERİ",
+          "difficulty": 2
+        },
+        {
+          "id": "ozne_10",
+          "question": "Okulun spor salonu henüz faaliyete geçmemiş cümlesinin öznesi nedir?",
+          "answer": "OKULUNSPORSALONU",
+          "difficulty": 2
+        },
+        {
+          "id": "ozne_11",
+          "question": "Yaşlı insanlar sabah sabah banka kuyruğunda bekliyor cümlesinin öznesi nedir?",
+          "answer": "YAŞLIİNSANLAR",
+          "difficulty": 2
+        },
+        {
+          "id": "ozne_12",
+          "question": "Beni hemen sarmıştı kitabın konusu cümlesinin öznesi nedir?",
+          "answer": "KİTABINKONUSU",
+          "difficulty": 2
+        },
+        {
+          "id": "ozne_13",
+          "question": "Karın lapa lapa yağışını çok güzeldi cümlesinin öznesi nedir?",
+          "answer": "KARINLAPALAPAYAĞIŞI",
+          "difficulty": 2
+        },
+        {
+          "id": "ozne_14",
+          "question": "Bazı yönetmenler edebiyata kötülük yapmaktadır cümlesinin öznesi nedir?",
+          "answer": "BAZIYÖNETMENLER",
+          "difficulty": 2
+        },
+        {
+          "id": "ozne_15",
+          "question": "Okulda konferans verilmesi öğrenciler için iyi olmuştu cümlesinin öznesi nedir?",
+          "answer": "KONFERANSVERİLMESİ",
+          "difficulty": 3
+        },
+        {
+          "id": "ozne_16",
+          "question": "Şimdi mezunlarımız önemli kurumlarda çalışıyor cümlesinin öznesi nedir?",
+          "answer": "MEZUNLARIMIZ",
+          "difficulty": 3
+        },
+        {
+          "id": "ozne_17",
+          "question": "Başarılı sporcular havaalanında kalabalık bir grup tarafından karşılandı cümlesinin öznesi nedir?",
+          "answer": "BAŞARILISPORCULAR",
+          "difficulty": 3
+        },
+        {
+          "id": "ozne_18",
+          "question": "En kısa zamanda size uğrarız cümlesinin öznesi nedir?",
+          "answer": "BİZ",
+          "difficulty": 3
+        },
+        {
+          "id": "ozne_19",
+          "question": "Murat bugünlerde çok çalışıyorsun cümlesinin öznesi nedir?",
+          "answer": "SEN",
+          "difficulty": 3
+        },
+        {
+          "id": "ozne_20",
+          "question": "Bulaşıklar güzelce yıkandı cümlesinin öznesi nedir?",
+          "answer": "BULAŞIKLAR",
+          "difficulty": 3
+        },
+        {
+          "id": "ozne_21",
+          "question": "Bütün yaşananları babaannem anlatmıştı cümlesinin öznesi nedir?",
+          "answer": "BABAANNEM",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "dolayli_tumlec",
+      "name": "Dolaylı Tümleç",
+      "clues": [
+        {
+          "id": "dolayli_tumlec_1",
+          "question": "Bütün yolcular arabaya bindi cümlesinin dolaylı tümleci nedir?",
+          "answer": "ARABAYA",
+          "difficulty": 1
+        },
+        {
+          "id": "dolayli_tumlec_2",
+          "question": "Bahçe sahibini gören çocuklar hemen ağaçtan atladı cümlesinin dolaylı tümleci nedir?",
+          "answer": "AĞAÇTAN",
+          "difficulty": 1
+        },
+        {
+          "id": "dolayli_tumlec_3",
+          "question": "Evin duvarında çeşitli tablolar asılıydı cümlesinin dolaylı tümleci nedir?",
+          "answer": "EVİNDUVARINDA",
+          "difficulty": 1
+        },
+        {
+          "id": "dolayli_tumlec_4",
+          "question": "Sırası gelen çocuk şiirini okumaya başladı cümlesinin dolaylı tümleci nedir?",
+          "answer": "ŞİİRİNİOKUMAYA",
+          "difficulty": 1
+        },
+        {
+          "id": "dolayli_tumlec_5",
+          "question": "Birçok dergide ünlü sanatçı ile ilgili yazılar var cümlesinin dolaylı tümleci nedir?",
+          "answer": "BİRÇOKDERGİDE",
+          "difficulty": 1
+        },
+        {
+          "id": "dolayli_tumlec_6",
+          "question": "Müze gezisinden söz ediyorduk cümlesinin dolaylı tümleci nedir?",
+          "answer": "MÜZEGEZİSİNDEN",
+          "difficulty": 1
+        },
+        {
+          "id": "dolayli_tumlec_7",
+          "question": "Bir kişi küçük kulübede oturan bekçilere soru sordu cümlesinin dolaylı tümleci nedir?",
+          "answer": "KÜÇÜKKULÜBEDE",
+          "difficulty": 1
+        },
+        {
+          "id": "dolayli_tumlec_8",
+          "question": "Güneş yüzünü gösterince biraz dışarıya çıktık cümlesinin dolaylı tümleci nedir?",
+          "answer": "DIŞARIYA",
+          "difficulty": 2
+        },
+        {
+          "id": "dolayli_tumlec_9",
+          "question": "Sanatçının son yazısından ben bir şey anlamadım cümlesinin dolaylı tümleci nedir?",
+          "answer": "SANATÇININSONYAZISINDAN",
+          "difficulty": 2
+        },
+        {
+          "id": "dolayli_tumlec_10",
+          "question": "İki yılda kurulan müzede birçok tarihi eser var cümlesinin dolaylı tümleci nedir?",
+          "answer": "İKİYILDAKURULANMÜZEDE",
+          "difficulty": 2
+        },
+        {
+          "id": "dolayli_tumlec_11",
+          "question": "Burada bütün evler topraktan yapılmış cümlesinin dolaylı tümleci nedir?",
+          "answer": "TOPRAKTAN",
+          "difficulty": 2
+        },
+        {
+          "id": "dolayli_tumlec_12",
+          "question": "Çektirdiği resimleri büyük bir albümde toplamış cümlesinin dolaylı tümleci nedir?",
+          "answer": "BÜYÜKBİRALBÜMDE",
+          "difficulty": 2
+        },
+        {
+          "id": "dolayli_tumlec_13",
+          "question": "Gece gündüz çalışan bu gençlerden çok şey bekliyoruz cümlesinin dolaylı tümleci nedir?",
+          "answer": "BUGENÇLERDEN",
+          "difficulty": 2
+        },
+        {
+          "id": "dolayli_tumlec_14",
+          "question": "Siz öyle nereye bakıyorsunuz? cümlesinin dolaylı tümleci nedir?",
+          "answer": "NEREYE",
+          "difficulty": 2
+        },
+        {
+          "id": "dolayli_tumlec_15",
+          "question": "Bu ödevi yaparken kimden yardım alabilirim? cümlesinin dolaylı tümleci nedir?",
+          "answer": "KİMDEN",
+          "difficulty": 2
+        },
+        {
+          "id": "dolayli_tumlec_16",
+          "question": "Şehir fırtınadan çok etkilenmiş cümlesinin dolaylı tümleci nedir?",
+          "answer": "FIRTINADAN",
+          "difficulty": 3
+        },
+        {
+          "id": "dolayli_tumlec_17",
+          "question": "Gençlere her zaman sahip çıkmalıyız cümlesinin dolaylı tümleci nedir?",
+          "answer": "GENÇLERE",
+          "difficulty": 3
+        },
+        {
+          "id": "dolayli_tumlec_18",
+          "question": "Öğrenciler akşamları ders çalışmaya gidecekler cümlesinin dolaylı tümleci nedir?",
+          "answer": "DERSÇALIŞMAYA",
+          "difficulty": 3
+        },
+        {
+          "id": "dolayli_tumlec_19",
+          "question": "O bu yıl sosyal etkinliklere katılmayı hiç düşünmedi cümlesinin dolaylı tümleci nedir?",
+          "answer": "SOSYALETKİNLİKLERE",
+          "difficulty": 3
+        },
+        {
+          "id": "dolayli_tumlec_20",
+          "question": "Yarışmaya birden fazla kişinin ortak çalışmasıyla da başvurulabilir cümlesinin dolaylı tümleci nedir?",
+          "answer": "YARIŞMAYA",
+          "difficulty": 3
+        },
+        {
+          "id": "dolayli_tumlec_21",
+          "question": "İki saat önce yola çıkan otobüs burada durmadı cümlesinin dolaylı tümleci nedir?",
+          "answer": "BURADA",
+          "difficulty": 3
+        },
+        {
+          "id": "dolayli_tumlec_22",
+          "question": "İnsanlara böylesine hizmet etmek kültürümüzde vardır cümlesinin dolaylı tümleci nedir?",
+          "answer": "KÜLTÜRÜMÜZDE",
+          "difficulty": 3
+        },
+        {
+          "id": "dolayli_tumlec_23",
+          "question": "Çalıştığı projeye birtakım ilaveler gerekiyordu cümlesinin dolaylı tümleci nedir?",
+          "answer": "ÇALIŞTIĞIPROJEYE",
+          "difficulty": 3
+        }
+      ]
+    }
+  ]
+}

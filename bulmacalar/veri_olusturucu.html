@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edebi Çengel - Veri Oluşturucu</title>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #f0f2f5;
+            color: #333;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+        .header p { opacity: 0.85; font-size: 0.95rem; }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .tab {
+            flex: 1;
+            padding: 14px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        .tab:hover { background: #f8f9fa; }
+        .tab.active { color: #667eea; border-bottom-color: #667eea; background: #f0f0ff; }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Forms */
+        .form-group { margin-bottom: 1rem; }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+        .form-row .form-group { flex: 1; }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-primary { background: #667eea; color: white; }
+        .btn-primary:hover { background: #5a6fd6; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #218838; }
+        .btn-danger { background: #dc3545; color: white; }
+        .btn-danger:hover { background: #c82333; }
+        .btn-warning { background: #ffc107; color: #333; }
+        .btn-warning:hover { background: #e0a800; }
+        .btn-sm { padding: 6px 12px; font-size: 12px; }
+
+        /* List items */
+        .item-list { max-height: 400px; overflow-y: auto; }
+        .item-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .item-card .info { flex: 1; margin-right: 12px; }
+        .item-card .info strong { display: block; font-size: 14px; color: #333; }
+        .item-card .info small { color: #888; font-size: 12px; }
+        .item-card .actions { display: flex; gap: 6px; flex-shrink: 0; }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .badge-easy { background: #d4edda; color: #155724; }
+        .badge-medium { background: #fff3cd; color: #856404; }
+        .badge-hard { background: #f8d7da; color: #721c24; }
+
+        /* JSON output */
+        .json-output {
+            background: #1e1e2e;
+            color: #a6e3a1;
+            border-radius: 8px;
+            padding: 16px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-height: 400px;
+            overflow-y: auto;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .copy-btn:hover { background: #5a6fd6; }
+
+        /* Counter */
+        .counter {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        /* Excel import area */
+        .import-area {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background: #fafafa;
+            margin-bottom: 1rem;
+        }
+        .import-area p { color: #888; margin-bottom: 8px; font-size: 14px; }
+        .import-area input[type="file"] {
+            border: none;
+            padding: 0;
+        }
+        .import-info {
+            background: #e8f4fd;
+            border: 1px solid #b8daff;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 1rem;
+            font-size: 13px;
+            color: #004085;
+        }
+
+        /* Grammar category section */
+        .category-section {
+            background: #f0f0ff;
+            border: 1px solid #d0d0ff;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 1rem;
+        }
+        .category-section h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Edebi Çengel - Veri Oluşturucu</h1>
+            <p>Edebiyat dönemleri, yazar portreleri ve dil bilgisi soruları için JSON dosyası oluşturun</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('literature')">📖 Edebiyat Dönemleri</button>
+            <button class="tab" onclick="switchTab('authors')">👤 Yazar Portreleri</button>
+            <button class="tab" onclick="switchTab('periods')">📚 Edebiyat Dönemleri İçerik</button>
+            <button class="tab" onclick="switchTab('grammar')">📝 Dil Bilgisi Soruları</button>
+        </div>
+
+        <!-- EDEBİYAT DÖNEMLERİ -->
+        <div id="tab-literature" class="tab-content active">
+            <!-- JSON İçe Aktarma -->
+            <div class="card">
+                <h2>📥 JSON İçe Aktar (Düzenleme)</h2>
+                <div class="import-info">
+                    Mevcut <strong>crossword_clues.json</strong> dosyasını yükleyerek düzenleme yapabilirsiniz.
+                </div>
+                <div class="import-area">
+                    <p>JSON dosyanızı seçin</p>
+                    <input type="file" id="litJsonImport" accept=".json" onchange="importLiteratureJSON(this)">
+                </div>
+            </div>
+
+            <!-- Kategori Yönetimi -->
+            <div class="card">
+                <h2>📂 Dönem / Kategori Yönetimi</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Kategori ID (küçük harf, boşluksuz)</label>
+                        <input type="text" id="litCatId" placeholder="Örn: islamiyet_oncesi">
+                    </div>
+                    <div class="form-group">
+                        <label>Kategori Adı</label>
+                        <input type="text" id="litCatName" placeholder="Örn: İSLAMİYET ÖNCESİ">
+                    </div>
+                    <div class="form-group" style="flex:0;">
+                        <label>&nbsp;</label>
+                        <button class="btn btn-primary" onclick="addLitCategory()">➕ Ekle</button>
+                    </div>
+                </div>
+                <div style="margin-top: 12px;">
+                    <label style="font-weight:600; font-size: 0.9rem; color: #555;">Aktif Kategori:</label>
+                    <select id="activeLitCategorySelect" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #e0e0e0; font-size: 14px; margin-top: 4px;">
+                        <option value="">-- Önce kategori ekleyin --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>❓ İpucu / Soru Ekle</h2>
+                <div class="form-group">
+                    <label>Soru / İpucu</label>
+                    <input type="text" id="litQuestion" placeholder="Soruyu yazın...">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Cevap (büyük harf, boşluksuz)</label>
+                        <input type="text" id="litAnswer" placeholder="Örn: KÜLTİGİN"
+                               oninput="this.value = this.value.toUpperCase().replace(/\s/g, '')">
+                    </div>
+                    <div class="form-group" style="flex: 0 0 150px;">
+                        <label>Zorluk</label>
+                        <select id="litDifficulty">
+                            <option value="1">Kolay (1)</option>
+                            <option value="2" selected>Orta (2)</option>
+                            <option value="3">Zor (3)</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="addLitClue()">➕ Soru Ekle</button>
+            </div>
+
+            <!-- Excel İçe Aktarma (Tek Kategori) -->
+            <div class="card">
+                <h2>📥 Excel'den İçe Aktar (Seçili Kategoriye)</h2>
+                <div class="import-info">
+                    <strong>Excel Formatı:</strong><br>
+                    • <strong>1. Sütun (A):</strong> Soru / İpucu<br>
+                    • <strong>2. Sütun (B):</strong> Cevap (büyük harf, boşluksuz)<br>
+                    • <strong>3. Sütun (C):</strong> Zorluk (1=Kolay, 2=Orta, 3=Zor)<br>
+                    • İlk satır başlık satırı olarak atlanır.<br>
+                    • <strong>Not:</strong> Aktif kategori seçili olmalıdır.
+                </div>
+                <div class="import-area">
+                    <p>CSV veya TSV dosyanızı seçin</p>
+                    <input type="file" id="litFileInput" accept=".csv,.tsv,.txt,.xlsx" onchange="importLitFile(this)">
+                </div>
+            </div>
+
+            <!-- Toplu İçe Aktarma (Tüm Kategoriler Tek Dosyada) -->
+            <div class="card">
+                <h2>📥 Toplu İçe Aktar (Tek Dosyada Tüm Kategoriler)</h2>
+                <div class="import-info">
+                    <strong>Excel Formatı (5 Sütun):</strong><br>
+                    • <strong>1. Sütun (A):</strong> Kategori ID (küçük harf, boşluksuz, Örn: islamiyet_oncesi)<br>
+                    • <strong>2. Sütun (B):</strong> Kategori Adı (Örn: İSLAMİYET ÖNCESİ)<br>
+                    • <strong>3. Sütun (C):</strong> Soru / İpucu<br>
+                    • <strong>4. Sütun (D):</strong> Cevap (büyük harf, boşluksuz)<br>
+                    • <strong>5. Sütun (E):</strong> Zorluk (1=Kolay, 2=Orta, 3=Zor)<br>
+                    • İlk satır başlık satırı olarak atlanır. Aynı Kategori ID ile olan satırlar aynı kategoride toplanır.
+                </div>
+                <div class="import-area">
+                    <p>CSV veya TSV dosyanızı seçin</p>
+                    <input type="file" id="litBulkFileInput" accept=".csv,.tsv,.txt,.xlsx" onchange="importLitBulkFile(this)">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📋 Eklenen Sorular <span class="counter" id="litClueCount">0</span></h2>
+                <div id="litCategoryList"></div>
+            </div>
+
+            <div class="card">
+                <h2>📄 JSON Çıktısı</h2>
+                <button class="btn btn-success" onclick="generateLitJSON()" style="margin-bottom: 12px;">🔄 JSON Oluştur</button>
+                <button class="btn btn-warning" onclick="downloadLitJSON()" style="margin-bottom: 12px;">💾 İndir</button>
+                <div style="position: relative;">
+                    <div class="json-output" id="litJsonOutput">Henüz JSON oluşturulmadı. Soru ekleyip "JSON Oluştur" butonuna tıklayın.</div>
+                    <button class="copy-btn" onclick="copyJSON('litJsonOutput')">Kopyala</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- YAZAR PORTRELERİ -->
+        <div id="tab-authors" class="tab-content">
+            <!-- JSON İçe Aktarma -->
+            <div class="card">
+                <h2>📥 JSON İçe Aktar (Düzenleme)</h2>
+                <div class="import-info">
+                    Mevcut <strong>authors.json</strong> dosyasını yükleyerek düzenleme yapabilirsiniz.
+                </div>
+                <div class="import-area">
+                    <p>JSON dosyanızı seçin</p>
+                    <input type="file" id="authorsJsonImport" accept=".json" onchange="importAuthorsJSON(this)">
+                </div>
+            </div>
+            <div class="card">
+                <h2>👤 Yazar Ekle</h2>
+                <div class="form-group">
+                    <label>Yazar Adı</label>
+                    <input type="text" id="authorName" placeholder="Örn: AŞIK VEYSEL (1894-1973)">
+                </div>
+                <div class="form-group">
+                    <label>Hakkında (Biyografi)</label>
+                    <textarea id="authorBio" rows="6" placeholder="Yazarın biyografisini buraya yazın..."></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addAuthor()">➕ Yazar Ekle</button>
+            </div>
+
+            <!-- Excel İçe Aktarma - Yazarlar -->
+            <div class="card">
+                <h2>📥 Excel'den İçe Aktar (Yazarlar)</h2>
+                <div class="import-info">
+                    <strong>Excel Formatı:</strong><br>
+                    • <strong>1. Sütun (A):</strong> Yazar Adı<br>
+                    • <strong>2. Sütun (B):</strong> Hakkında / Biyografi<br>
+                    • İlk satır başlık satırı olarak atlanır.
+                </div>
+                <div class="import-area">
+                    <p>CSV veya TSV dosyanızı seçin</p>
+                    <input type="file" id="authorFileInput" accept=".csv,.tsv,.txt,.xlsx" onchange="importAuthorsFile(this)">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📋 Eklenen Yazarlar <span class="counter" id="authorCount">0</span></h2>
+                <div class="item-list" id="authorList"></div>
+            </div>
+
+            <div class="card">
+                <h2>📄 JSON Çıktısı</h2>
+                <button class="btn btn-success" onclick="generateAuthorsJSON()" style="margin-bottom: 12px;">🔄 JSON Oluştur</button>
+                <button class="btn btn-warning" onclick="downloadAuthorsJSON()" style="margin-bottom: 12px;">💾 İndir</button>
+                <div style="position: relative;">
+                    <div class="json-output" id="authorsJsonOutput">Henüz JSON oluşturulmadı. Yazar ekleyip "JSON Oluştur" butonuna tıklayın.</div>
+                    <button class="copy-btn" onclick="copyJSON('authorsJsonOutput')">Kopyala</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDEBİYAT DÖNEMLERİ İÇERİK -->
+        <div id="tab-periods" class="tab-content">
+            <!-- JSON İçe Aktarma -->
+            <div class="card">
+                <h2>📥 JSON İçe Aktar (Düzenleme)</h2>
+                <div class="import-info">
+                    Mevcut <strong>literature_periods.json</strong> dosyasını yükleyerek düzenleme yapabilirsiniz.
+                </div>
+                <div class="import-area">
+                    <p>JSON dosyanızı seçin</p>
+                    <input type="file" id="periodsJsonImport" accept=".json" onchange="importPeriodsJSON(this)">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📚 Edebiyat Dönemi Ekle</h2>
+                <div class="form-group">
+                    <label>Başlık</label>
+                    <input type="text" id="periodTitle" placeholder="Örn: TANZİMAT DÖNEMİ">
+                </div>
+                <div class="form-group">
+                    <label>İçerik</label>
+                    <textarea id="periodContent" rows="6" placeholder="Dönem içeriğini buraya yazın..."></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addPeriod()">➕ Dönem Ekle</button>
+            </div>
+
+            <div class="card">
+                <h2>📥 Excel'den İçe Aktar (Dönemler)</h2>
+                <div class="import-info">
+                    <strong>Excel Formatı:</strong><br>
+                    • <strong>1. Sütun (A):</strong> Başlık<br>
+                    • <strong>2. Sütun (B):</strong> İçerik<br>
+                    • İlk satır başlık satırı olarak atlanır.
+                </div>
+                <div class="import-area">
+                    <p>CSV veya TSV dosyanızı seçin</p>
+                    <input type="file" id="periodFileInput" accept=".csv,.tsv,.txt,.xlsx" onchange="importPeriodsFile(this)">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📋 Eklenen Dönemler <span class="counter" id="periodCount">0</span></h2>
+                <div class="item-list" id="periodList"></div>
+            </div>
+
+            <div class="card">
+                <h2>📄 JSON Çıktısı</h2>
+                <button class="btn btn-success" onclick="generatePeriodsJSON()" style="margin-bottom: 12px;">🔄 JSON Oluştur</button>
+                <button class="btn btn-warning" onclick="downloadPeriodsJSON()" style="margin-bottom: 12px;">💾 İndir</button>
+                <div style="position: relative;">
+                    <div class="json-output" id="periodsJsonOutput">Henüz JSON oluşturulmadı. Dönem ekleyip "JSON Oluştur" butonuna tıklayın.</div>
+                    <button class="copy-btn" onclick="copyJSON('periodsJsonOutput')">Kopyala</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DİL BİLGİSİ SORULARI -->
+        <div id="tab-grammar" class="tab-content">
+            <!-- JSON İçe Aktarma -->
+            <div class="card">
+                <h2>📥 JSON İçe Aktar (Düzenleme)</h2>
+                <div class="import-info">
+                    Mevcut <strong>grammar_clues.json</strong> dosyasını yükleyerek düzenleme yapabilirsiniz.
+                </div>
+                <div class="import-area">
+                    <p>JSON dosyanızı seçin</p>
+                    <input type="file" id="grammarJsonImport" accept=".json" onchange="importGrammarJSON(this)">
+                </div>
+            </div>
+
+            <!-- Kategori Yönetimi -->
+            <div class="card">
+                <h2>📂 Kategori Yönetimi</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Kategori ID (küçük harf, boşluksuz)</label>
+                        <input type="text" id="catId" placeholder="Örn: ses_bilgisi">
+                    </div>
+                    <div class="form-group">
+                        <label>Kategori Adı</label>
+                        <input type="text" id="catName" placeholder="Örn: SES BİLGİSİ">
+                    </div>
+                    <div class="form-group" style="flex:0;">
+                        <label>&nbsp;</label>
+                        <button class="btn btn-primary" onclick="addCategory()">➕ Ekle</button>
+                    </div>
+                </div>
+                <div style="margin-top: 12px;">
+                    <label style="font-weight:600; font-size: 0.9rem; color: #555;">Aktif Kategori:</label>
+                    <select id="activeCategorySelect" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #e0e0e0; font-size: 14px; margin-top: 4px;">
+                        <option value="">-- Önce kategori ekleyin --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>❓ Soru Ekle</h2>
+                <div class="form-group">
+                    <label>Soru</label>
+                    <input type="text" id="grammarQuestion" placeholder="Soruyu yazın...">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Cevap (büyük harf, boşluksuz)</label>
+                        <input type="text" id="grammarAnswer" placeholder="Örn: BÜYÜKÜNLÜUYUMU"
+                               oninput="this.value = this.value.toUpperCase().replace(/\s/g, '')">
+                    </div>
+                    <div class="form-group" style="flex: 0 0 150px;">
+                        <label>Zorluk</label>
+                        <select id="grammarDifficulty">
+                            <option value="1">Kolay (1)</option>
+                            <option value="2" selected>Orta (2)</option>
+                            <option value="3">Zor (3)</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="addGrammarClue()">➕ Soru Ekle</button>
+            </div>
+
+            <!-- Excel İçe Aktarma (Tek Kategori) - Dil Bilgisi -->
+            <div class="card">
+                <h2>📥 Excel'den İçe Aktar (Seçili Kategoriye)</h2>
+                <div class="import-info">
+                    <strong>Excel Formatı:</strong><br>
+                    • <strong>1. Sütun (A):</strong> Soru<br>
+                    • <strong>2. Sütun (B):</strong> Cevap (büyük harf, boşluksuz)<br>
+                    • <strong>3. Sütun (C):</strong> Zorluk (1=Kolay, 2=Orta, 3=Zor)<br>
+                    • İlk satır başlık satırı olarak atlanır.<br>
+                    • <strong>Not:</strong> Aktif kategori seçili olmalıdır.
+                </div>
+                <div class="import-area">
+                    <p>CSV veya TSV dosyanızı seçin</p>
+                    <input type="file" id="grammarFileInput" accept=".csv,.tsv,.txt,.xlsx" onchange="importGrammarFile(this)">
+                </div>
+            </div>
+
+            <!-- Toplu İçe Aktarma (Tüm Kategoriler Tek Dosyada) - Dil Bilgisi -->
+            <div class="card">
+                <h2>📥 Toplu İçe Aktar (Tek Dosyada Tüm Kategoriler)</h2>
+                <div class="import-info">
+                    <strong>Excel Formatı (5 Sütun):</strong><br>
+                    • <strong>1. Sütun (A):</strong> Kategori ID (küçük harf, boşluksuz, Örn: ses_bilgisi)<br>
+                    • <strong>2. Sütun (B):</strong> Kategori Adı (Örn: SES BİLGİSİ)<br>
+                    • <strong>3. Sütun (C):</strong> Soru<br>
+                    • <strong>4. Sütun (D):</strong> Cevap (büyük harf, boşluksuz)<br>
+                    • <strong>5. Sütun (E):</strong> Zorluk (1=Kolay, 2=Orta, 3=Zor)<br>
+                    • İlk satır başlık satırı olarak atlanır. Aynı Kategori ID ile olan satırlar aynı kategoride toplanır.
+                </div>
+                <div class="import-area">
+                    <p>CSV veya TSV dosyanızı seçin</p>
+                    <input type="file" id="grammarBulkFileInput" accept=".csv,.tsv,.txt,.xlsx" onchange="importGrammarBulkFile(this)">
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📋 Eklenen Sorular <span class="counter" id="clueCount">0</span></h2>
+                <div id="grammarCategoryList"></div>
+            </div>
+
+            <div class="card">
+                <h2>📄 JSON Çıktısı</h2>
+                <button class="btn btn-success" onclick="generateGrammarJSON()" style="margin-bottom: 12px;">🔄 JSON Oluştur</button>
+                <button class="btn btn-warning" onclick="downloadGrammarJSON()" style="margin-bottom: 12px;">💾 İndir</button>
+                <div style="position: relative;">
+                    <div class="json-output" id="grammarJsonOutput">Henüz JSON oluşturulmadı. Soru ekleyip "JSON Oluştur" butonuna tıklayın.</div>
+                    <button class="copy-btn" onclick="copyJSON('grammarJsonOutput')">Kopyala</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============ TAB SWITCH ============
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+
+            document.getElementById('tab-' + tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // ============ EDEBİYAT DÖNEMLERİ ============
+        let litCategories = {};
+
+        function addLitCategory() {
+            const id = document.getElementById('litCatId').value.trim().toLowerCase().replace(/\s+/g, '_');
+            const name = document.getElementById('litCatName').value.trim();
+
+            if (!id) { alert('Kategori ID boş olamaz!'); return; }
+            if (!name) { alert('Kategori adı boş olamaz!'); return; }
+            if (litCategories[id]) { alert('Bu ID ile zaten bir kategori var!'); return; }
+
+            litCategories[id] = { id, name, clues: [] };
+            document.getElementById('litCatId').value = '';
+            document.getElementById('litCatName').value = '';
+            updateLitCategorySelect();
+            renderLitClues();
+        }
+
+        function updateLitCategorySelect() {
+            const select = document.getElementById('activeLitCategorySelect');
+            const currentVal = select.value;
+            select.innerHTML = '<option value="">-- Kategori Seçin --</option>';
+            Object.values(litCategories).forEach(cat => {
+                const opt = document.createElement('option');
+                opt.value = cat.id;
+                opt.textContent = cat.name;
+                select.appendChild(opt);
+            });
+            if (currentVal && litCategories[currentVal]) {
+                select.value = currentVal;
+            }
+        }
+
+        function addLitClue() {
+            const catId = document.getElementById('activeLitCategorySelect').value;
+            if (!catId) { alert('Önce bir kategori seçin!'); return; }
+
+            const question = document.getElementById('litQuestion').value.trim();
+            const answer = document.getElementById('litAnswer').value.trim().toUpperCase().replace(/\s/g, '');
+            const difficulty = parseInt(document.getElementById('litDifficulty').value);
+
+            if (!question) { alert('Soru boş olamaz!'); return; }
+            if (!answer) { alert('Cevap boş olamaz!'); return; }
+
+            const cat = litCategories[catId];
+            const clueId = `${catId}_${cat.clues.length + 1}`;
+            cat.clues.push({ id: clueId, question, answer, difficulty });
+
+            document.getElementById('litQuestion').value = '';
+            document.getElementById('litAnswer').value = '';
+            renderLitClues();
+        }
+
+        function removeLitClue(catId, clueIndex) {
+            litCategories[catId].clues.splice(clueIndex, 1);
+            renderLitClues();
+        }
+
+        function removeLitCategory(catId) {
+            if (!confirm(`"${litCategories[catId].name}" kategorisini ve tüm sorularını silmek istediğinize emin misiniz?`)) return;
+            delete litCategories[catId];
+            updateLitCategorySelect();
+            renderLitClues();
+        }
+
+        function renderLitClues() {
+            const container = document.getElementById('litCategoryList');
+            let totalClues = 0;
+
+            const cats = Object.values(litCategories);
+            if (cats.length === 0) {
+                container.innerHTML = '<p style="color:#888; text-align:center; padding:20px;">Henüz kategori eklenmedi.</p>';
+                document.getElementById('litClueCount').textContent = '0';
+                return;
+            }
+
+            container.innerHTML = cats.map(cat => {
+                totalClues += cat.clues.length;
+                return `
+                    <div class="category-section">
+                        <h3>${escapeHtml(cat.name)} <span class="counter">${cat.clues.length}</span>
+                            <button class="btn btn-danger btn-sm" onclick="removeLitCategory('${escapeAttr(cat.id)}')" style="margin-left:8px;">🗑️ Kategoriyi Sil</button>
+                        </h3>
+                        <div class="item-list">
+                            ${cat.clues.length === 0 ? '<p style="color:#888; padding:8px;">Bu kategoride henüz soru yok.</p>' :
+                            cat.clues.map((c, i) => `
+                                <div class="item-card">
+                                    <div class="info">
+                                        <strong>${escapeHtml(c.question)}</strong>
+                                        <small>Cevap: <strong>${escapeHtml(c.answer)}</strong> | Zorluk: <span class="badge ${c.difficulty === 1 ? 'badge-easy' : c.difficulty === 2 ? 'badge-medium' : 'badge-hard'}">${c.difficulty === 1 ? 'Kolay' : c.difficulty === 2 ? 'Orta' : 'Zor'}</span></small>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn btn-danger btn-sm" onclick="removeLitClue('${escapeAttr(cat.id)}', ${i})">🗑️</button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('litClueCount').textContent = totalClues;
+        }
+
+        function generateLitJSON() {
+            const cats = Object.values(litCategories);
+            if (cats.length === 0) {
+                alert('Önce en az bir kategori ve soru ekleyin!');
+                return;
+            }
+            const data = {
+                version: "2.0",
+                description: "Kategorilere ayrılmış çengel bulmaca verileri - dinamik oluşturma için",
+                categories: cats.map(cat => ({
+                    id: cat.id,
+                    name: cat.name,
+                    clues: cat.clues.map(c => ({
+                        id: c.id,
+                        question: c.question,
+                        answer: c.answer,
+                        difficulty: c.difficulty
+                    }))
+                }))
+            };
+            document.getElementById('litJsonOutput').textContent = JSON.stringify(data, null, 2);
+        }
+
+        function downloadLitJSON() {
+            generateLitJSON();
+            const content = document.getElementById('litJsonOutput').textContent;
+            if (content.startsWith('Henüz')) return;
+            downloadFile(content, 'crossword_clues.json');
+        }
+
+        function importLitFile(input) {
+            const catId = document.getElementById('activeLitCategorySelect').value;
+            if (!catId) {
+                alert('Önce bir kategori seçin! İçe aktarılacak sorular seçili kategoriye eklenecektir.');
+                input.value = '';
+                return;
+            }
+
+            const file = input.files[0];
+            if (!file) return;
+
+            readSpreadsheetFile(file, function(rows) {
+                let addedCount = 0;
+                const cat = litCategories[catId];
+
+                for (let i = 1; i < rows.length; i++) {
+                    const parts = rows[i];
+                    if (parts.length >= 2) {
+                        const question = String(parts[0]).trim();
+                        const answer = String(parts[1]).trim().toUpperCase().replace(/\s/g, '');
+                        const difficulty = parts.length >= 3 ? parseInt(String(parts[2]).trim()) || 2 : 2;
+
+                        if (question && answer) {
+                            const clueId = `${catId}_${cat.clues.length + 1}`;
+                            cat.clues.push({ id: clueId, question, answer, difficulty: Math.max(1, Math.min(3, difficulty)) });
+                            addedCount++;
+                        }
+                    }
+                }
+                renderLitClues();
+                alert(`${addedCount} soru başarıyla "${cat.name}" kategorisine aktarıldı!`);
+            });
+            input.value = '';
+        }
+
+        function importLiteratureJSON(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (!data.categories || !Array.isArray(data.categories)) {
+                        alert('Geçersiz JSON formatı! "categories" dizisi bulunamadı.');
+                        return;
+                    }
+                    litCategories = {};
+                    data.categories.forEach(cat => {
+                        litCategories[cat.id] = {
+                            id: cat.id,
+                            name: cat.name,
+                            clues: (cat.clues || []).map(c => ({
+                                id: c.id,
+                                question: c.question,
+                                answer: c.answer,
+                                difficulty: c.difficulty || 2
+                            }))
+                        };
+                    });
+                    updateLitCategorySelect();
+                    renderLitClues();
+                    const totalClues = Object.values(litCategories).reduce((sum, c) => sum + c.clues.length, 0);
+                    alert(`JSON başarıyla yüklendi! ${Object.keys(litCategories).length} kategori, ${totalClues} soru içe aktarıldı.`);
+                } catch (err) {
+                    alert('JSON dosyası okunamadı: ' + err.message);
+                }
+            };
+            reader.readAsText(file, 'UTF-8');
+            input.value = '';
+        }
+
+        function importLitBulkFile(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            readSpreadsheetFile(file, function(rows) {
+                let addedCount = 0;
+                let newCatCount = 0;
+
+                for (let i = 1; i < rows.length; i++) {
+                    const parts = rows[i];
+                    if (parts.length >= 4) {
+                        const catId = String(parts[0]).trim().toLowerCase().replace(/\s+/g, '_');
+                        const catName = String(parts[1]).trim();
+                        const question = String(parts[2]).trim();
+                        const answer = String(parts[3]).trim().toUpperCase().replace(/\s/g, '');
+                        const difficulty = parts.length >= 5 ? parseInt(String(parts[4]).trim()) || 2 : 2;
+
+                        if (!catId || !catName || !question || !answer) continue;
+
+                        if (!litCategories[catId]) {
+                            litCategories[catId] = { id: catId, name: catName, clues: [] };
+                            newCatCount++;
+                        }
+                        const cat = litCategories[catId];
+                        const clueId = `${catId}_${cat.clues.length + 1}`;
+                        cat.clues.push({ id: clueId, question, answer, difficulty: Math.max(1, Math.min(3, difficulty)) });
+                        addedCount++;
+                    }
+                }
+                updateLitCategorySelect();
+                renderLitClues();
+                alert(`Toplu içe aktarma tamamlandı!\n${newCatCount} yeni kategori oluşturuldu.\n${addedCount} soru eklendi.`);
+            });
+            input.value = '';
+        }
+
+        // ============ YAZAR PORTRELERİ ============
+        let authors = [];
+
+        function addAuthor() {
+            const name = document.getElementById('authorName').value.trim();
+            const bio = document.getElementById('authorBio').value.trim();
+
+            if (!name) { alert('Yazar adı boş olamaz!'); return; }
+            if (!bio) { alert('Biyografi boş olamaz!'); return; }
+
+            authors.push({ name, bio });
+            document.getElementById('authorName').value = '';
+            document.getElementById('authorBio').value = '';
+            renderAuthors();
+        }
+
+        function removeAuthor(index) {
+            authors.splice(index, 1);
+            renderAuthors();
+        }
+
+        function renderAuthors() {
+            const list = document.getElementById('authorList');
+            document.getElementById('authorCount').textContent = authors.length;
+
+            if (authors.length === 0) {
+                list.innerHTML = '<p style="color:#888; text-align:center; padding:20px;">Henüz yazar eklenmedi.</p>';
+                return;
+            }
+
+            list.innerHTML = authors.map((a, i) => `
+                <div class="item-card">
+                    <div class="info">
+                        <strong>${escapeHtml(a.name)}</strong>
+                        <small>${escapeHtml(a.bio.substring(0, 100))}${a.bio.length > 100 ? '...' : ''}</small>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-danger btn-sm" onclick="removeAuthor(${i})">🗑️</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function generateAuthorsJSON() {
+            if (authors.length === 0) {
+                alert('Önce en az bir yazar ekleyin!');
+                return;
+            }
+            const data = {
+                version: "1.0",
+                description: "Türk edebiyatı yazar portreleri",
+                authors: authors.map(a => ({ name: a.name, bio: a.bio }))
+            };
+            document.getElementById('authorsJsonOutput').textContent = JSON.stringify(data, null, 2);
+        }
+
+        function downloadAuthorsJSON() {
+            generateAuthorsJSON();
+            const content = document.getElementById('authorsJsonOutput').textContent;
+            if (content.startsWith('Henüz')) return;
+            downloadFile(content, 'authors.json');
+        }
+
+        function importAuthorsFile(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            readSpreadsheetFile(file, function(rows) {
+                let addedCount = 0;
+                for (let i = 1; i < rows.length; i++) {
+                    const parts = rows[i];
+                    if (parts.length >= 2) {
+                        const name = String(parts[0]).trim();
+                        const bio = String(parts[1]).trim();
+                        if (name && bio) {
+                            authors.push({ name, bio });
+                            addedCount++;
+                        }
+                    }
+                }
+                renderAuthors();
+                alert(`${addedCount} yazar başarıyla içe aktarıldı!`);
+            });
+            input.value = '';
+        }
+
+        function importAuthorsJSON(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (!data.authors || !Array.isArray(data.authors)) {
+                        alert('Geçersiz JSON formatı! "authors" dizisi bulunamadı.');
+                        return;
+                    }
+                    authors = data.authors.map(a => ({ name: a.name, bio: a.bio }));
+                    renderAuthors();
+                    alert(`JSON başarıyla yüklendi! ${authors.length} yazar içe aktarıldı.`);
+                } catch (err) {
+                    alert('JSON dosyası okunamadı: ' + err.message);
+                }
+            };
+            reader.readAsText(file, 'UTF-8');
+            input.value = '';
+        }
+
+        // ============ EDEBİYAT DÖNEMLERİ İÇERİK ============
+        let periods = [];
+
+        function addPeriod() {
+            const title = document.getElementById('periodTitle').value.trim();
+            const content = document.getElementById('periodContent').value.trim();
+
+            if (!title) { alert('Başlık boş olamaz!'); return; }
+            if (!content) { alert('İçerik boş olamaz!'); return; }
+
+            periods.push({ title, content });
+            document.getElementById('periodTitle').value = '';
+            document.getElementById('periodContent').value = '';
+            renderPeriods();
+        }
+
+        function removePeriod(index) {
+            periods.splice(index, 1);
+            renderPeriods();
+        }
+
+        function renderPeriods() {
+            const list = document.getElementById('periodList');
+            document.getElementById('periodCount').textContent = periods.length;
+
+            if (periods.length === 0) {
+                list.innerHTML = '<p style="color:#888; text-align:center; padding:20px;">Henüz dönem eklenmedi.</p>';
+                return;
+            }
+
+            list.innerHTML = periods.map((p, i) => `
+                <div class="item-card">
+                    <div class="info">
+                        <strong>${escapeHtml(p.title)}</strong>
+                        <small>${escapeHtml(p.content.substring(0, 120))}${p.content.length > 120 ? '...' : ''}</small>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-danger btn-sm" onclick="removePeriod(${i})">🗑️</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function generatePeriodsJSON() {
+            if (periods.length === 0) {
+                alert('Önce en az bir dönem ekleyin!');
+                return;
+            }
+            const data = {
+                version: '1.0',
+                description: 'Türk edebiyatı dönem içerikleri',
+                periods: periods.map(p => ({ title: p.title, content: p.content }))
+            };
+            document.getElementById('periodsJsonOutput').textContent = JSON.stringify(data, null, 2);
+        }
+
+        function downloadPeriodsJSON() {
+            generatePeriodsJSON();
+            const content = document.getElementById('periodsJsonOutput').textContent;
+            if (content.startsWith('Henüz')) return;
+            downloadFile(content, 'literature_periods.json');
+        }
+
+        function importPeriodsFile(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            readSpreadsheetFile(file, function(rows) {
+                let addedCount = 0;
+                for (let i = 1; i < rows.length; i++) {
+                    const parts = rows[i];
+                    if (parts.length >= 2) {
+                        const title = String(parts[0]).trim();
+                        const content = String(parts[1]).trim();
+                        if (title && content) {
+                            periods.push({ title, content });
+                            addedCount++;
+                        }
+                    }
+                }
+                renderPeriods();
+                alert(`${addedCount} dönem başarıyla içe aktarıldı!`);
+            });
+            input.value = '';
+        }
+
+        function importPeriodsJSON(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (!data.periods || !Array.isArray(data.periods)) {
+                        alert('Geçersiz JSON formatı! "periods" dizisi bulunamadı.');
+                        return;
+                    }
+                    periods = data.periods.map(p => ({
+                        title: p.title || p.name || '',
+                        content: p.content || p.bio || ''
+                    })).filter(p => p.title && p.content);
+                    renderPeriods();
+                    alert(`JSON başarıyla yüklendi! ${periods.length} dönem içe aktarıldı.`);
+                } catch (err) {
+                    alert('JSON dosyası okunamadı: ' + err.message);
+                }
+            };
+            reader.readAsText(file, 'UTF-8');
+            input.value = '';
+        }
+
+        // ============ DİL BİLGİSİ SORULARI ============
+        let grammarCategories = {};
+
+        function addCategory() {
+            const id = document.getElementById('catId').value.trim().toLowerCase().replace(/\s+/g, '_');
+            const name = document.getElementById('catName').value.trim();
+
+            if (!id) { alert('Kategori ID boş olamaz!'); return; }
+            if (!name) { alert('Kategori adı boş olamaz!'); return; }
+            if (grammarCategories[id]) { alert('Bu ID ile zaten bir kategori var!'); return; }
+
+            grammarCategories[id] = { id, name, clues: [] };
+            document.getElementById('catId').value = '';
+            document.getElementById('catName').value = '';
+            updateCategorySelect();
+            renderGrammarClues();
+        }
+
+        function updateCategorySelect() {
+            const select = document.getElementById('activeCategorySelect');
+            const currentVal = select.value;
+            select.innerHTML = '<option value="">-- Kategori Seçin --</option>';
+            Object.values(grammarCategories).forEach(cat => {
+                const opt = document.createElement('option');
+                opt.value = cat.id;
+                opt.textContent = cat.name;
+                select.appendChild(opt);
+            });
+            if (currentVal && grammarCategories[currentVal]) {
+                select.value = currentVal;
+            }
+        }
+
+        function addGrammarClue() {
+            const catId = document.getElementById('activeCategorySelect').value;
+            if (!catId) { alert('Önce bir kategori seçin!'); return; }
+
+            const question = document.getElementById('grammarQuestion').value.trim();
+            const answer = document.getElementById('grammarAnswer').value.trim().toUpperCase().replace(/\s/g, '');
+            const difficulty = parseInt(document.getElementById('grammarDifficulty').value);
+
+            if (!question) { alert('Soru boş olamaz!'); return; }
+            if (!answer) { alert('Cevap boş olamaz!'); return; }
+
+            const cat = grammarCategories[catId];
+            const clueId = `${catId}_${cat.clues.length + 1}`;
+            cat.clues.push({ id: clueId, question, answer, difficulty });
+
+            document.getElementById('grammarQuestion').value = '';
+            document.getElementById('grammarAnswer').value = '';
+            renderGrammarClues();
+        }
+
+        function removeGrammarClue(catId, clueIndex) {
+            grammarCategories[catId].clues.splice(clueIndex, 1);
+            renderGrammarClues();
+        }
+
+        function removeCategory(catId) {
+            if (!confirm(`"${grammarCategories[catId].name}" kategorisini ve tüm sorularını silmek istediğinize emin misiniz?`)) return;
+            delete grammarCategories[catId];
+            updateCategorySelect();
+            renderGrammarClues();
+        }
+
+        function renderGrammarClues() {
+            const container = document.getElementById('grammarCategoryList');
+            let totalClues = 0;
+
+            const cats = Object.values(grammarCategories);
+            if (cats.length === 0) {
+                container.innerHTML = '<p style="color:#888; text-align:center; padding:20px;">Henüz kategori eklenmedi.</p>';
+                document.getElementById('clueCount').textContent = '0';
+                return;
+            }
+
+            container.innerHTML = cats.map(cat => {
+                totalClues += cat.clues.length;
+                return `
+                    <div class="category-section">
+                        <h3>${escapeHtml(cat.name)} <span class="counter">${cat.clues.length}</span>
+                            <button class="btn btn-danger btn-sm" onclick="removeCategory('${escapeAttr(cat.id)}')" style="margin-left:8px;">🗑️ Kategoriyi Sil</button>
+                        </h3>
+                        <div class="item-list">
+                            ${cat.clues.length === 0 ? '<p style="color:#888; padding:8px;">Bu kategoride henüz soru yok.</p>' :
+                            cat.clues.map((c, i) => `
+                                <div class="item-card">
+                                    <div class="info">
+                                        <strong>${escapeHtml(c.question)}</strong>
+                                        <small>Cevap: <strong>${escapeHtml(c.answer)}</strong> | Zorluk: <span class="badge ${c.difficulty === 1 ? 'badge-easy' : c.difficulty === 2 ? 'badge-medium' : 'badge-hard'}">${c.difficulty === 1 ? 'Kolay' : c.difficulty === 2 ? 'Orta' : 'Zor'}</span></small>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn btn-danger btn-sm" onclick="removeGrammarClue('${escapeAttr(cat.id)}', ${i})">🗑️</button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('clueCount').textContent = totalClues;
+        }
+
+        function generateGrammarJSON() {
+            const cats = Object.values(grammarCategories);
+            if (cats.length === 0) {
+                alert('Önce en az bir kategori ve soru ekleyin!');
+                return;
+            }
+            const data = {
+                version: "1.0",
+                description: "Dil bilgisi çengel bulmaca verileri - kategorilere ayrılmış",
+                categories: cats.map(cat => ({
+                    id: cat.id,
+                    name: cat.name,
+                    clues: cat.clues.map(c => ({
+                        id: c.id,
+                        question: c.question,
+                        answer: c.answer,
+                        difficulty: c.difficulty
+                    }))
+                }))
+            };
+            document.getElementById('grammarJsonOutput').textContent = JSON.stringify(data, null, 2);
+        }
+
+        function downloadGrammarJSON() {
+            generateGrammarJSON();
+            const content = document.getElementById('grammarJsonOutput').textContent;
+            if (content.startsWith('Henüz')) return;
+            downloadFile(content, 'grammar_clues.json');
+        }
+
+        function importGrammarFile(input) {
+            const catId = document.getElementById('activeCategorySelect').value;
+            if (!catId) {
+                alert('Önce bir kategori seçin! İçe aktarılacak sorular seçili kategoriye eklenecektir.');
+                input.value = '';
+                return;
+            }
+
+            const file = input.files[0];
+            if (!file) return;
+
+            readSpreadsheetFile(file, function(rows) {
+                let addedCount = 0;
+                const cat = grammarCategories[catId];
+
+                for (let i = 1; i < rows.length; i++) {
+                    const parts = rows[i];
+                    if (parts.length >= 2) {
+                        const question = String(parts[0]).trim();
+                        const answer = String(parts[1]).trim().toUpperCase().replace(/\s/g, '');
+                        const difficulty = parts.length >= 3 ? parseInt(String(parts[2]).trim()) || 2 : 2;
+
+                        if (question && answer) {
+                            const clueId = `${catId}_${cat.clues.length + 1}`;
+                            cat.clues.push({ id: clueId, question, answer, difficulty: Math.max(1, Math.min(3, difficulty)) });
+                            addedCount++;
+                        }
+                    }
+                }
+                renderGrammarClues();
+                alert(`${addedCount} soru başarıyla "${cat.name}" kategorisine aktarıldı!`);
+            });
+            input.value = '';
+        }
+
+        function importGrammarJSON(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (!data.categories || !Array.isArray(data.categories)) {
+                        alert('Geçersiz JSON formatı! "categories" dizisi bulunamadı.');
+                        return;
+                    }
+                    grammarCategories = {};
+                    data.categories.forEach(cat => {
+                        grammarCategories[cat.id] = {
+                            id: cat.id,
+                            name: cat.name,
+                            clues: (cat.clues || []).map(c => ({
+                                id: c.id,
+                                question: c.question,
+                                answer: c.answer,
+                                difficulty: c.difficulty || 2
+                            }))
+                        };
+                    });
+                    updateCategorySelect();
+                    renderGrammarClues();
+                    const totalClues = Object.values(grammarCategories).reduce((sum, c) => sum + c.clues.length, 0);
+                    alert(`JSON başarıyla yüklendi! ${Object.keys(grammarCategories).length} kategori, ${totalClues} soru içe aktarıldı.`);
+                } catch (err) {
+                    alert('JSON dosyası okunamadı: ' + err.message);
+                }
+            };
+            reader.readAsText(file, 'UTF-8');
+            input.value = '';
+        }
+
+        function importGrammarBulkFile(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            readSpreadsheetFile(file, function(rows) {
+                let addedCount = 0;
+                let newCatCount = 0;
+
+                for (let i = 1; i < rows.length; i++) {
+                    const parts = rows[i];
+                    if (parts.length >= 4) {
+                        const catId = String(parts[0]).trim().toLowerCase().replace(/\s+/g, '_');
+                        const catName = String(parts[1]).trim();
+                        const question = String(parts[2]).trim();
+                        const answer = String(parts[3]).trim().toUpperCase().replace(/\s/g, '');
+                        const difficulty = parts.length >= 5 ? parseInt(String(parts[4]).trim()) || 2 : 2;
+
+                        if (!catId || !catName || !question || !answer) continue;
+
+                        if (!grammarCategories[catId]) {
+                            grammarCategories[catId] = { id: catId, name: catName, clues: [] };
+                            newCatCount++;
+                        }
+                        const cat = grammarCategories[catId];
+                        const clueId = `${catId}_${cat.clues.length + 1}`;
+                        cat.clues.push({ id: clueId, question, answer, difficulty: Math.max(1, Math.min(3, difficulty)) });
+                        addedCount++;
+                    }
+                }
+                updateCategorySelect();
+                renderGrammarClues();
+                alert(`Toplu içe aktarma tamamlandı!\n${newCatCount} yeni kategori oluşturuldu.\n${addedCount} soru eklendi.`);
+            });
+            input.value = '';
+        }
+
+        // ============ YARDIMCI FONKSİYONLAR ============
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function escapeAttr(text) {
+            return text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        }
+
+        function copyJSON(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector(`#${elementId} + .copy-btn, [onclick="copyJSON('${elementId}')"]`);
+                const origText = btn?.textContent;
+                if (btn) {
+                    btn.textContent = 'Kopyalandı ✓';
+                    setTimeout(() => btn.textContent = origText || 'Kopyala', 2000);
+                }
+            });
+        }
+
+        function downloadFile(content, filename) {
+            const blob = new Blob([content], { type: 'application/json;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function parseLine(line, separator) {
+            // Simple CSV/TSV parser that handles quoted fields
+            const parts = [];
+            let current = '';
+            let inQuotes = false;
+
+            for (let i = 0; i < line.length; i++) {
+                const ch = line[i];
+                if (ch === '"') {
+                    if (inQuotes && i + 1 < line.length && line[i + 1] === '"') {
+                        current += '"';
+                        i++;
+                    } else {
+                        inQuotes = !inQuotes;
+                    }
+                } else if (ch === separator && !inQuotes) {
+                    parts.push(current);
+                    current = '';
+                } else {
+                    current += ch;
+                }
+            }
+            parts.push(current);
+            return parts;
+        }
+
+        // Universal file reader: handles .xlsx, .csv, .tsv
+        // callback receives rows as array of arrays (first row = header, skipped by caller)
+        function readSpreadsheetFile(file, callback) {
+            const ext = file.name.split('.').pop().toLowerCase();
+
+            if (ext === 'xlsx' || ext === 'xls') {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const workbook = XLSX.read(e.target.result, { type: 'array' });
+                        const sheetName = workbook.SheetNames[0];
+                        const sheet = workbook.Sheets[sheetName];
+                        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' });
+                        callback(rows);
+                    } catch (err) {
+                        alert('Excel dosyası okunamadı: ' + err.message);
+                    }
+                };
+                reader.readAsArrayBuffer(file);
+            } else {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const text = e.target.result;
+                    const separator = text.includes('\t') ? '\t' : ',';
+                    const lines = text.split('\n').filter(l => l.trim());
+                    const rows = lines.map(line => parseLine(line, separator));
+                    callback(rows);
+                };
+                reader.readAsText(file, 'UTF-8');
+            }
+        }
+
+        // Initialize
+        renderLitClues();
+        renderAuthors();
+        renderPeriods();
+        renderGrammarClues();
+    </script>
+</body>
+</html>

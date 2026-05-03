@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çengel Bulmaca - İçerik Yöneticisi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .tabs {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .tab:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        
+        .tab:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .content-panel {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #5a67d8;
+        }
+        
+        .btn-danger {
+            background: #e53e3e;
+        }
+        
+        .btn-danger:hover {
+            background: #c53030;
+        }
+        
+        .btn-success {
+            background: #38a169;
+        }
+        
+        .btn-success:hover {
+            background: #2f855a;
+        }
+        
+        .clues-container {
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .clue-item {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .clue-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        .topics-list {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .topic-card {
+            background: white;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .topic-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .topic-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .topic-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+        
+        .topic-stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stat {
+            background: #edf2f7;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: #4a5568;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: flex-end;
+        }
+        
+        .alert {
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .alert-success {
+            background: #c6f6d5;
+            color: #22543d;
+            border: 1px solid #9ae6b4;
+        }
+        
+        .alert-error {
+            background: #fed7d7;
+            color: #742a2a;
+            border: 1px solid #fc8181;
+        }
+        
+        .preview-text {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            padding: 0.5rem;
+            background: #f7fafc;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        
+        .question-item {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .question-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .question-title {
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .difficulty-badge {
+            padding: 0.2rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .difficulty-1 { background: #28a745; }
+        .difficulty-2 { background: #17a2b8; }
+        .difficulty-3 { background: #ffc107; color: #212529; }
+        .difficulty-4 { background: #fd7e14; }
+        .difficulty-5 { background: #dc3545; }
+        
+        .question-text {
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+        
+        .question-answer {
+            font-family: monospace;
+            background: #e9ecef;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .question-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .btn-small {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab {
+                border-radius: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Çengel Bulmaca İçerik Yöneticisi</h1>
+            <p>Oyun içerikleri kolayca ekleyin, düzenleyin ve yönetin</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('overview')">📊 Genel Bakış</button>
+            <button class="tab" onclick="showTab('add-topic')">➕ Konu Ekle</button>
+            <button class="tab" onclick="showTab('add-puzzle')">🧩 Bulmaca Ekle</button>
+            <button class="tab" onclick="showTab('import-export')">📁 İçe/Dışa Aktar</button>
+        </div>
+        
+        <!-- Overview Tab -->
+        <div id="overview" class="content-panel">
+            <h2>📊 Mevcut İçerikler</h2>
+            <div style="margin-bottom: 1rem;">
+                <button class="btn" onclick="loadDemoData()" style="background: #28a745; margin-right: 1rem;">🎯 Demo Veri Yükle</button>
+                <button class="btn" onclick="clearAllData()" style="background: #dc3545;">🗑️ Tüm Veriyi Sil</button>
+            </div>
+            <div id="topics-list" class="topics-list">
+                <!-- Konular buraya yüklenecek -->
+            </div>
+            <div id="empty-state" style="text-align: center; padding: 3rem; color: #666;">
+                <h3>Henüz konu eklenmemiş</h3>
+                <p>"Konu Ekle" sekmesinden yeni konular ekleyebilirsiniz.</p>
+                <p>Veya yukarıdaki "Demo Veri Yükle" butonunu kullanarak örnek verileri yükleyebilirsiniz.</p>
+            </div>
+        </div>
+        
+        <!-- Add Topic Tab -->
+        <div id="add-topic" class="content-panel hidden">
+            <h2>➕ Yeni Konu Ekle</h2>
+            <form id="topic-form">
+                <div class="form-group">
+                    <label for="topic-name">Konu Adı *</label>
+                    <input type="text" id="topic-name" required placeholder="Örn: Türk Edebiyatı">
+                </div>
+                
+                <div class="form-group">
+                    <label for="topic-description">Açıklama *</label>
+                    <textarea id="topic-description" required placeholder="Konu hakkında kısa açıklama..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Konu Oluştur</button>
+            </form>
+        </div>
+        
+        <!-- Add Puzzle Tab -->
+        <div id="add-puzzle" class="content-panel hidden">
+            <h2>🧩 Soru Yönetimi</h2>
+            
+            <!-- Konu Seçimi -->
+            <div id="topic-selection" class="form-group">
+                <label for="selected-topic">Konu Seçin *</label>
+                <select id="selected-topic" onchange="loadTopicQuestions()" required>
+                    <option value="">Önce konu seçmelisiniz...</option>
+                </select>
+            </div>
+            
+            <!-- Mevcut Sorular Listesi -->
+            <div id="existing-questions" class="hidden" style="margin-bottom: 2rem;">
+                <h3>📋 Mevcut Sorular</h3>
+                <div id="questions-list">
+                    <!-- Mevcut sorular buraya yüklenecek -->
+                </div>
+            </div>
+            
+            <!-- Yeni Soru Ekleme -->
+            <div id="add-question-section" class="hidden">
+                <h3>➕ Yeni Soru Ekle</h3>
+                <form id="question-form">
+                    <div class="grid">
+                        <div class="form-group">
+                            <label for="question-text">Soru *</label>
+                            <textarea id="question-text" required placeholder="Soruyu buraya yazın..." rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="question-answer">Cevap *</label>
+                            <input type="text" id="question-answer" required placeholder="Cevabı buraya yazın (büyük harflerle)" style="text-transform: uppercase;">
+                        </div>
+                    </div>
+                    
+                    <div class="grid">
+                        <div class="form-group">
+                            <label for="question-difficulty">Zorluk Seviyesi *</label>
+                            <select id="question-difficulty" required>
+                                <option value="1">1 - Çok Kolay</option>
+                                <option value="2">2 - Kolay</option>
+                                <option value="3">3 - Orta</option>
+                                <option value="4">4 - Zor</option>
+                                <option value="5">5 - Çok Zor</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="visible-letters">Görünür Harf Sayısı</label>
+                            <input type="number" id="visible-letters" value="2" min="1" max="10">
+                        </div>
+                    </div>
+                    
+                    <!-- Medya Ekleme -->
+                    <div class="form-group">
+                        <label>📷 Medya Dosyası (Opsiyonel)</label>
+                        <div class="grid">
+                            <div>
+                                <label for="media-type">Medya Türü</label>
+                                <select id="media-type">
+                                    <option value="">Medya yok</option>
+                                    <option value="image">🖼️ Resim</option>
+                                    <option value="video">🎥 Video</option>
+                                    <option value="audio">🎵 Ses</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="media-path">Medya Dosya Yolu</label>
+                                <input type="text" id="media-path" placeholder="assets/media/dosya.jpg">
+                            </div>
+                        </div>
+                        <small style="color: #666;">Medya dosyasını Flutter projesinin assets/media/ klasörüne koyun</small>
+                    </div>
+                    
+                    <!-- Cevap Önizlemesi -->
+                    <div class="form-group">
+                        <label>👁️ Cevap Önizlemesi</label>
+                        <div id="answer-preview" style="font-family: monospace; font-size: 1.2rem; background: #f8f9fa; padding: 1rem; border-radius: 5px; border: 1px solid #dee2e6;">
+                            Cevap yazıldığında önizleme burada görünecek
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn">✅ Soruyu Ekle</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Import/Export Tab -->
+        <div id="import-export" class="content-panel hidden">
+            <h2>📁 İçe/Dışa Aktarma</h2>
+            
+            <div class="grid">
+                <div>
+                    <h3>📤 Dışa Aktar</h3>
+                    <p>Tüm içerikleri JSON formatında indirin:</p>
+                    <button class="btn" onclick="exportData()">İndir (JSON)</button>
+                </div>
+                
+                <div>
+                    <h3>📥 İçe Aktar</h3>
+                    <div class="form-group">
+                        <label for="import-file">JSON Dosyası Seçin</label>
+                        <input type="file" id="import-file" accept=".json">
+                    </div>
+                    <button class="btn" onclick="importData()">Yükle</button>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <h3>🎯 Oyuna Aktarma</h3>
+                <p>İçerikleri oyun klasörüne kopyalayın:</p>
+                <button class="btn btn-success" onclick="exportToGame()">Oyuna Aktar</button>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+                    Not: Bu işlem topics.json dosyasını Flutter projesi klasörüne kopyalar.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Global değişkenler
+        let currentData = {
+            topics: [],
+            lastUpdated: new Date().toISOString()
+        };
+        
+        // Sayfa yüklendiğinde
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+            refreshTopicsList();
+            refreshPuzzleTopics();
+        });
+        
+        // Tab değiştirme
+        function showTab(tabName) {
+            // Tüm panelleri gizle
+            document.querySelectorAll('.content-panel').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            
+            // Tüm tablardan active sınıfını kaldır
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Seçilen paneli göster ve tabı aktif yap
+            document.getElementById(tabName).classList.remove('hidden');
+            event.target.classList.add('active');
+            
+            // Overview tabındaysa konuları yenile
+            if (tabName === 'overview') {
+                refreshTopicsList();
+            }
+        }
+        
+        // LocalStorage'dan veri yükle
+        function loadData() {
+            const saved = localStorage.getItem('cengel-bulmaca-data');
+            if (saved) {
+                currentData = JSON.parse(saved);
+            }
+        }
+        
+        // LocalStorage'a veri kaydet
+        function saveData() {
+            currentData.lastUpdated = new Date().toISOString();
+            localStorage.setItem('cengel-bulmaca-data', JSON.stringify(currentData));
+        }
+        
+        // Konular listesini yenile
+        function refreshTopicsList() {
+            const container = document.getElementById('topics-list');
+            const emptyState = document.getElementById('empty-state');
+            
+            if (currentData.topics.length === 0) {
+                container.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            container.style.display = 'grid';
+            emptyState.style.display = 'none';
+            
+            container.innerHTML = currentData.topics.map(topic => `
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <div>
+                            <div class="topic-title">${topic.name}</div>
+                            <p style="color: #666; margin-bottom: 1rem;">${topic.description}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="topic-stats">
+                        <span class="stat">${topic.puzzleSets.length} Bulmaca Seti</span>
+                        <span class="stat">${getTotalClues(topic)} Soru</span>
+                        <span class="stat">Zorluk: ${getDifficultyRange(topic)}</span>
+                    </div>
+                    
+                    <div class="actions">
+                        <button class="btn" onclick="editTopic('${topic.id}')">✏️ Düzenle</button>
+                        <button class="btn btn-danger" onclick="deleteTopic('${topic.id}')">🗑️ Sil</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Puzzle konuları dropdown'unu yenile
+        function refreshPuzzleTopics() {
+            const select = document.getElementById('selected-topic');
+            if (select) {
+                select.innerHTML = '<option value="">Önce konu seçmelisiniz...</option>' +
+                    currentData.topics.map(topic => 
+                        `<option value="${topic.id}">${topic.name}</option>`
+                    ).join('');
+            }
+        }
+        
+        // Konu seçildiğinde soruları yükle
+        function loadTopicQuestions() {
+            const topicId = document.getElementById('selected-topic').value;
+            const existingQuestionsDiv = document.getElementById('existing-questions');
+            const addQuestionDiv = document.getElementById('add-question-section');
+            
+            if (!topicId) {
+                existingQuestionsDiv.classList.add('hidden');
+                addQuestionDiv.classList.add('hidden');
+                return;
+            }
+            
+            const topic = currentData.topics.find(t => t.id === topicId);
+            if (!topic) return;
+            
+            // Tüm soruları topla (puzzle set yapısından)
+            const allQuestions = [];
+            topic.puzzleSets.forEach(set => {
+                set.clues.forEach(clue => {
+                    allQuestions.push({
+                        ...clue,
+                        difficulty: set.difficulty,
+                        setTitle: set.title
+                    });
+                });
+            });
+            
+            // Mevcut soruları göster
+            displayExistingQuestions(allQuestions);
+            
+            // Soru ekleme bölümünü göster
+            existingQuestionsDiv.classList.remove('hidden');
+            addQuestionDiv.classList.remove('hidden');
+        }
+        
+        // Mevcut soruları göster
+        function displayExistingQuestions(questions) {
+            const container = document.getElementById('questions-list');
+            
+            if (questions.length === 0) {
+                container.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">Bu konuda henüz soru eklenmemiş.</p>';
+                return;
+            }
+            
+            container.innerHTML = questions.map((question, index) => `
+                <div class="question-item">
+                    <div class="question-header">
+                        <span class="question-title">Soru ${index + 1}</span>
+                        <span class="difficulty-badge difficulty-${question.difficulty}">
+                            Zorluk ${question.difficulty}
+                        </span>
+                    </div>
+                    <div class="question-text">${question.question}</div>
+                    <div class="question-answer">Cevap: ${question.answer}</div>
+                    ${question.mediaPath ? `<div style="margin-top: 0.5rem; color: #007bff;">📷 Medya: ${question.mediaPath}</div>` : ''}
+                    <div class="question-actions">
+                        <button class="btn btn-small" onclick="editQuestion('${question.id}')">✏️ Düzenle</button>
+                        <button class="btn btn-small" style="background: #dc3545;" onclick="deleteQuestion('${question.id}')">🗑️ Sil</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Yardımcı fonksiyonlar
+        function getTotalClues(topic) {
+            return topic.puzzleSets.reduce((total, set) => total + set.clues.length, 0);
+        }
+        
+        function getDifficultyRange(topic) {
+            const difficulties = topic.puzzleSets.map(set => set.difficulty);
+            const min = Math.min(...difficulties);
+            const max = Math.max(...difficulties);
+            return min === max ? min.toString() : `${min}-${max}`;
+        }
+        
+        // Konu ekleme formu
+        document.getElementById('topic-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('topic-name').value.trim();
+            const description = document.getElementById('topic-description').value.trim();
+            
+            if (!name || !description) {
+                showAlert('Lütfen tüm alanları doldurun!', 'error');
+                return;
+            }
+            
+            const topic = {
+                id: generateId(name),
+                name: name,
+                description: description,
+                iconPath: null,
+                puzzleSets: []
+            };
+            
+            currentData.topics.push(topic);
+            saveData();
+            
+            // Formu temizle
+            this.reset();
+            
+            showAlert('Konu başarıyla eklendi!', 'success');
+            refreshTopicsList();
+            refreshPuzzleTopics();
+        });
+        
+        // Bulmaca ekleme formu
+        document.getElementById('puzzle-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const topicId = document.getElementById('puzzle-topic').value;
+            const difficulty = parseInt(document.getElementById('puzzle-difficulty').value);
+            const title = document.getElementById('puzzle-title').value.trim();
+            const description = document.getElementById('puzzle-description').value.trim();
+            
+            if (!topicId || !title) {
+                showAlert('Lütfen konu ve başlık alanlarını doldurun!', 'error');
+                return;
+            }
+            
+            // Clue'ları topla
+            const clues = [];
+            document.querySelectorAll('.clue-item').forEach((item, index) => {
+                const question = item.querySelector('.clue-question').value.trim();
+                const answer = item.querySelector('.clue-answer').value.trim();
+                const visibleCount = parseInt(item.querySelector('.clue-visible').value) || 1;
+                const mediaType = item.querySelector('.clue-media-type').value || null;
+                const mediaPath = item.querySelector('.clue-media-path').value.trim() || null;
+                
+                if (question && answer) {
+                    clues.push({
+                        id: `${generateId(title)}_${index + 1}`,
+                        question: question,
+                        answer: answer,
+                        visibleLetterCount: visibleCount,
+                        visiblePositions: [],
+                        mediaPath: mediaPath,
+                        mediaType: mediaType
+                    });
+                }
+            });
+            
+            if (clues.length === 0) {
+                showAlert('En az bir soru ekleyin!', 'error');
+                return;
+            }
+            
+            const puzzleSet = {
+                id: generateId(title + '_' + difficulty),
+                title: title,
+                difficulty: difficulty,
+                description: description || null,
+                clues: clues
+            };
+            
+            // Konuya ekle
+            const topic = currentData.topics.find(t => t.id === topicId);
+            if (topic) {
+                topic.puzzleSets.push(puzzleSet);
+                saveData();
+                
+                // Formu temizle
+                this.reset();
+                document.getElementById('clues-list').innerHTML = '';
+                
+                showAlert('Bulmaca seti başarıyla eklendi!', 'success');
+                refreshTopicsList();
+            }
+        });
+        
+        // ID oluşturucu
+        function generateId(text) {
+            return text.toLowerCase()
+                      .replace(/ğ/g, 'g')
+                      .replace(/ü/g, 'u')
+                      .replace(/ş/g, 's')
+                      .replace(/ı/g, 'i')
+                      .replace(/ö/g, 'o')
+                      .replace(/ç/g, 'c')
+                      .replace(/[^a-z0-9]/g, '_')
+                      .replace(/_+/g, '_')
+                      .replace(/^_|_$/g, '');
+        }
+        
+        // Yeni clue ekleme
+        function addClue() {
+            const container = document.getElementById('clues-list');
+            const clueIndex = container.children.length + 1;
+            
+            const clueHtml = `
+                <div class="clue-item">
+                    <h4>Soru ${clueIndex}</h4>
+                    
+                    <div class="form-group">
+                        <label>Soru *</label>
+                        <textarea class="clue-question" placeholder="Soruyu buraya yazın..." required></textarea>
+                    </div>
+                    
+                    <div class="grid">
+                        <div class="form-group">
+                            <label>Cevap *</label>
+                            <input type="text" class="clue-answer" placeholder="Cevabı buraya yazın..." required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Görünür Harf Sayısı</label>
+                            <input type="number" class="clue-visible" value="1" min="1" max="10">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Medya Dosyası (Opsiyonel)</label>
+                        <div class="grid">
+                            <select class="clue-media-type">
+                                <option value="">Medya yok</option>
+                                <option value="image">Resim</option>
+                                <option value="video">Video</option>
+                                <option value="audio">Ses</option>
+                            </select>
+                            <div style="display: flex; gap: 8px;">
+                                <input type="file" class="clue-media-file" accept="image/*,video/*,audio/*" style="display: none;">
+                                <input type="text" class="clue-media-path" placeholder="Medya dosyası yolu (assets/media/dosya.jpg)" readonly>
+                                <button type="button" class="btn" onclick="selectMediaFile(this)" style="padding: 8px 12px; min-width: auto;">📁 Seç</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-text" id="preview-${clueIndex}">Cevap önizlemesi burada görünecek</div>
+                    
+                    <div style="margin-top: 1rem;">
+                        <button type="button" class="btn btn-danger" onclick="removeClue(this)">🗑️ Sil</button>
+                    </div>
+                </div>
+            `;
+            
+            container.insertAdjacentHTML('beforeend', clueHtml);
+            
+            // Event listener ekle
+            const newClue = container.lastElementChild;
+            const answerInput = newClue.querySelector('.clue-answer');
+            const visibleInput = newClue.querySelector('.clue-visible');
+            
+            function updatePreview() {
+                const answer = answerInput.value;
+                const visible = parseInt(visibleInput.value) || 1;
+                const preview = maskAnswer(answer, visible);
+                newClue.querySelector('.preview-text').textContent = preview || 'Cevap önizlemesi burada görünecek';
+            }
+            
+            answerInput.addEventListener('input', updatePreview);
+            visibleInput.addEventListener('input', updatePreview);
+        }
+        
+        // Cevabı maskele (önizleme için)
+        function maskAnswer(answer, visibleCount) {
+            if (!answer) return '';
+            
+            const chars = answer.split('');
+            let shownCount = 0;
+            
+            for (let i = 0; i < chars.length && shownCount < visibleCount; i++) {
+                if (chars[i] !== ' ') {
+                    shownCount++;
+                }
+            }
+            
+            let currentCount = 0;
+            for (let i = 0; i < chars.length; i++) {
+                if (chars[i] !== ' ') {
+                    currentCount++;
+                    if (currentCount > visibleCount) {
+                        chars[i] = '_';
+                    }
+                }
+            }
+            
+            return chars.join('');
+        }
+        
+        // Clue silme
+        function removeClue(button) {
+            button.closest('.clue-item').remove();
+            updateClueNumbers();
+        }
+        
+        // Clue numaralarını güncelle
+        function updateClueNumbers() {
+            document.querySelectorAll('.clue-item').forEach((item, index) => {
+                item.querySelector('h4').textContent = `Soru ${index + 1}`;
+            });
+        }
+        
+        // Alert gösterme
+        function showAlert(message, type) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.textContent = message;
+            
+            const container = document.querySelector('.container');
+            container.insertBefore(alertDiv, container.firstChild);
+            
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 5000);
+        }
+        
+        // Veri dışa aktarma
+        function exportData() {
+            const dataStr = JSON.stringify(currentData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(dataBlob);
+            link.download = `cengel-bulmaca-${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+        }
+        
+        // Veri içe aktarma
+        function importData() {
+            const fileInput = document.getElementById('import-file');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                showAlert('Lütfen bir dosya seçin!', 'error');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    
+                    if (importedData.topics && Array.isArray(importedData.topics)) {
+                        currentData = importedData;
+                        saveData();
+                        refreshTopicsList();
+                        refreshPuzzleTopics();
+                        showAlert('Veriler başarıyla içe aktarıldı!', 'success');
+                    } else {
+                        showAlert('Geçersiz JSON formatı!', 'error');
+                    }
+                } catch (error) {
+                    showAlert('JSON dosyası okunamadı: ' + error.message, 'error');
+                }
+            };
+            
+            reader.readAsText(file);
+        }
+        
+        // Oyuna aktarma (mock - gerçekte file system erişimi gerekir)
+        function exportToGame() {
+            const dataStr = JSON.stringify(currentData, null, 2);
+            
+            // Tarayıcıda gerçek dosya yazma mümkün değil, bu yüzden indirme yapıyoruz
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(dataBlob);
+            link.download = 'topics.json';
+            link.click();
+            
+            showAlert('topics.json dosyası indirildi. Bu dosyayı assets/data/ klasörüne manuel olarak kopyalayın.', 'success');
+        }
+        
+        // Konu silme
+        function deleteTopic(topicId) {
+            if (confirm('Bu konuyu ve tüm bulmacalarını silmek istediğinizden emin misiniz?')) {
+                currentData.topics = currentData.topics.filter(t => t.id !== topicId);
+                saveData();
+                refreshTopicsList();
+                refreshPuzzleTopics();
+                showAlert('Konu başarıyla silindi!', 'success');
+            }
+        }
+        
+        // Konu düzenleme (basit implementasyon)
+        function editTopic(topicId) {
+            const topic = currentData.topics.find(t => t.id === topicId);
+            if (topic) {
+                const newName = prompt('Yeni konu adı:', topic.name);
+                const newDescription = prompt('Yeni açıklama:', topic.description);
+                
+                if (newName && newDescription) {
+                    topic.name = newName;
+                    topic.description = newDescription;
+                    saveData();
+                    refreshTopicsList();
+                    refreshPuzzleTopics();
+                    showAlert('Konu başarıyla güncellendi!', 'success');
+                }
+            }
+        }
+        
+        // Demo veri yükleme
+        function loadDemoData() {
+            const demoData = {
+                topics: [
+                    {
+                        id: 'edebiyat',
+                        name: 'Türk Edebiyatı',
+                        description: 'Türk edebiyatından ünlü eserler ve yazarlar',
+                        puzzleSets: [
+                            {
+                                id: 'nazim_hikmet',
+                                title: 'Nazım Hikmet - Orta',
+                                difficulty: 2,
+                                description: 'Nazım Hikmet ile ilgili sorular',
+                                clues: [
+                                    {
+                                        id: 'nh_1',
+                                        question: 'Nazım Hikmet\'in Bursa Cezaevi\'nde yazdığı ünlü eseri',
+                                        answer: 'MEMLEKETIMDEN INSAN MANZARALARI',
+                                        visibleLetterCount: 3
+                                    },
+                                    {
+                                        id: 'nh_2',
+                                        question: 'Nazım Hikmet\'in doğum yeri',
+                                        answer: 'SELANIK',
+                                        visibleLetterCount: 2
+                                    }
+                                ]
+                            },
+                            {
+                                id: 'yasar_kemal',
+                                title: 'Yaşar Kemal - Kolay',
+                                difficulty: 1,
+                                description: 'Yaşar Kemal ile ilgili sorular',
+                                clues: [
+                                    {
+                                        id: 'yk_1',
+                                        question: 'Yaşar Kemal\'in en ünlü romanı',
+                                        answer: 'INCE MEMED',
+                                        visibleLetterCount: 3
+                                    },
+                                    {
+                                        id: 'yk_2',
+                                        question: 'Yaşar Kemal\'in doğum yeri',
+                                        answer: 'ADANA',
+                                        visibleLetterCount: 2
+                                    }
+                                ]
+                            },
+                            {
+                                id: 'orhan_pamuk',
+                                title: 'Orhan Pamuk - Zor',
+                                difficulty: 3,
+                                description: 'Orhan Pamuk ile ilgili sorular',
+                                clues: [
+                                    {
+                                        id: 'op_1',
+                                        question: 'Orhan Pamuk\'un Nobel aldığı romanı',
+                                        answer: 'KIRMIZI',
+                                        visibleLetterCount: 1
+                                    },
+                                    {
+                                        id: 'op_2',
+                                        question: 'Orhan Pamuk\'un İstanbul romanı',
+                                        answer: 'ISTANBUL HATIRALAR VE SEHIR',
+                                        visibleLetterCount: 2
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                lastUpdated: new Date().toISOString()
+            };
+            
+            currentData = demoData;
+            saveData();
+            refreshTopicsList();
+            refreshPuzzleTopics();
+            showAlert('Demo veriler başarıyla yüklendi!', 'success');
+        }
+        
+        // Tüm veriyi silme
+        function clearAllData() {
+            if (confirm('Tüm verileri silmek istediğinizden emin misiniz? Bu işlem geri alınamaz!')) {
+                currentData = { topics: [], lastUpdated: new Date().toISOString() };
+                saveData();
+                refreshTopicsList();
+                refreshPuzzleTopics();
+                showAlert('Tüm veriler silindi!', 'success');
+            }
+        }
+        
+        // Medya dosyası seçici
+        function selectMediaFile(button) {
+            const clueItem = button.closest('.clue-item');
+            const fileInput = clueItem.querySelector('.clue-media-file');
+            const pathInput = clueItem.querySelector('.clue-media-path');
+            const typeSelect = clueItem.querySelector('.clue-media-type');
+            
+            fileInput.onchange = function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    // Dosya türüne göre medya tipini otomatik ayarla
+                    if (file.type.startsWith('image/')) {
+                        typeSelect.value = 'image';
+                    } else if (file.type.startsWith('video/')) {
+                        typeSelect.value = 'video';
+                    } else if (file.type.startsWith('audio/')) {
+                        typeSelect.value = 'audio';
+                    }
+                    
+                    // Önerilen dosya yolunu göster
+                    const extension = file.name.split('.').pop();
+                    const baseName = file.name.replace(`.${extension}`, '').toLowerCase().replace(/[^a-z0-9]/g, '_');
+                    pathInput.value = `assets/media/${baseName}.${extension}`;
+                    
+                    showAlert(`Dosya seçildi: ${file.name}. Dosyayı assets/media/ klasörüne "${baseName}.${extension}" olarak kopyalayın.`, 'success');
+                }
+            };
+            
+            fileInput.click();
+        }
+        
+        // Yeni soru ekleme form event listener'ı
+        document.getElementById('question-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const topicId = document.getElementById('selected-topic').value;
+            const questionText = document.getElementById('question-text').value.trim();
+            const questionAnswer = document.getElementById('question-answer').value.trim().toUpperCase();
+            const difficulty = parseInt(document.getElementById('question-difficulty').value);
+            const visibleLetters = parseInt(document.getElementById('visible-letters').value);
+            const mediaType = document.getElementById('media-type').value;
+            const mediaPath = document.getElementById('media-path').value.trim();
+            
+            if (!topicId || !questionText || !questionAnswer) {
+                showAlert('Lütfen konu seçin ve soru/cevap alanlarını doldurun!', 'error');
+                return;
+            }
+            
+            const topic = currentData.topics.find(t => t.id === topicId);
+            if (!topic) return;
+            
+            // Yeni soru objesi
+            const newQuestion = {
+                id: generateId(questionText) + '_' + Date.now(),
+                question: questionText,
+                answer: questionAnswer,
+                visibleLetterCount: visibleLetters,
+                mediaPath: mediaPath || null,
+                mediaType: mediaType || null
+            };
+            
+            // Bu zorluk seviyesi için puzzle set var mı kontrol et
+            let puzzleSet = topic.puzzleSets.find(set => set.difficulty === difficulty);
+            
+            if (!puzzleSet) {
+                // Yeni puzzle set oluştur
+                puzzleSet = {
+                    id: `${topicId}_difficulty_${difficulty}_${Date.now()}`,
+                    title: `${topic.name} - Zorluk ${difficulty}`,
+                    difficulty: difficulty,
+                    description: `Zorluk seviyesi ${difficulty} soruları`,
+                    clues: []
+                };
+                topic.puzzleSets.push(puzzleSet);
+            }
+            
+            // Soruyu puzzle set'e ekle
+            puzzleSet.clues.push(newQuestion);
+            
+            // Veriyi kaydet
+            saveData();
+            
+            // Formu temizle
+            this.reset();
+            document.getElementById('question-difficulty').value = '2';
+            document.getElementById('visible-letters').value = '2';
+            updateAnswerPreview();
+            
+            // Soruları yenile
+            loadTopicQuestions();
+            
+            showAlert('Soru başarıyla eklendi!', 'success');
+        });
+        
+        // Cevap önizlemesi güncelle
+        function updateAnswerPreview() {
+            const answer = document.getElementById('question-answer').value.trim().toUpperCase();
+            const visibleCount = parseInt(document.getElementById('visible-letters').value) || 1;
+            const previewDiv = document.getElementById('answer-preview');
+            
+            if (!answer) {
+                previewDiv.textContent = 'Cevap yazıldığında önizleme burada görünecek';
+                return;
+            }
+            
+            // Basit maskeleme algoritması (demo amaçlı)
+            const chars = answer.split('');
+            const letterPositions = [];
+            
+            // Harf pozisyonlarını bul
+            for (let i = 0; i < chars.length; i++) {
+                if (chars[i] !== ' ') {
+                    letterPositions.add(i);
+                }
+            }
+            
+            // İlk birkaç harfi göster
+            const showCount = Math.min(visibleCount, letterPositions.length);
+            const masked = chars.map((char, index) => {
+                if (char === ' ') return ' ';
+                if (letterPositions.indexOf(index) < showCount) return char;
+                return '_';
+            });
+            
+            previewDiv.textContent = masked.join(' ');
+        }
+        
+        // Cevap alanı değiştiğinde önizlemeyi güncelle
+        document.getElementById('question-answer').addEventListener('input', updateAnswerPreview);
+        document.getElementById('visible-letters').addEventListener('input', updateAnswerPreview);
+        
+        // Soru düzenleme (basit)
+        function editQuestion(questionId) {
+            // Bu özellik şimdilik basit bir prompt ile
+            const newQuestion = prompt('Yeni soru metni:');
+            if (newQuestion) {
+                // Soruyu bul ve güncelle
+                for (let topic of currentData.topics) {
+                    for (let set of topic.puzzleSets) {
+                        const question = set.clues.find(q => q.id === questionId);
+                        if (question) {
+                            question.question = newQuestion;
+                            saveData();
+                            loadTopicQuestions();
+                            showAlert('Soru güncellendi!', 'success');
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Soru silme
+        function deleteQuestion(questionId) {
+            if (confirm('Bu soruyu silmek istediğinizden emin misiniz?')) {
+                // Soruyu bul ve sil
+                for (let topic of currentData.topics) {
+                    for (let set of topic.puzzleSets) {
+                        const index = set.clues.findIndex(q => q.id === questionId);
+                        if (index !== -1) {
+                            set.clues.splice(index, 1);
+                            
+                            // Eğer puzzle set boş kaldıysa onu da sil
+                            if (set.clues.length === 0) {
+                                const setIndex = topic.puzzleSets.indexOf(set);
+                                topic.puzzleSets.splice(setIndex, 1);
+                            }
+                            
+                            saveData();
+                            loadTopicQuestions();
+                            showAlert('Soru silindi!', 'success');
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Sayfa yüklendiğinde önizlemeyi güncelle
+        setTimeout(() => {
+            updateAnswerPreview();
+        }, 500);
+    </script>
+</body>
+</html>

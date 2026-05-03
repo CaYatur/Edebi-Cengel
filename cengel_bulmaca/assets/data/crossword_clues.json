@@ -1,0 +1,2215 @@
+{
+  "version": "2.0",
+  "description": "Kategorilere ayrılmış çengel bulmaca verileri - dinamik oluşturma için",
+  "categories": [
+    {
+      "id": "islamiyet_oncesi",
+      "name": "İSLAMİYET ÖNCESİ",
+      "clues": [
+        {
+          "id": "islamiyet_oncesi_1",
+          "question": "732 yılında Bilge Kağan tarafından dikilen Göktürk yazıtı",
+          "answer": "KÜLTİGİN",
+          "difficulty": 1
+        },
+        {
+          "id": "islamiyet_oncesi_2",
+          "question": "Orhun Abideleri ..... alfabesi ile yazılmıştır",
+          "answer": "GÖKTÜRK",
+          "difficulty": 1
+        },
+        {
+          "id": "islamiyet_oncesi_3",
+          "question": "Uygurlar döneminde Göktürk alfabesi ile yazılan fal kitabı",
+          "answer": "IRKBİTİG",
+          "difficulty": 3
+        },
+        {
+          "id": "islamiyet_oncesi_4",
+          "question": "Günümüzde Göktürk Yazıtlarının bulunduğu ülke",
+          "answer": "MOĞOLİSTAN",
+          "difficulty": 1
+        },
+        {
+          "id": "islamiyet_oncesi_5",
+          "question": "Çinceden çevrilen Budizm’e ait bilgilerin yer aldığı Uygurlar dönemi eseri",
+          "answer": "SEKİZYÜKMEK",
+          "difficulty": 3
+        },
+        {
+          "id": "islamiyet_oncesi_6",
+          "question": "Uygurlar döneminde Çinceden çevrilen Budizm’in esaslarını felsefesini ve Buda’nın menkıbelerini anlatan hikayelerin yer aldığı eser",
+          "answer": "ALTUNYARUK",
+          "difficulty": 3
+        },
+        {
+          "id": "islamiyet_oncesi_7",
+          "question": "Bilge Kağan yazıtının batı yüzü ……diliyle yazılmıştır",
+          "answer": "ÇİNCE",
+          "difficulty": 1
+        },
+        {
+          "id": "islamiyet_oncesi_8",
+          "question": "Göktürk Yazıtları’ndan ilk bahseden İlhanlı tarihçesi",
+          "answer": "CÜVEYNİ",
+          "difficulty": 3
+        },
+        {
+          "id": "islamiyet_oncesi_9",
+          "question": "Kül Tigin ve Bilge Kağan Kitabelerinin yazarı",
+          "answer": "YOLLUĞTİGİN",
+          "difficulty": 3
+        },
+        {
+          "id": "islamiyet_oncesi_10",
+          "question": "Göktürk Yazıtları’ndaki yazıyı ilk defa çözen Danimarkalı bilim adamı",
+          "answer": "THOMSEN",
+          "difficulty": 3
+        },
+        {
+          "id": "islamiyet_oncesi_11",
+          "question": "Türkler Göktürk alfabesinden sonra.... alfabesini kullanmışlardır",
+          "answer": "UYGUR",
+          "difficulty": 1
+        },
+        {
+          "id": "islamiyet_oncesi_12",
+          "question": "İlk Türk şairi",
+          "answer": "APRINÇORTİGİN",
+          "difficulty": 3
+        },
+        {
+          "id": "islamiyet_oncesi_13",
+          "question": "Göktürk Yazıtları’ndan üçüncüsüdür 735 yılında dikilmiştir .... Anıtı",
+          "answer": "BİLGEKAĞAN",
+          "difficulty": 1
+        },
+        {
+          "id": "islamiyet_oncesi_14",
+          "question": "725 yılında kendi adına anıt diktiren Türk veziri",
+          "answer": "TONYUKUK",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "ilk_islami_eserler",
+      "name": "İLK İSLAMİ ESERLER",
+      "clues": [
+        {
+          "id": "ilk_islami_eserler_1",
+          "question": "Kutadgu Bilig Türk edebiyatındaki ilk …..dir",
+          "answer": "MESNEVİ",
+          "difficulty": 3
+        },
+        {
+          "id": "ilk_islami_eserler_2",
+          "question": "Kutadgu Bilig’de aklı temsil eden karakter",
+          "answer": "ÖGDÜLMİŞ",
+          "difficulty": 3
+        },
+        {
+          "id": "ilk_islami_eserler_3",
+          "question": "Divanı Lügat-it Türk’ün dünyadaki tek nüshası İstanbul .... Kütüphanesi’ndedir",
+          "answer": "MİLLET",
+          "difficulty": 3
+        },
+        {
+          "id": "ilk_islami_eserler_4",
+          "question": "Yusuf Has Hacip‘in eseri",
+          "answer": "KUTADGUBİLİG",
+          "difficulty": 1
+        },
+        {
+          "id": "ilk_islami_eserler_5",
+          "question": "Hoca Ahmet Yesevî’nin eseri",
+          "answer": "DİVANIHİKMET",
+          "difficulty": 1
+        },
+        {
+          "id": "ilk_islami_eserler_6",
+          "question": "Ahmet Yesevi .... tarikatının kurucusudur",
+          "answer": "YESEVİLİK",
+          "difficulty": 1
+        },
+        {
+          "id": "ilk_islami_eserler_7",
+          "question": "Divanı Lügat-it Türk’ün yazarı",
+          "answer": "KAŞGARLIMAHMUT",
+          "difficulty": 1
+        },
+        {
+          "id": "ilk_islami_eserler_8",
+          "question": "12. yüzyılın ikinci yarısında Harezmi Türkçesi ile yazılan Muhakemet’ül Edep adlı eserin yazarı",
+          "answer": "ZEMAHŞER",
+          "difficulty": 3
+        },
+        {
+          "id": "ilk_islami_eserler_9",
+          "question": "Atabetü’l Hakayık‘ın yazarı",
+          "answer": "EDİPAHMET",
+          "difficulty": 1
+        },
+        {
+          "id": "ilk_islami_eserler_10",
+          "question": "Kutadgu Bilig Türk edebiyatında.... ölçüsüyle yazılan ilk eserdir",
+          "answer": "ARUZ",
+          "difficulty": 1
+        },
+        {
+          "id": "ilk_islami_eserler_11",
+          "question": "Divanı Lügat-it Türk’le ilgili İlk çalışmayı Kilisli ... yapmıştır",
+          "answer": "RIFATBİLGE",
+          "difficulty": 3
+        },
+        {
+          "id": "ilk_islami_eserler_12",
+          "question": "Divanı Lügat-it Türk’te Türkçe kelimelerin ve örneklerin anlamları ... olarak verilmiştir",
+          "answer": "ARAPÇA",
+          "difficulty": 1
+        },
+        {
+          "id": "ilk_islami_eserler_13",
+          "question": "Kutadgu Bilig’de adaleti temsil eden hükümdar",
+          "answer": "KÜNTOGDI",
+          "difficulty": 3
+        },
+        {
+          "id": "ilk_islami_eserler_14",
+          "question": "Kutadgu Bilig’in nazım şekli",
+          "answer": "MESNEVİ",
+          "difficulty": 1
+        },
+        {
+          "id": "ilk_islami_eserler_15",
+          "question": "Kutadgu Bilig’in nazım birimi",
+          "answer": "BEYİT",
+          "difficulty": 1
+        },
+        {
+          "id": "ilk_islami_eserler_16",
+          "question": "Kutadgu Bilig’de kelime anlamı dolunay olan mutluluğu temsil eden vezir",
+          "answer": "AYTOLDI",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "13_14_yuz_yil",
+      "name": "13-14. YÜZ YIL",
+      "clues": [
+        {
+          "id": "13_14_yuz_yil_1",
+          "question": "Mevlana’nın eserlerinden biri",
+          "answer": "DİVANIKEBİR",
+          "difficulty": 3
+        },
+        {
+          "id": "13_14_yuz_yil_2",
+          "question": "Azerbaycan şivesi ile gazel ve duyular yazan hurufi olduğu için Halep’te derisi yüzülerek öldürülen 14. yüzyıl divan şairi",
+          "answer": "NESİMİ",
+          "difficulty": 3
+        },
+        {
+          "id": "13_14_yuz_yil_3",
+          "question": "14. yüzyıl şairi Hoca Mesut’un mesnevisi Süheyl ü .....",
+          "answer": "NEVBAHAR",
+          "difficulty": 3
+        },
+        {
+          "id": "13_14_yuz_yil_4",
+          "question": "14. yüzyılda yaşayan Ahmedi’nin yazdığı bir mesnevi",
+          "answer": "İSKENDERNAME",
+          "difficulty": 1
+        },
+        {
+          "id": "13_14_yuz_yil_5",
+          "question": "13. yüzyılda yaşayan Yusuf’un Züleyha adlı mesnevi si bulunan şair Şeyyad ....",
+          "answer": "HAMZA",
+          "difficulty": 3
+        },
+        {
+          "id": "13_14_yuz_yil_6",
+          "question": "Ahiliğin özelliklerini taşıyan insanlara toplumda nasıl davranmaları gerektiğini açıklayan dinî ahlaki nitelikteki öğüt kitabı",
+          "answer": "FÜTÜVVETNAME",
+          "difficulty": 3
+        },
+        {
+          "id": "13_14_yuz_yil_7",
+          "question": "Yunus Emre’nin mesnevi nazım şekliyle ve aruz ölçüsüyle yazdığı eserin adı",
+          "answer": "RİSALETÜNNUSHİYE",
+          "difficulty": 1
+        },
+        {
+          "id": "13_14_yuz_yil_8",
+          "question": "Mevlana’nın yedi vaazının bir araya getirilmesiyle oluşturulan eseri",
+          "answer": "MECALİSİSEBA",
+          "difficulty": 3
+        },
+        {
+          "id": "13_14_yuz_yil_9",
+          "question": "Tasavvufta insan nefsinin dünya nimetlerinden arınmış hali, olgun insan",
+          "answer": "İNSANIKAMİL",
+          "difficulty": 1
+        },
+        {
+          "id": "13_14_yuz_yil_10",
+          "question": "13. yüzyıl Anadolu’da yaşayan bir halk bilgisi olup Türk folklorunun en önemli fıkra kahramanıdır",
+          "answer": "NASRETTİNHOCA",
+          "difficulty": 1
+        },
+        {
+          "id": "13_14_yuz_yil_11",
+          "question": "Mevlana’nın oğlu olan ve eserlerinden biri İbtidaname adını taşıyan tasavvuf şairi",
+          "answer": "SULTANVELED",
+          "difficulty": 1
+        },
+        {
+          "id": "13_14_yuz_yil_12",
+          "question": "Gülşehri’nin kuşdili anlamına gelen didaktik tasavvufi alegorik mesnevisi",
+          "answer": "MANTIKUTTAYR",
+          "difficulty": 1
+        },
+        {
+          "id": "13_14_yuz_yil_13",
+          "question": "Bayramilik tarikatının kurucusu olan mutasavvıf şair",
+          "answer": "HACIBAYRAMVELİ",
+          "difficulty": 1
+        },
+        {
+          "id": "13_14_yuz_yil_14",
+          "question": "Oğuz Türklerinin düşmanları ve kendi aralarındaki mücadelesini anlatan destansı hikayeler",
+          "answer": "DEDEKORKUT",
+          "difficulty": 1
+        },
+        {
+          "id": "13_14_yuz_yil_15",
+          "question": "14. yüzyılda yaşamış, hükümdarlık yapmış, tuyuğ nazım şeklini Divan edebiyatına getirmiş şairimiz",
+          "answer": "KADIBURHANEDDİN",
+          "difficulty": 3
+        },
+        {
+          "id": "13_14_yuz_yil_16",
+          "question": "14. yüzyılda yaşayan Beydeba’nın Kelile ve Dinme adlı eserini tercüme eden şair",
+          "answer": "KULMESUD",
+          "difficulty": 3
+        },
+        {
+          "id": "13_14_yuz_yil_17",
+          "question": "Divan edebiyatının ilk şairi",
+          "answer": "HOCADEHHANİ",
+          "difficulty": 3
+        },
+        {
+          "id": "13_14_yuz_yil_18",
+          "question": "Seyit Battal Gazi’nin kahramanı olduğu İslam sonrası Türk destanı",
+          "answer": "BATTALNAME",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "asik_tekke_edebiyati",
+      "name": "AŞIK-TEKKE EDEBİYATI",
+      "clues": [
+        {
+          "id": "asik_tekke_edebiyati_1",
+          "question": "Bektaşi geleneklerine bağlı toplumsal yergi içerikli şiirleri ve taşlamalarıyla tanınan 18. yüzyıl Bolulu halk ozanı",
+          "answer": "DERTLİ",
+          "difficulty": 3
+        },
+        {
+          "id": "asik_tekke_edebiyati_2",
+          "question": "Aşık edebiyatı nazım şekillerinden, sekizli hece ölçüsü ile söylenen bu nazım şeklinde behey bre hey gibi ünlemler kullanılır",
+          "answer": "VARSAĞI",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_3",
+          "question": "Kavganın ve özgürlüğün sembolü olan, destansı halk hikayesi de bulunan ozanımızın adı",
+          "answer": "KÖROĞLU",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_4",
+          "question": "Aşık edebiyatının en çok kullanılan nazım şekli",
+          "answer": "KOŞMA",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_5",
+          "question": "Genellikle yedili hece ölçüsü ile söylenen bu nazım şeklinde aaxa uyakları görülür asıl söylenmek istenen genellikle son iki dizededir",
+          "answer": "MANİ",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_6",
+          "question": "Çukurova’da yaşamış aşk bir gurbet temalarını samimi bir dille işleyen saz şiirlerinin en ünlü şairidir",
+          "answer": "KARACAOĞLAN",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_7",
+          "question": "Divan edebiyatında da halk edebiyatında görülen bazı kavramları ifade etmek için kullanılan kalıplaşmış sözler",
+          "answer": "MAZMUN",
+          "difficulty": 3
+        },
+        {
+          "id": "asik_tekke_edebiyati_8",
+          "question": "19. yüzyılda yaşamış lirik bir saz şairimiz Sivas’ın Kangal ilçesi Deliklitaş bucağında doğmuştur.",
+          "answer": "RUHSATİ",
+          "difficulty": 3
+        },
+        {
+          "id": "asik_tekke_edebiyati_9",
+          "question": "Kaygusuz Abdal’ın tasavvufi konuları işlediği nesir eseri",
+          "answer": "BUDALANAME",
+          "difficulty": 3
+        },
+        {
+          "id": "asik_tekke_edebiyati_10",
+          "question": "Tekke edebiyatında pirlerin ve mürşitlerin tarikata yeni giren müritleri bilgilendirmek amacıyla söyledikleri didaktik şiirler",
+          "answer": "NUTUK",
+          "difficulty": 3
+        },
+        {
+          "id": "asik_tekke_edebiyati_11",
+          "question": "Aşık edebiyatında aşk, doğa güzelliği temalarını işleyen koşma türü",
+          "answer": "GÜZELLEME",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_12",
+          "question": "Halk edebiyatının nazım birimi",
+          "answer": "DÖRTLÜK",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_13",
+          "question": "Avşar Türklerinden özlü ve içli bir dille yiğitçe söyleşi bir arada kullanan ozanımız",
+          "answer": "DADALOĞLU",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_14",
+          "question": "13. yüzyılda yaşamış mutasavvıf bir şair Ahmet Yesevi’den ders almış, Anadolu’ya gelmiş, Makalat adlı eseri yazmış",
+          "answer": "HACIBEKTAŞVELİ",
+          "difficulty": 3
+        },
+        {
+          "id": "asik_tekke_edebiyati_15",
+          "question": "19. yüzyıl halk şairlerimizden divan şiirine hakimiyeti ile tanınan bu Bayburtlu şairimiz koşma ve semaileri ile ünlüdür",
+          "answer": "ZİHNİ",
+          "difficulty": 3
+        },
+        {
+          "id": "asik_tekke_edebiyati_16",
+          "question": "Garipname adlı mesnevisinin şairi",
+          "answer": "AŞIKPAŞA",
+          "difficulty": 3
+        },
+        {
+          "id": "asik_tekke_edebiyati_17",
+          "question": "Dörtlük sayısı en fazla olan aşık edebiyatı nazım şekli",
+          "answer": "DESTAN",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_18",
+          "question": "Türkünün nakarat bölümü",
+          "answer": "KAVUŞTAK",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_19",
+          "question": "Nükteli ve iğneli bir üslubu var Alevi ve Bektaşi geleneğini sürdürür Sarayname, Minbername eserlerini yazmıştır",
+          "answer": "KAYGUSUZABDAL",
+          "difficulty": 3
+        },
+        {
+          "id": "asik_tekke_edebiyati_20",
+          "question": "Destandan halk hikayesine geçiş ürünü olan hikayeler",
+          "answer": "DEDEKORKUT",
+          "difficulty": 1
+        },
+        {
+          "id": "asik_tekke_edebiyati_21",
+          "question": "Şairname adlı eseri olan, saz şairleri içinde en çok şiir bırakan halk şairi",
+          "answer": "AŞIKÖMER",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "genel_1",
+      "name": "GENEL-1",
+      "clues": [
+        {
+          "id": "genel_1_1",
+          "question": "İnsanın Allah’tan gelip Allah’a döneceğini anlatan tekke edebiyatı nazım türü",
+          "answer": "DEVRİYE",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_1_2",
+          "question": "Yeniçeri ozanlarının en tanınmışıdır, Genç Osman Destanı onun en önemli eseridir",
+          "answer": "KAYIKÇIKULMUSTAFA",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_1_3",
+          "question": "Koşma hece ölçüsünün .... kalıbıyla söylenir",
+          "answer": "ONBİRLİ",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_4",
+          "question": "Türk edebiyatında ilk divan şairi",
+          "answer": "HOCADEHHANİ",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_1_5",
+          "question": "Türk edebiyatında ilk tarihi roman",
+          "answer": "CEZMİ",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_6",
+          "question": "Kaside de bir bölüm",
+          "answer": "METHİYE",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_1_7",
+          "question": "Orhan Kemal’in bir romanı",
+          "answer": "MURTAZA",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_1_8",
+          "question": "Romantizme tepki olarak doğan şiir akımı",
+          "answer": "REALİZM",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_9",
+          "question": "Evliya Çelebi’nin ünlü eseri",
+          "answer": "SEYAHATNAME",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_10",
+          "question": "Savaş ve Barış, Anna Karanina gibi romanları ile ün yapmış Rus yazarı",
+          "answer": "TOLSTOY",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_11",
+          "question": "16. yüzyılda yaşamış şairlerin sultanı olarak bilinen divan şairi",
+          "answer": "BAKİ",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_12",
+          "question": "Savaş, yiğitlik, kahramanlık, vatan sevgisi gibi konuları coşkulu bir şekilde anlatan halk şiiri türü",
+          "answer": "KOÇAKLAMA",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_13",
+          "question": "Divan şiirinde tuyuğa benzer bir nazım şekli",
+          "answer": "RUBAİ",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_14",
+          "question": "Nedim’in en çok şiir yazdığı nazım biçimi",
+          "answer": "ŞARKI",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_15",
+          "question": "Âşık edebiyatı nazım biçimidir, hecenin sekizli kalıbı ile yazılır, sevgi doğa güzelliği konuları işlenir",
+          "answer": "SEMAİ",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_1_16",
+          "question": "Hint ulusuna ait doğal destan",
+          "answer": "RAMAYANA",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_1_17",
+          "question": "Ziya Paşa’nın Divan edebiyatı geleneğini eleştirdiği makalesi",
+          "answer": "ŞİİRVEİNŞA",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "genel_2",
+      "name": "GENEL-2",
+      "clues": [
+        {
+          "id": "genel_2_1",
+          "question": "Bir Tanzimat şairimiz",
+          "answer": "NAMIKKEMAL",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_2_2",
+          "question": "Halk edebiyatındaki taşlamanın divan edebiyatındaki karşılığı",
+          "answer": "HİCİV",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_2_3",
+          "question": "Hiciv edebiyatımızın en büyük şairi, Siham-ı Kaza adlı eserin yazarıdır",
+          "answer": "NEFİ",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_4",
+          "question": "Olay hikayesinin dünya edebiyatındaki en büyük temsilcisi",
+          "answer": "MAUPASSANT",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_5",
+          "question": "Biyografi türü ile benzerlik gösteren eserlere Divan edebiyatında verilen isim",
+          "answer": "TEZKİRE",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_6",
+          "question": "Yakup Kadri’nin bir romanı, romanda üç ayrı kuşak arasındaki görüş ve yaşayış farkları anlatılır, Naim Efendi, Sekine Hanım, Sermet Bey başlıca kişilerdir",
+          "answer": "KİRALIKKONAK",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_7",
+          "question": "Anonim halk edebiyatı nazım şekli yedili hece vezni ile söylenir",
+          "answer": "MANİ",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_2_8",
+          "question": "Klasisizme tepki olarak doğan akım",
+          "answer": "ROMANTİZM",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_2_9",
+          "question": "Şeyh Galip'in yazdığı tasavvufi mesnevi.",
+          "answer": "HÜSNÜAŞK",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_10",
+          "question": "Gülşehri'nin \"Kuş Dili\" anlamına gelen tasavvufi, didaktik, alegorik mesnevisinin adı",
+          "answer": "MANTIKUTTAYR",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_11",
+          "question": "Divan edebiyatında tuyuglarıyla tanınan şair",
+          "answer": "KADIBURHANETTİN",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_12",
+          "question": "Gazel veya kasidenin son beyti",
+          "answer": "MAKTA",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_13",
+          "question": "19. yüzyılda Nedim'in yolundan giden, mahallileşme akımının bu yüzyıldaki temsilcisi olan divan şairi",
+          "answer": "ENDERUNLUVASIF",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_14",
+          "question": "Divan şairlerinin şiirlerinde kullandığı takma ad",
+          "answer": "MAHLAS",
+          "difficulty": 3
+        },
+        {
+          "id": "genel_2_15",
+          "question": "Şeyhi'nin, 126 beyitlik sembolik, alegorik mesnevisidir.",
+          "answer": "HARNAME",
+          "difficulty": 1
+        },
+        {
+          "id": "genel_2_16",
+          "question": "Ali Şir Nevai'nin yazdığı, \"iki dilin karşılaştırılması\" anlamına gelen eseri.",
+          "answer": "MUHAKEMETÜLLÜGATEYN",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "divan_edebiyati_1",
+      "name": "DİVAN EDEBİYATI-1",
+      "clues": [
+        {
+          "id": "divan_edebiyati_1_1",
+          "question": "Divan edebiyatı nazım biçimi. Bu türün ilk ve en güzel örneklerini Nedim vermiştir.",
+          "answer": "ŞARKI",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_1_2",
+          "question": "Afyon ile şarabın karşılaştırılıp şarabın üstünlüğünün anlatıldığı eser Şah İsmail'e sunulmuştur.",
+          "answer": "BENGÜBADE",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_3",
+          "question": "16. yüzyılda yaşamış Şairler Sultanı olarak bilinen divan şairi",
+          "answer": "BAKİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_4",
+          "question": "Divan edebiyatı nesrinde uyak.",
+          "answer": "SECİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_5",
+          "question": "Hacı Bektaş-ı Veli'nin tasavvufi, dinî-ahlaki eserinin adı.",
+          "answer": "MAKALAT",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_6",
+          "question": "Sebk-i Hindi akımının 17. yüzyıldaki temsilcilerinden biri.",
+          "answer": "NEFİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_7",
+          "question": "Lale Devri’nde yaşamış, şarkının ilk örneklerini vermiş divan şairi",
+          "answer": "NEDİM",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_1_8",
+          "question": "Divan edebiyatında değişmeden kullanılan kalıplaşmış ifadelere …….. denir.",
+          "answer": "MAZMUN",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_9",
+          "question": "Baki'nin Kanuni Mersiyesi …….. nazım şekliyle yazılmıştır",
+          "answer": "KASİDE",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_1_10",
+          "question": "Kasidenin betimleme bölümü",
+          "answer": "TEŞBİB",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_11",
+          "question": "17. yüzyıl divan şairi Nabi ….. tarz gazelleriyle tanınır,",
+          "answer": "HİKEMİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_12",
+          "question": "Türk edebiyatında tek mensur hamse yazarıdır",
+          "answer": "NERGİSİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_13",
+          "question": "Nabi'nin, hac izlenimlerini anlattığı gezi türündeki eseri,",
+          "answer": "TUHFETÜLHARAMEYN",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_14",
+          "question": "İnsan ismi dışında herhangi bir nesne veya kavramın sorulduğu manzum bilmece",
+          "answer": "LÜGAZ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_15",
+          "question": "Fatih Sultan Mehmet'in şiirlerinde kullandığı mahlas",
+          "answer": "AVNİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_16",
+          "question": "Katip Çelebi'nin tarih türündeki eseri",
+          "answer": "FEZLEKE",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_17",
+          "question": "Divan edebiyatında Allah'ın birliğini, yüceliğini anlatan, Allah'ı öven şiirlere verilen isim.",
+          "answer": "TEVHİD",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_1_18",
+          "question": "Yurt dışına giden elçilerin gittikleri yerleri anlattıkları eserler",
+          "answer": "SEFARETNAME",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_19",
+          "question": "Şehzadelerin sünnet, evlenme; sultanların evlenme törenlerini anlatan eserler.",
+          "answer": "SURNAME",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_20",
+          "question": "Mektuplardan veya çeşitli konulardaki düz yazılardan oluşan eserler.",
+          "answer": "MÜNŞEAT",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_21",
+          "question": "Sultan Veledin bir mesnevisi",
+          "answer": "İBTİDANAME",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_1_22",
+          "question": "17. yüzyıl divan şairidir. Hikemi gazelleriyle tanınır.",
+          "answer": "NABİ",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_1_23",
+          "question": "Süleyman Çelebi'nin Vesiletü'n Necat adlı eserinin türü",
+          "answer": "MESNEVİ",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_1_24",
+          "question": "Bir şairin yazdığı beş mesneviden oluşan esere …… denir.",
+          "answer": "HAMSE",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_1_25",
+          "question": "Baki'nin çağdaşı olan lirik şiirleriyle bilinen mistik Türk şairi",
+          "answer": "FUZULİ",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "divan_edebiyati_2",
+      "name": "DİVAN EDEBİYATI-2",
+      "clues": [
+        {
+          "id": "divan_edebiyati_2_1",
+          "question": "Anadolu tasavvuf edebiyatının önemli bir kişiliğidir. Belhli olan ……… Moğol istilası üzerine Anadolu'ya göç ederek Konya'ya yerleşmiştir. Eserlerini Farsça yazmıştır.",
+          "answer": "MEVLANA",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_2",
+          "question": "Gazel ya da kasidenin ilk beyti",
+          "answer": "MATLA",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_3",
+          "question": "Bir şairin, başka bir şairin şiirine aynı ölçü, redif ve kafiyeyle yazdığı şiire denir",
+          "answer": "NAZİRE",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_4",
+          "question": "Bir şehrin güzelliklerinin betimlendiği, övüldüğü şiirler.",
+          "answer": "ŞEHRENGİZ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_5",
+          "question": "Divan edebiyatının lirik şairi. Aşk ve ıstırap şairi olan …….. 16. yüzyılda Bağdat civarında yaşamıştır.",
+          "answer": "FUZULİ",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_6",
+          "question": "Harname adlı mesnevinin yazarı",
+          "answer": "ŞEYHİ",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_7",
+          "question": "1631 yılında kaleme aldığı ve IV. Murat'a sunduğu kendi adıyla anılan ( …….. Risalesi) raporları ile tanınmıştır.",
+          "answer": "KOÇİBEY",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_8",
+          "question": "Risaletü'n Nushiye adlı eserin yazarı",
+          "answer": "YUNUSEMRE",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_9",
+          "question": "Bir kimseyi yermek, eleştirmek amacıyla yazılan şiirler.",
+          "answer": "HİCVİYE",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_10",
+          "question": "Azeri ağzıyla gazel ve tuyuğlar yazan, Hurufi olduğu için Halep'te derisi yüzülerek öldürülen 14. yüzyıl Divan şairi",
+          "answer": "NESİMİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_11",
+          "question": "Bir gazelin her beytinin başına üç dize eklenerek oluşturulan nazım şekli.",
+          "answer": "TAHMİS",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_12",
+          "question": "Şarkının üçüncü dizesine ……….. adı verilir.",
+          "answer": "MİYAN",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_13",
+          "question": "İran edebiyatında doğan, sonra Türk edebiyatına geçen, en büyük şairi Ömer Hayyam olan divan edebiyatı nazım biçimi",
+          "answer": "RUBAİ",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_14",
+          "question": "Hüsn ü Aşk adlı tasavvufi mesnevisi olan şair",
+          "answer": "ŞEYHGALİP",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_15",
+          "question": "Osmanlı tarihçisi, ilk Osmanlı vakanüvisi olan ……..’nın kendi adıyla anılan tarih kitabı",
+          "answer": "NAİMA",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_16",
+          "question": "14. yüzyıl sanatçısı Aşık Paşa'nın mesnevisi",
+          "answer": "GARİBNAME",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_17",
+          "question": "Kul Mesud'un yazdığı çeviri eser",
+          "answer": "KELİLEVEDİMNE",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_18",
+          "question": "Ahiliğin özelliklerini taşıyan, insanlara toplumda nasıl davranmaları gerektiğini açıklayan dinî- ahlaki nitelikli öğüt kitaplarıdır",
+          "answer": "FÜTÜVVETNAME",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_19",
+          "question": "Alay ve şaka yollu yazılmış nazirelere verilen ad.",
+          "answer": "TEHZİL",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_20",
+          "question": "Biyografı türüyle benzerlik gösteren eserlere divan edebiyatında verilen isim",
+          "answer": "TEZKİRE",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_21",
+          "question": "15. yüzyılda Mercimek Ahmet'in sade nesirle yazdığı çeviri ese",
+          "answer": "KABUSNAME",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_22",
+          "question": "Rubai nazım şekli Türk edebiyatına ….. edebiyatından girmiştir.",
+          "answer": "İRAN",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_23",
+          "question": "Peygamberimizi öven şiirlere denir.",
+          "answer": "NAAT",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_24",
+          "question": "Katip Çelebi'nin coğrafya türündeki eseri.",
+          "answer": "CİHANNUMA",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_25",
+          "question": "Katip Çelebi'nin bibliyografya türündeki eseri",
+          "answer": "KEŞFÜZZÜNUN",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_26",
+          "question": "Sinan Paşa'nın süslü nesirle yazdığı eseri",
+          "answer": "TAZARRUNAME",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_27",
+          "question": "Evliya Çelebi'nin ünlü eseri",
+          "answer": "SEYAHATNAME",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_28",
+          "question": "16. yüzyılda yaşayan ……. asıl ününü 17 bentlik \"Terkib-i Bend\"i ile sağlamıştır.",
+          "answer": "BAĞDATLIRUHİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_29",
+          "question": "Basit Türkçe anlamına gelen, temsilcilerinden biri Edirneli Nazmi olan divan edebiyatında sade Türkçe ile şiir yazma girişimi",
+          "answer": "TÜRKİBASİT",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_30",
+          "question": "Süleyman Çelebi'nin yazdığı mevlidin asıl adı",
+          "answer": "VESİLETÜNNECAT",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_2_31",
+          "question": "Baki'nin terkib-i bent nazım şekliyle yazdığı ünlü mersiyesi",
+          "answer": "KANUNİ",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_2_32",
+          "question": "Mevlana'nın mesnevi nazım şekliyle yazdığı, tasavvufi hikayelerin yer aldığı eseri",
+          "answer": "MESNEVİ",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "divan_edebiyati_3",
+      "name": "DİVAN EDEBİYATI-3",
+      "clues": [
+        {
+          "id": "divan_edebiyati_3_1",
+          "question": "Divan edebiyatının son büyük şairi.",
+          "answer": "ŞEYHGALİP",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_2",
+          "question": "Kasidenin bölümlerinden biri.",
+          "answer": "FAHRİYE",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_3",
+          "question": "Kasidede yer alan gazel tarzı şiir",
+          "answer": "TEGAZZÜL",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_4",
+          "question": "Babür Şah'ın eseri",
+          "answer": "BABÜRNAME",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_5",
+          "question": "Yusuf u Züleyha mesnevisiyle tanınan 13. yüzyıl şairi",
+          "answer": "ŞEYYADHAMZA",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_6",
+          "question": "Divan şiirine İran edebiyatından geçen, uyak düzeni aaXa tek dörtlükten oluşan nazım şekli",
+          "answer": "RUBAİ",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_3_7",
+          "question": "Türki-i Basit akımının temsilcilerinden biri",
+          "answer": "EDİRNELİNAZMİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_8",
+          "question": "14.yüzyılda yaşayan Ahmedi'nin yazdığı bir mesnevi",
+          "answer": "İSKENDERNAME",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_9",
+          "question": "Kanuni Sultan Süleyman'ın şiirlerinde kullandığı mahlası",
+          "answer": "MUHİBBİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_10",
+          "question": "Matla ve makta beyiti olmayan gazele benzer. Genellikle iki beyitten oluşur. Uyak düzeni xa xa xa şeklindedir.",
+          "answer": "KITA",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_11",
+          "question": "Mevlana'nın şiirlerinin toplandığı eseri",
+          "answer": "DİVANIKEBİR",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_12",
+          "question": "Şarkının her bendin sonunda tekrarlanan dizesine denir",
+          "answer": "NAKARAT",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_3_13",
+          "question": "Mevlana'nın mektuplarının yer aldığı eser.",
+          "answer": "MEKTUBAT",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_3_14",
+          "question": "Peygamberimizin dış görünüşünü anlatan, ruhsal yapısını betimleyen eserler",
+          "answer": "HİLYE",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_15",
+          "question": "Şeyhi'nin mesnevisi",
+          "answer": "HARNAME",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_3_16",
+          "question": "17. yüzyıl divan şairi Nefi'nin hicivlerinin toplandığı eser",
+          "answer": "SİHAMIKAZA",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_17",
+          "question": "18. yüzyıl divan şairi Nedim …….. akımının divan edebiyatındaki en önemli temsilcisidir.",
+          "answer": "NEDİM",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_3_18",
+          "question": "Divan edebiyatına Türklerin kazandırdığı nazım şekillerinden biri.",
+          "answer": "TUYUĞ",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_3_19",
+          "question": "Habname adlı ünlü eseri olan ……… Divan edebiyatı süslü nesrinin temsilcilerindendir.",
+          "answer": "VEYSİ",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_20",
+          "question": "Fuzuli'nin Kerbela olayını anlattığı eseri",
+          "answer": "HADİKATÜSSUADA",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_21",
+          "question": "Fuzuli'nin mektup türündeki eseri",
+          "answer": "ŞİKAYETNAME",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_3_22",
+          "question": "0n beş beyitten az olmayan, bütün beyitlerin ikinci dizeleri en baştaki beyit ile uyaklı bulunan ve çoğu kez büyükleri övmek için yazılan Divan edebiyatı manzumesi.",
+          "answer": "KASİDE",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_3_23",
+          "question": "Harezm hükümdarı olan in Şecere-i Terakime ve Şecere-i Türk adlı iki eseri vardır.",
+          "answer": "EBULGAZİBAHADIRHAN",
+          "difficulty": 3
+        },
+        {
+          "id": "divan_edebiyati_3_24",
+          "question": "Ali Şir Nevai'nin yazdığı Türk edebiyatındaki ilk şairler tezkiresi",
+          "answer": "MECALİSÜNNEFAİS",
+          "difficulty": 1
+        },
+        {
+          "id": "divan_edebiyati_3_25",
+          "question": "15. yüzyıl Çağatay şairi, Türk edebiyatında ilk hamse sahibidir.",
+          "answer": "ALİŞİRNEVAİ",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "id": "tanzimat_edebiyati_1",
+      "name": "TANZİMAT EDEBİYATI-1",
+      "clues": [
+        {
+          "id": "tanzimat_edebiyati_1_1",
+          "question": "Ziya Paşa'nın bir makalesidir. Ziya Paşa bu makalede divan edebiyatını eleştirmiştir.",
+          "answer": "ŞİİRVEİNŞA",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_2",
+          "question": "Türk edebiyatında ilk tarihî roman,",
+          "answer": "CEZMİ",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_3",
+          "question": "Tanzimat edebiyatı 1. dönem şairlerinden biri",
+          "answer": "ZİYAPAŞA",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_4",
+          "question": "Realizmin şiire uyarlanmış şekli",
+          "answer": "PARNASİZM",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_5",
+          "question": "Klasisizme tepki olarak doğan edebi akım",
+          "answer": "REALİZM",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_6",
+          "question": "Makber, Garam, Hacle adlı eserlerin türü",
+          "answer": "ŞİİR",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_7",
+          "question": "Tanzimat edebiyatı döneminde şiirde ….. ölçüsü kullanılmıştır",
+          "answer": "ARUZ",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_8",
+          "question": "Teodor Kasap ve arkadaşlarının 1869'da çıkardığı ilk Türk mizah dergisi",
+          "answer": "DİYOJEN",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_9",
+          "question": "Abdülhak Hamil Tarhan'ın, karısının ölümü üzerine yazdığı meşhur şiiri",
+          "answer": "MAKBER",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_10",
+          "question": "Abdülhak Hamil Turhan'ın tiyatrolarından biri",
+          "answer": "TARIK",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_11",
+          "question": "Tanzimat edebiyatı şiirinde az da olsa … ölçüsüyle şiirler yazılmıştır.",
+          "answer": "HECE",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_12",
+          "question": "Recaizade Mahmut Ekrem'in, Tanzimat edebiyatı döneminde yeni edebiyat kurallarını tanıttığı, yıllarca ders kitabı olarak okutulan eseri",
+          "answer": "TALİMİEDEBİYAT",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_13",
+          "question": "Demdeme, Eşber, Talim-i Edebiyat adlı eserler Tanzimat edebiyatı …. dönem sanatçılarına aittir.",
+          "answer": "İKİNCİ",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_14",
+          "question": "Şemsettin Sami …… Abidelerini Türkiye Türkçesine aktarmıştır.",
+          "answer": "ORHUN",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_15",
+          "question": "Nabizade Nazım'ın, roman ve hikayelerinde etkilendiği edebi akım",
+          "answer": "REALİZM",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_16",
+          "question": "Şair Evlenmesi adlı piyesin kahramanlarından biridir. Eğitimli, şair ruhlu, saf bir yapıya sahip bir kişidir.",
+          "answer": "MÜŞTAKBEY",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_17",
+          "question": "Samipaşazade Sezai'nin öykü türündeki eseri",
+          "answer": "KÜÇÜKŞEYLER",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_18",
+          "question": "Samipaşazade Sezai'nin Sergüzeşt romanı ….. konusunu ele almıştır.",
+          "answer": "KÖLELİK",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_19",
+          "question": "Vuslat, Afife Anjelik, Atala ... gibi eserlerin yazarı",
+          "answer": "RECAİZADEMAHMUTEKREM",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_20",
+          "question": "Kurucusu Fransız sanatçısı Montaigne olan edebiyat türü",
+          "answer": "DENEME",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_21",
+          "question": "Recaizade Mahmut Ekrem …… için kafiye anlayışını savunmuştur.",
+          "answer": "KULAK",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_22",
+          "question": "Namık Kemal'in tiyatro eserlerinden biri",
+          "answer": "GÜLNİHAL",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_23",
+          "question": "Recaizade Mahmut Ekrem'in tiyatro türündeki bir eseri",
+          "answer": "ATALA",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_24",
+          "question": "Namık Kemal'in tiyatro eserlerinden biri (Celaleddin …)",
+          "answer": "HARZEMŞAH",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_25",
+          "question": "Edebiyatımda köy hayatını konu alan ilk roman",
+          "answer": "KARABİBİK",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_1_26",
+          "question": "Letaif-i Rivayat, Küçük Şeyler adlı eserlerin türü",
+          "answer": "HİKAYE",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_1_27",
+          "question": "Namık Kemal'in vatan konusunu işlediği şiirlerinden biri",
+          "answer": "VAVEYLA",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "tanzimat_edebiyati_2",
+      "name": "TANZİMAT EDEBİYATI-2",
+      "clues": [
+        {
+          "id": "tanzimat_edebiyati_2_1",
+          "question": "Taaşşuk-ı Talat ve Fitnat, Kamus-ı Türki adlı eserlerin yazarı.",
+          "answer": "ŞEMSETTİNSAMİ",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_2",
+          "question": "Namık Kemal'in tiyatro eserlerinden biri",
+          "answer": "KARABELA",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_3",
+          "question": "Tanzimat edebiyatının halkçı yazarıdır. Halkı bilgilendirmek ve eğitmek amacıyla hemen her konuda eserler vermiştir.",
+          "answer": "AHMETMİTHATEFENDİ",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_4",
+          "question": "Tanzimat döneminde edebiyatımıza giren türlerden biridir.",
+          "answer": "ELEŞTİRİ",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_5",
+          "question": "Muallim Naci'nin anı türündeki eseri",
+          "answer": "ÖMERİNÇOCUKLUĞU",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_6",
+          "question": "Ahmet Mithat Efendi'nin çıkardığı gazetelerden biri",
+          "answer": "TERCÜMANIHAKİKAT",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_7",
+          "question": "Şinasi'nin şiirlerini topladığı eserinin adı",
+          "answer": "MÜNTEHEBATIEŞAR",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_8",
+          "question": "İntibah, Araba Sevdası, Sergüzeşt... gibi eserlerin türü",
+          "answer": "ROMAN",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_9",
+          "question": "Bu sanatçımızın Durub-ı Emsal-i Osmaniye adlı atasözü derlemesi vardır.",
+          "answer": "ŞİNASİ",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_10",
+          "question": "Ahmet Vefık Paşa, Fransız yazar …..'in hemen hemen bütün komedilerini Türkçeye çevirmiştir.",
+          "answer": "MOLİERE",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_11",
+          "question": "Ziya Paşa’nın Defter-i Âmal adlı eseri ..... türünün güzel örneğidir.",
+          "answer": "HATIRA",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_12",
+          "question": "Tanzimat edebiyatının ikinci döneminde ……. için sanat anlayışı vardır.",
+          "answer": "SANAT",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_13",
+          "question": "Tanzimat edebiyatında Divan edebiyatının aksine konu ….. önemlidir.",
+          "answer": "BÜTÜNLÜĞÜ",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_14",
+          "question": "İlk yarı resmi gazetemiz",
+          "answer": "CERİDEİHAVADİS",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_15",
+          "question": "Recaizade Mahmut Ekrem'in yazdığı yanlış batılılaşmayı anlatan, Türk edebiyatının ilk realist romanı kabul edilen eser",
+          "answer": "ARABASEVDASI",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_16",
+          "question": "Edebiyatımızdaki ilk roman çevirisi",
+          "answer": "TELEMAK",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_17",
+          "question": "Türk edebiyatında Batılı anlamda ilk tiyatro eseri",
+          "answer": "VATANYAHUTSİLİSTRE",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_18",
+          "question": "(…… Müdafaanamesi) Namık Kemal'in eleştiri türündeki eseridir.",
+          "answer": "RENAN",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_19",
+          "question": "Halka yakınlığı ve onları aydınlatmaya çalışması nedeniyle Ahmet Mithat Efendi'ye ilk öğretmen anlamına gelen ….. denmiştir.",
+          "answer": "HACEİEVVEL",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_20",
+          "question": "Vatan, hürriyet konularını işlediği için Namık Kemal, edebiyatımızda ….. olarak anılır.",
+          "answer": "VATANŞAİRİ",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_21",
+          "question": "Ziya Paşa bu eserinde Sadrazam Ali Paşa'yı yermiştir.",
+          "answer": "RÜYA",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_22",
+          "question": "Türk edebiyatında ilk edebî roman",
+          "answer": "İNTİBAH",
+          "difficulty": 1
+        },
+        {
+          "id": "tanzimat_edebiyati_2_23",
+          "question": "Ziya Paşa. Şiir ve İnşa makalesinde bizim asıl şiirimizin ….. şiiri olduğunu söylemiştir.",
+          "answer": "HALK",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_24",
+          "question": "Muallim Naci için ….. kafiye anlayışını benimsemiştir.",
+          "answer": "GÖZ",
+          "difficulty": 3
+        },
+        {
+          "id": "tanzimat_edebiyati_2_25",
+          "question": "Türk edebiyatında ilk pastoral şiir",
+          "answer": "SAHRA",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "serveti_funun",
+      "name": "SERVETİ FÜNUN",
+      "clues": [
+        {
+          "id": "serveti_funun_1",
+          "question": "Servetifünun döneminde Batı'dan alınan nazım şekillerinden birinin adı",
+          "answer": "TERZARİMA",
+          "difficulty": 3
+        },
+        {
+          "id": "serveti_funun_2",
+          "question": "\"Ferda-yı Garam, Hayal İçinde, Ferdi ve Şürekası\" adlı eserlerin türü.",
+          "answer": "HİKAYE",
+          "difficulty": 3
+        },
+        {
+          "id": "serveti_funun_3",
+          "question": "Servetifünun döneminde oldukça ….. bir dil kullanılmıştır.",
+          "answer": "AĞIR",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_4",
+          "question": "Servetifünun döneminde yazılan bu eser Türk edebiyatının ilk psikolojik romanı kabul edilir.",
+          "answer": "EYLÜL",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_5",
+          "question": "Servetifünuncular dönemin siyasi koşullarından dolayı eserlerinde daha çok ….. konular üzerinde durmuşlardır.",
+          "answer": "BİREYSEL",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_6",
+          "question": "Servetifünun döneminde \"….. için uyak\" anlayışı benimsenmiştir.",
+          "answer": "KULAK",
+          "difficulty": 3
+        },
+        {
+          "id": "serveti_funun_7",
+          "question": "Cenap Şahabettin'in gezi türündeki bir eseri",
+          "answer": "HACYOLUNDA",
+          "difficulty": 3
+        },
+        {
+          "id": "serveti_funun_8",
+          "question": "Servet-i Fünuncular nazım birimi olarak \"beyit\" değil \"…..\" kullanmışlardır.",
+          "answer": "BENT",
+          "difficulty": 3
+        },
+        {
+          "id": "serveti_funun_9",
+          "question": "Servet -i Fünun döneminde Divan edebiyatının aksine ….. güzelliği önemsenmiştir.",
+          "answer": "BÜTÜN",
+          "difficulty": 3
+        },
+        {
+          "id": "serveti_funun_10",
+          "question": "Tevfik Fikret'in \"Rübab-ı Şikeste\" adlı eserinin türü.",
+          "answer": "ŞİİR",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_11",
+          "question": "Cenap Şehabettin'in bir tiyatrosunun adı.",
+          "answer": "KÖREBE",
+          "difficulty": 3
+        },
+        {
+          "id": "serveti_funun_12",
+          "question": "Hüseyin Cahit Yalçın'ın bir eseri. Aşkın ikinci plana atıldığı bu romanda toplumsal hayata yer verilmiş olması yapıtın en önemli özelliğidir.",
+          "answer": "HAYALİÇİNDE",
+          "difficulty": 3
+        },
+        {
+          "id": "serveti_funun_13",
+          "question": "Tevfik Fikret'in şiir kitaplarından biri.",
+          "answer": "RUBABIŞİKESTE",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_14",
+          "question": "Tevfik Fikret ….. adlı şiirinde İstanbul'dan nefretle bahseder ve bu şiiri büyük bir yankı uyandırır.",
+          "answer": "SİS",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_15",
+          "question": "Hüseyin Cahit'in Servetifünun dergisinin kapanmasına sebep olan makalesinin adı.",
+          "answer": "EDEBİYATVEHUKUK",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_16",
+          "question": "Halit Ziya'nın tiyatro türündeki bir eseri",
+          "answer": "KABUS",
+          "difficulty": 3
+        },
+        {
+          "id": "serveti_funun_17",
+          "question": "Servetifünun romancıları ….. akımının etkisiyle eserlerinde \"gözleme\" önem vermişlerdir.",
+          "answer": "REALİZM",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_18",
+          "question": "Servetifünun topluluğu ayrıca …..adıyla da anılmaktadır.",
+          "answer": "EDEBİYATICEDİDE",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_19",
+          "question": "Daha çok şiirleriyle tanınan Cenap Şebabettin ….. şiirinde okura karın yağışını adeta hissettirmektedir.",
+          "answer": "ELHANIŞİTA",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_20",
+          "question": "Servet-i Fünuncular ….. ölçüsünü kullanmaya devam etmişlerdir.",
+          "answer": "ARUZ",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_21",
+          "question": "Bu sanatçımız modern Türk romanının temellerini atmış, eserlerinde realist bir anlayış benimsemiştir.",
+          "answer": "HALİTZİYA",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_22",
+          "question": "Tevfik Fikret çocuklar için yazdığı bu eserinde hece ölçüsünü kullanmıştır.",
+          "answer": "ŞERMİN",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_23",
+          "question": "Tevfik Fikret'in gençlere seslendiği, geleceğin umudunun gençlerde olduğunu vurguladığı şiiri",
+          "answer": "HALUKUNCEVABI",
+          "difficulty": 1
+        },
+        {
+          "id": "serveti_funun_24",
+          "question": "Servet-i Fünuncular nazmı ….. yaklaştırmışlardır.",
+          "answer": "NESRE",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "fecri_ati",
+      "name": "FECRİ ATİ",
+      "clues": [
+        {
+          "id": "fecri_ati_1",
+          "question": "Türk edebiyatının en güçlü natüralist yazarlarındandır. Sokağı edebiyatımıza getirmiş olan bu sanatçımız Ahmet Mithat geleneğini takip ederek yüzlerce eser vermiş ve halkı eğitmeye çalışmıştır.",
+          "answer": "HÜSEYİNRAHMİGÜRPINAR",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_2",
+          "question": "Fecr-i Ati topluluğu içinde yer alan sanatçılardan biri de ….. Sahir'dir.",
+          "answer": "CELAL",
+          "difficulty": 3
+        },
+        {
+          "id": "fecri_ati_3",
+          "question": "\"Gulyabani, Tesadüf, Nimetşinas\" gibi eserler Hüseyin Rahmi'nin….. türünde eserleridir.",
+          "answer": "ROMAN",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_4",
+          "question": "Eski şiiri günümüzde de yaşatmış bir şair olan bu sanatçımızın şiirlerinde sonsuzluğa ulaşma duygusu, ölüm kaygısı, aşk ve lirizm başlıca temalar olarak görülür. Divan şiirini çağdaş bir yorumla veren şiirleri de vardır. \"Kendi Gök Kubbemiz, Eski Şiirin Rüzgarıyla\" adlı şiir kitapları ile tanınmaktadır.",
+          "answer": "YAHYAKEMALBEYATLI",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_5",
+          "question": "Fecr-i Aticiler ... nazım şeklini geliştirerek kullanmaya devam etmişlerdir. Ahmet Haşim edebiyatımızda bu nazım şeklini başarıyla kullanan şairlerimizdendir.",
+          "answer": "MÜSTEZAT",
+          "difficulty": 3
+        },
+        {
+          "id": "fecri_ati_6",
+          "question": "Fecr-i Ati topluluğunda şiirler ….. ölçüsü ile yazılmıştır.",
+          "answer": "ARUZ",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_7",
+          "question": "Yahya Kemal şiirlerinde …..’un doğal güzelliklerini yansıtmıştır. Bu şehre büyük bir hayranlık duymuştur.",
+          "answer": "İSTANBUL",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_8",
+          "question": "\"Piyale, Hakkın Sesleri, Türk Sazı, Kendi Gökkubbemiz\" adlı eserlerin türü.",
+          "answer": "ŞİİR",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_9",
+          "question": "Edebiyatımızda Ahmet Rasim denilince ….. türü akla gelmektedir.",
+          "answer": "FIKRA",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_10",
+          "question": "Yahya Kemal'in mensur eserlerinden birinin adı.",
+          "answer": "EDEBİYATADAİR",
+          "difficulty": 3
+        },
+        {
+          "id": "fecri_ati_11",
+          "question": "Mehmet Emin Yurdakul edebiyatımızda \"…..\" olarak anılmaktadır.",
+          "answer": "TÜRKŞAİRİ",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_12",
+          "question": "Ahmet Haşim'in fıkralarını topladığı eserinin adı.",
+          "answer": "GURABAHANEİLAKLAKAN",
+          "difficulty": 3
+        },
+        {
+          "id": "fecri_ati_13",
+          "question": "Aruz ölçüsünü ustaca kullanan bu şairimiz, nazmı nesre yaklaştırmada ustadır. Sosyal konulara eğilen bu sanatçımızın \"Süleymaniye Kürsüsünde, Fatih Kürsüsünde\" adlı şiirleri ünlüdür.",
+          "answer": "MEHMETAKİFERSOY",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_14",
+          "question": "İstiklal Marşı'mızın yazarı olan Mehmet Akif Ersoy şiirlerini ….. adlı kitapta toplamıştır.",
+          "answer": "SAFAHAT",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_15",
+          "question": "Fecr-i Ati topluluğu üslup ve sanat anlayışında ….. topluluğunun silik birer kopyası olmaktan kurtulamamıştır.",
+          "answer": "SERVETİFÜNUN",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_16",
+          "question": "Ahmet Haşim ….. ölçüsünü hiç kullanmamıştır. Hatta bu ölçüyü \"Köylü Vezni\" olarak nitelemiştir.",
+          "answer": "HECE",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_17",
+          "question": "Fecr-i Aticiler daha çok ….. konuları işlemişlerdir.",
+          "answer": "BİREYSEL",
+          "difficulty": 3
+        },
+        {
+          "id": "fecri_ati_18",
+          "question": "Fecr-i Aticiler ….. edebiyatını örnek almışlardır.",
+          "answer": "FRANSIZ",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_19",
+          "question": "Gözlemci bir yazar olan bu sanatçımız hiçbir edebi topluluğa katılmamıştır. Sanatçımızın \"Falaka, Şehir Mektupları, Gülüp Ağladıklarım\" gibi önemli eserleri vardır.",
+          "answer": "AHMETRASİM",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_20",
+          "question": "Fecr-i Ati topluluğunda bu sanatçımızın dışında sanat değeri taşıyan şiir yazan olmamıştır. Bu sanatçımız daha sonra sanatını bağımsız olarak devam ettirmiştir. Şiirlerini \"Göl Saatlerinde toplamıştır. \"Gurabahane-i Laklakan, Bize Göre\" adlı eserlerinde ise gazete yazılarını toplamıştır.",
+          "answer": "AHMETHAŞİM",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_21",
+          "question": "Hüseyin Rahmi Gürpınar'ın eserlerinden birinin adı.",
+          "answer": "CADI",
+          "difficulty": 3
+        },
+        {
+          "id": "fecri_ati_22",
+          "question": "Ahmet Haşim'in \"Frankfurt Seyahatnamesi\" adlı eseri ….. türünün güzel örneklerinden biridir.",
+          "answer": "GEZİ",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_23",
+          "question": "Fecr-i Aticiler, özellikle de Ahmet Haşim parnasizme tepki olarak doğan ….. akımından etkilenmişlerdir.",
+          "answer": "SEMBOLİZM",
+          "difficulty": 1
+        },
+        {
+          "id": "fecri_ati_24",
+          "question": "Fecr-i Aticiler \"Sanat ….. ve muhteremdir\" anlayışıyla hareket etmişlerdir",
+          "answer": "ŞAHSİ",
+          "difficulty": 3
+        },
+        {
+          "id": "fecri_ati_25",
+          "question": "Fecr-i Ati topluluğu edebiyat anlayışlarını önceden belirleyerek ve bunu bir bildiriyle kamuoyuna duyuran ….. topluluktur.",
+          "answer": "İLK",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "milli_edebiyat",
+      "name": "MİLLİ EDEBİYAT",
+      "clues": [
+        {
+          "id": "milli_edebiyat_1",
+          "question": "Millî Edebiyat akımının öncülerinden olan sanatçı modern ve realist Türk öykücülüğünün kurucusudur. Sanatçı 191l'de Genç Kalemler dergisinde yayımladığı Yeni Lisan başlıklı makale ile yazı hayatına atılmıştır.",
+          "answer": "ÖMERSEYFETTİN",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_2",
+          "question": "Refik Halit'in \"Yezidin Kızı, İstanbul’un İç Yüzü, Sürgün, Nilgün\" adlı eserlerinin türü.",
+          "answer": "ROMAN",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_3",
+          "question": "Türk dilinin sadeleşmesi konusunda Ömer Seyfettin ve Ziya Gökalp’le büyük çaba gösteren sanatçının Geçtiğim Yol adlı şiir kitabı vardır.",
+          "answer": "ALİCANİPYÖNTEM",
+          "difficulty": 3
+        },
+        {
+          "id": "milli_edebiyat_4",
+          "question": "\"Zeytindağı, Bir Ömür Boyunca, Türk’ün Ateşle İmtihanı, Zoraki Diplomat’’ eserlerin türü.",
+          "answer": "ANI",
+          "difficulty": 3
+        },
+        {
+          "id": "milli_edebiyat_5",
+          "question": "Edebiyatımızda Kurtuluş Savaşı’nın konu edildiği bu ilk romanda savaş sırasında hasta bakıcılık yapan Ayşe’yi içten içe seven Peyami ve Binbaşı İhsan'ın aşkları anlatılmaktadır.",
+          "answer": "ATEŞTENGÖMLEK",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_6",
+          "question": "Beş Hececiler’den biri (..... Behiç Koryürek)",
+          "answer": "ENİS",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_7",
+          "question": "Bu yazarımız, önemli bir romanda iyi bir öğrenim görmüş İstanbul kızı olan Feride’nin Anadolu'nun çeşitli köy ve kasabalarında öğretmen olarak yaşadığı serüveni anlatmaktadır.",
+          "answer": "REŞATNURİGÜNTEKİN",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_8",
+          "question": "Romanlarında önce bireysel duyguları ve kadın ruhunun özelliklerini işlemiş; Kurtuluş Savaşı yıllarında ise toplumsal konulara yönelmiştir. \"Tatarcık, Seviye Talip, Yeni Turan, Zeyno’nun Oğlu\" gibi romanları ünlü romanlarının gölgesinde kalmıştır.",
+          "answer": "HALİDEEDİPADIVAR",
+          "difficulty": 3
+        },
+        {
+          "id": "milli_edebiyat_9",
+          "question": "Millî Edebiyatın kurulmasında ve gelişmesinde önemli rol oynayan bu sanatçımız. Türkçülük düşüncesini sistemleştirmiştir. Bu sanatçımız \"Türkçülüğün Esasları\" adlı eseriyle tanınmaktadır.",
+          "answer": "ZİYAGÖKALP",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_10",
+          "question": "\"Vurun Kahpeye, Yaban, Ateşten Gömlek\" adlı eserler ….. Savaşı döneminin havasını yansıtan romanlarımızdır.",
+          "answer": "KURTULUŞ",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_11",
+          "question": "Ruşen Eşref Ünaydın’ın mülakat türündeki eseridir. Yazar, edebiyatçılarla yaptığı konuşmalarını bu eserde derlemiştir.",
+          "answer": "DİYORLARKİ",
+          "difficulty": 3
+        },
+        {
+          "id": "milli_edebiyat_12",
+          "question": "Ömer Seyfettin edebiyatımızda ….. tarzı hikayeciliğin öncüsüdür.",
+          "answer": "MAUPASSANT",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_13",
+          "question": "Atatürk’ü yakından tanıtan anılarıyla ün kazanan sanatçının \"Zeytindağı, Çankaya\" adlı eserleri çok meşhurdur.",
+          "answer": "FALİHRIFKIATAY",
+          "difficulty": 3
+        },
+        {
+          "id": "milli_edebiyat_14",
+          "question": "Ömer Seyfettin ve arkadaşları …… adlı makalede Türkçenin sadeleştirilmesi ile ilgili görüşlerini dile getirmişlerdir.",
+          "answer": "YENİLİSAN",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_15",
+          "question": "Millî Edebiyat akımının genel amaçlarından biri ….. ölçüsünün kullanılmasıdır.",
+          "answer": "HECE",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_16",
+          "question": "Bu romanda yazar, I. Dünya Savaşı’nın bitimiyle birlikte Sakarya Savaşı’nın sonuna kadar olan sürede bir Anadolu köyünde, köylüleri, köyün durumunu, Millî Mücadele'ye ilişkin tavırlarını Ahmet Celal’in gözüyle anlatmaktadır.",
+          "answer": "YABAN",
+          "difficulty": 3
+        },
+        {
+          "id": "milli_edebiyat_17",
+          "question": "Halide Edip'in Millî Mücadele dönemi anılarını anlattığı eseri. (Türk’ün Ateşle …..)",
+          "answer": "İMTİHANI",
+          "difficulty": 3
+        },
+        {
+          "id": "milli_edebiyat_18",
+          "question": "Şiire I. Dünya Savaşı ve Millî Mücadele yıllarında başlayan, mütareke yıllarında şöhret kazanan bu şairler, Anadolu'yu ve vasat insan tipini şiire soktular. Memleket sevgisi, yurt güzellikleri, kahramanlık ve yiğitlik, işledikleri başlıca konulardır. (....Hececiler)",
+          "answer": "BEŞ",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_19",
+          "question": "Edebiyatımızda ilk defamilli edebiyat döneminde İstanbul dışına çıkılmış, eserlerde ….. konu olarak işlenmiştir.",
+          "answer": "ANADOLU",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_20",
+          "question": "Halide Edip'in \"Dağa Çıkan Kurt\" Refik Hafit Karay’ın \"Memleket Hikayeleri\" Ömer Seyfettin'in \"Beyaz Lale\" adlı eserleri edebiyatımızda ….. türünün başarılı örnekleridir.",
+          "answer": "HİKAYE",
+          "difficulty": 1
+        },
+        {
+          "id": "milli_edebiyat_21",
+          "question": "Falih Rıfkı’nın \"Bizim Akdeniz, Times Kıyılan\", Reşat Nuri’nin \"Anadolu Notları\" ….. türünün önemli örnekleridir.",
+          "answer": "GEZİ",
+          "difficulty": 3
+        },
+        {
+          "id": "milli_edebiyat_22",
+          "question": "Çok yönlü bir sanatçı olan Refik Halit Karay ilk gençlik evresinde Kalem dergisinde …. imzasıyla yayımladığı mizah yazılarıyla tanınmıştır.",
+          "answer": "KİRPİ",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "cumhuriyet_donemi_1",
+      "name": "CUMHURİYET DÖNEMİ-1",
+      "clues": [
+        {
+          "id": "cumhuriyet_donemi_1_1",
+          "question": "Şiirde iç ahengi üstün tutan, nazmı nesirden uzaklaştıran şair, biçim mükemmelliğini aramış, sözcükleri bir kuyumcu titizliğiyle seçmiştir. Öz şiirin öncülerinden olan şairin şiir kitaplarından biri Kendi Gök Kubbemiz'dir. Yahya Kemal …",
+          "answer": "BEYATLI",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_1_2",
+          "question": "Ahmet Hamdi Tanpınar’ın \"Beş Şehir\" adlı eserinin türü",
+          "answer": "DENEME",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_1_3",
+          "question": "Necip Fazıl Kısakürek'in bir tiyatro eseri. BİR ADAM …",
+          "answer": "YARATMAK",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_1_4",
+          "question": "Ahmet Hamdi Tanpınar'ın bir romanı",
+          "answer": "HUZUR",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_1_5",
+          "question": "Şiirde dizelerin hece sayılarının eşitliğine dayalı ölçü.",
+          "answer": "HECEÖLÇÜSÜ",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_1_6",
+          "question": "Fransız sembolistlerinden ve halk şiirinden yararlanarak heceyle kendine has , başarılı şiirler yazan şair, şiirlerini Çile adlı kitapta toplamıştır. … KISAKÜREK",
+          "answer": "NECİPFAZIL",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_1_7",
+          "question": "Ahmet Muhip Dıranas'ın \"Hoyrattır bu akşamüstüler daima\" dizesiyle başlayan şiiri",
+          "answer": "OLVİDO",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_1_8",
+          "question": "Ahmet Hamdi Tanpınar'ın bir romanı …BESTE",
+          "answer": "MAHUR",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_1_9",
+          "question": "Cahit Sıtkı Tarancı'nın meşhur şiiri",
+          "answer": "OTUZBEŞYAŞ",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_1_10",
+          "question": "Türk edebiyatında “Saf Şiir” (Öz Şiir) eğilimi. . . . . . . . 'in “Şiir Hakkında Bazı Mülahazalar” adlı makalesiyle (Türk edebiyatında ilk poetika örneği kabul edilir.) başlar",
+          "answer": "AHMETHAŞİM",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_1_11",
+          "question": "1928 yılında kurulan ve Cumhuriyet dönemi edebiyatında ilk beyannameyi yayımlayan topluluk YEDİ …",
+          "answer": "MEŞALECİLER",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_1_12",
+          "question": "\"Sebil ve Güvercinlerin şairi: ZİYA OSMAN",
+          "answer": "SABA",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_1_13",
+          "question": "Şiirlerinde korkusunu, yaşama sevincini işleyen şairin şiir kitaplarından biri Düşten Güzel'dir.",
+          "answer": "CAHİTSITKITARANCI",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_1_14",
+          "question": "Öz şiiri benimseyen şairler, sanat için . anlayışıyla yazarlar",
+          "answer": "SANAT",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_1_15",
+          "question": "Necip Fazıl Kısakürek'in romanı: … YALAN",
+          "answer": "AYNADAKİ",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_1_16",
+          "question": "Necip Fazıl'ın çıkardığı dergilerden birinin adı. …DOĞU",
+          "answer": "BÜYÜK",
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "id": "cumhuriyet_donemi_2",
+      "name": "CUMHURİYET DÖNEMİ-2",
+      "clues": [
+        {
+          "id": "cumhuriyet_donemi_2_1",
+          "question": "Necip Fazıl'ın bir tiyatro eseri…. Bey",
+          "answer": "REİS",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_2",
+          "question": "Cahit Sıtkı Tarancı'nın bir şiir kitabI, DÜŞTEN …",
+          "answer": "GÜZEL",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_3",
+          "question": "Necip Fazıl Kısakürek'in bir şiir kitabı: ÖLÜM …",
+          "answer": "VEÖTESİ",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_4",
+          "question": "Yedi Meşaleciler grubunun tek hikaye yazarı … KORAY",
+          "answer": "KENANHULUSİ",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_5",
+          "question": "Çözülen bir demetten indiler birer birer,/ Bırak, yorgun başları bu taşlarda uyusun ./ Tutuşmuş ruhlarına bir damla gözyaşı sun,/ Bir sebile döküldü bembeyaz güvercinler...\" şeklinde başlayan Ziya Osman Sabahın şiiri: SEBİL VE ….",
+          "answer": "GÜVERCİNLER",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_6",
+          "question": "Sabri Esat Siyavuşgil'in şiir kitabı ODALAR VE …",
+          "answer": "SOFALAR",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_7",
+          "question": "Şiir kitaplarından biri Bizim Türküler olan, asıl çalışmasını edebiyat tarihi alanında yapan Yedi Meşaleciler grubunun üyesi olan sanatçı: KOCATÜRK",
+          "answer": "VASFİMAHİR",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_8",
+          "question": "Ahmet Hamdi Tanpınar’ın \"Beş Şehir\" adlı eserinde anlatılan şehirlerden biri.",
+          "answer": "ERZURUM",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_2_9",
+          "question": "Yedi Meşalecilerden biri: CEVDET KUDRET",
+          "answer": "SOLOK",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_10",
+          "question": "Yedi Meşalecilerden olan sanatçı \"Varlık' dergisini çıkarmıştır … NAYIR",
+          "answer": "YAŞARNABİ",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_11",
+          "question": "Yedi meşalecilerin sloganı \"canlılık, samimiyet ve daima …'tir.'",
+          "answer": "YENİLİK",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_12",
+          "question": "Ahmet Hamdi Tanpına'ın şiiri … ZAMAN",
+          "answer": "BURSADA",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_2_13",
+          "question": "Ahmet Muhip Dıranas'ın tanınmış bir şiiri. … Abla",
+          "answer": "FAHRİYE",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_2_14",
+          "question": "Ahmet Kutsi Tecer'in tiyatro eserlerinden biri.",
+          "answer": "KOÇYİĞİTKÖROĞLU",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_15",
+          "question": "Şiirlerini hece ölçüsüyle yazan, şiirlerinde Anadolu'yu tarihi deniz güzelliklerini işleyen \"Deniz Sarhoşları, Yayla Dumanı, Sarıkız Mermerleri” adlı şiir kitapları bulunan şairimiz, …UŞAKLI",
+          "answer": "ÖMERBEDRETTİN",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_16",
+          "question": "Hecenin beş şairinden biridir Enis Behiç …",
+          "answer": "KORYÜREK",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_17",
+          "question": "Önceleri âşık tarzına uygun, çoğunlukla ulusal konuları işleyen lirik şiirler yazan, “Bu Vatan Kimin\" adlı şiiriyle hafızalarda yer eden şairimiz. … GÖKYAY",
+          "answer": "ORHANŞAİK",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_18",
+          "question": "Enis Behiç Koryürek'in şiir kitaplarından biri.",
+          "answer": "GÜNEŞİNÖLÜMÜ",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_19",
+          "question": "Şiir kitaplarından biri Erciyes’ten Kopan Çığ olan, Ankaralı Aşık Ömer takma adıyla da şiirler yazan şairimiz. …ÇAĞLAR",
+          "answer": "BEHÇETKEMAL",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_20",
+          "question": "Faruk Nafiz Çamlıbel'in bir tiyatro eseri",
+          "answer": "CANAVAR",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_21",
+          "question": "Halit Fahri Ozansoy'un bir tiyatro eseri.",
+          "answer": "BAYKUŞ",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_22",
+          "question": "Faruk Nafiz Çamlıbel'in bir şiiri.",
+          "answer": "HANDUVARLARI",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_2_23",
+          "question": "Şiire aruzla başlayan sonra Milli Edebiyatın etkisiyle heceye geçen beş şaire verilen isim.",
+          "answer": "BEŞHECECİLER",
+          "difficulty": 1
+        },
+        {
+          "id": "cumhuriyet_donemi_2_24",
+          "question": "Ömer Bedrettin Uşaklı'nın bir şiir kitabı: DENİZ…",
+          "answer": "SARHOŞLARI",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_25",
+          "question": "Orhan Seyfi Orhon'un bir şiir kitabı, Fırtına …",
+          "answer": "VEKAR",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_26",
+          "question": "Halk Edebiyatı geleneklerine bağlı ve hece ölçüsünde çağdaş şiirler yazdı. Sessiz Nehir, Kardelenler adlı şiir kitapları vardır",
+          "answer": "ZEKİÖMERDEFNE",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_27",
+          "question": "Beş Hececilerden biri",
+          "answer": "HALİTFAHRİOZANSOY",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_28",
+          "question": "Halk Edebiyatı geleneklerine bağlı ve hece ölçüsünde çağdaş şiirler yazdı. Sessiz Nehir, Kardelenler adlı şiir kitapları vardır",
+          "answer": "ZEKİÖMER",
+          "difficulty": 3
+        },
+        {
+          "id": "cumhuriyet_donemi_2_29",
+          "question": "Beş Hececilerden biri",
+          "answer": "HALİTFAHRİ",
+          "difficulty": 3
+        }
+      ]
+    }
+  ],
+  "totalClues": 352
+}

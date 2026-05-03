@@ -1,0 +1,110 @@
+# ============================================================
+# GAMEKELIME / EDEBİ ÇENGEL — .gitignore
+# ============================================================
+
+# ============================================================
+# GÜVENLİK: Asla repoya girmesin
+# ============================================================
+
+# Ortam değişkenleri (JWT_SECRET, CAYADEV_CLIENT_SECRET, vb.)
+.env
+.env.*
+!.env.example
+
+# SSL/TLS sertifikaları ve özel anahtarlar
+server/certs/
+*.pem
+*.pfx
+*.p12
+*.key
+*.crt
+*.cer
+
+# Gerçek kullanıcı veritabanı (KVKK/GDPR)
+server/data/users.json
+
+# ============================================================
+# NODE.JS — Server
+# ============================================================
+server/node_modules/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ============================================================
+# FLUTTER / DART — cengel_bulmaca
+# ============================================================
+
+# Build çıktıları
+cengel_bulmaca/build/
+cengel_bulmaca/.dart_tool/
+cengel_bulmaca/.flutter-plugins
+cengel_bulmaca/.flutter-plugins-dependencies
+cengel_bulmaca/.packages
+
+# Android — yerel makine yolları (sdk.dir, flutter.sdk)
+cengel_bulmaca/android/local.properties
+cengel_bulmaca/android/.gradle/
+cengel_bulmaca/android/app/debug.keystore
+cengel_bulmaca/android/key.properties
+*.jks
+*.keystore
+
+# iOS
+cengel_bulmaca/ios/.symlinks/
+cengel_bulmaca/ios/Flutter/flutter_export_environment.sh
+cengel_bulmaca/ios/Flutter/Generated.xcconfig
+cengel_bulmaca/ios/Pods/
+cengel_bulmaca/ios/Runner.xcworkspace/xcuserdata/
+
+# macOS
+cengel_bulmaca/macos/Flutter/GeneratedPluginRegistrant.swift
+cengel_bulmaca/macos/Flutter/ephemeral/
+
+# Windows
+cengel_bulmaca/windows/flutter/generated_plugin_registrant.cc
+cengel_bulmaca/windows/flutter/generated_plugin_registrant.h
+cengel_bulmaca/windows/flutter/generated_plugins.cmake
+
+# Linux
+cengel_bulmaca/linux/flutter/generated_plugin_registrant.cc
+cengel_bulmaca/linux/flutter/generated_plugin_registrant.h
+cengel_bulmaca/linux/flutter/generated_plugins.cmake
+
+# ============================================================
+# DERLENMIŞ ÇIKTILAR (BuildedREADY)
+# ============================================================
+BuildedREADY/apk/
+BuildedREADY/web/
+BuildedREADY/windows/
+
+# Derlenmiş Windows uygulaması
+EdebiCengel_Bulmaca/
+EdebiCengel_Bulmaca_Windows.zip
+*.zip
+
+# ============================================================
+# IDE & ARAÇLAR
+# ============================================================
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# LOG & GEÇİCİ DOSYALAR
+# ============================================================
+*.log
+*.tmp
+*.temp
+build_output.txt
+cengel_bulmaca/build_output.txt
+
+# İç notlar ve kod inceleme belgeleri
+CODE_REVIEW.md

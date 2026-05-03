@@ -1,0 +1,20 @@
+# Hassas yapılandırma - asla commit edilmemeli
+.env
+.env.local
+.env.*.local
+
+# Bağımlılıklar
+node_modules/
+
+# Sertifikalar
+certs/
+*.pem
+*.key
+
+# Loglar
+*.log
+npm-debug.log*
+
+# Editör
+.vscode/
+.idea/

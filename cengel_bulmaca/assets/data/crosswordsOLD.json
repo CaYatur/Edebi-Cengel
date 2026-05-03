@@ -1,0 +1,561 @@
+{
+  "puzzles": [
+    {
+      "id": "edebiyat_1",
+      "title": "Türk Edebiyatı - Kolay",
+      "difficulty": 1,
+      "description": "Türk edebiyatından ünlü eserler ve yazarlar",
+      "gridRows": 12,
+      "gridCols": 12,
+      "words": [
+        {
+          "id": "w1",
+          "question": "İnce Memed romanının yazarı (İsim)",
+          "answer": "YASAR",
+          "row": 0,
+          "col": 3,
+          "direction": "across",
+          "number": 1
+        },
+        {
+          "id": "w2",
+          "question": "Nazım Hikmet'in doğum yeri",
+          "answer": "SELANIK",
+          "row": 0,
+          "col": 5,
+          "direction": "down",
+          "number": 2
+        },
+        {
+          "id": "w3",
+          "question": "Yaşar Kemal'in doğum yeri",
+          "answer": "ADANA",
+          "row": 2,
+          "col": 1,
+          "direction": "across",
+          "number": 3
+        },
+        {
+          "id": "w4",
+          "question": "Türk edebiyatının önemli türlerinden",
+          "answer": "ROMAN",
+          "row": 2,
+          "col": 3,
+          "direction": "down",
+          "number": 4
+        },
+        {
+          "id": "w5",
+          "question": "Orhan Pamuk'un Nobel aldığı yıl (2006) - yazıyla",
+          "answer": "ALTI",
+          "row": 4,
+          "col": 0,
+          "direction": "across",
+          "number": 5
+        },
+        {
+          "id": "w6",
+          "question": "Şiir yazan kişi",
+          "answer": "SAIR",
+          "row": 1,
+          "col": 7,
+          "direction": "down",
+          "number": 6
+        },
+        {
+          "id": "w7",
+          "question": "Cahit Sıtkı'nın soyadı",
+          "answer": "TARANCI",
+          "row": 6,
+          "col": 2,
+          "direction": "across",
+          "number": 7
+        },
+        {
+          "id": "w8",
+          "question": "Kitap okuma yeri",
+          "answer": "KUTUPHANE",
+          "row": 6,
+          "col": 4,
+          "direction": "down",
+          "number": 8
+        },
+        {
+          "id": "w9",
+          "question": "Yazı yazma aracı",
+          "answer": "KALEM",
+          "row": 8,
+          "col": 0,
+          "direction": "across",
+          "number": 9
+        },
+        {
+          "id": "w10",
+          "question": "Necip Fazıl'ın ünlü şiiri: ... Türküsü",
+          "answer": "SAKARYA",
+          "row": 4,
+          "col": 8,
+          "direction": "down",
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": "genel_kultur_1",
+      "title": "Genel Kültür - Orta",
+      "difficulty": 2,
+      "description": "Genel kültür soruları",
+      "gridRows": 10,
+      "gridCols": 12,
+      "words": [
+        {
+          "id": "gk1",
+          "question": "Türkiye'nin başkenti",
+          "answer": "ANKARA",
+          "row": 0,
+          "col": 2,
+          "direction": "across",
+          "number": 1
+        },
+        {
+          "id": "gk2",
+          "question": "En büyük kıta",
+          "answer": "ASYA",
+          "row": 0,
+          "col": 2,
+          "direction": "down",
+          "number": 1
+        },
+        {
+          "id": "gk3",
+          "question": "Türkiye'nin en uzun nehri",
+          "answer": "KIZILIRMAK",
+          "row": 2,
+          "col": 0,
+          "direction": "across",
+          "number": 2
+        },
+        {
+          "id": "gk4",
+          "question": "Güneş sisteminin en büyük gezegeni",
+          "answer": "JUPITER",
+          "row": 2,
+          "col": 3,
+          "direction": "down",
+          "number": 3
+        },
+        {
+          "id": "gk5",
+          "question": "Dünya'nın uydusu",
+          "answer": "AY",
+          "row": 4,
+          "col": 5,
+          "direction": "across",
+          "number": 4
+        },
+        {
+          "id": "gk6",
+          "question": "İstanbul Boğazı'nı geçen köprü sayısı (yazıyla)",
+          "answer": "UC",
+          "row": 4,
+          "col": 7,
+          "direction": "down",
+          "number": 5
+        },
+        {
+          "id": "gk7",
+          "question": "Osmanlı'nın kurucusu",
+          "answer": "OSMAN",
+          "row": 6,
+          "col": 1,
+          "direction": "across",
+          "number": 6
+        },
+        {
+          "id": "gk8",
+          "question": "Suyun kimyasal formülündeki element",
+          "answer": "OKSIJEN",
+          "row": 6,
+          "col": 2,
+          "direction": "down",
+          "number": 7
+        },
+        {
+          "id": "gk9",
+          "question": "En küçük asal sayı (yazıyla)",
+          "answer": "IKI",
+          "row": 8,
+          "col": 0,
+          "direction": "across",
+          "number": 8
+        }
+      ]
+    },
+    {
+      "id": "bilim_1",
+      "title": "Bilim ve Teknoloji",
+      "difficulty": 2,
+      "description": "Bilim ve teknoloji terimleri",
+      "gridRows": 11,
+      "gridCols": 11,
+      "words": [
+        {
+          "id": "bt1",
+          "question": "Bilgisayarın beyni",
+          "answer": "ISLEMCI",
+          "row": 0,
+          "col": 2,
+          "direction": "across",
+          "number": 1
+        },
+        {
+          "id": "bt2",
+          "question": "Dünya çapında ağ (kısaltma)",
+          "answer": "WWW",
+          "row": 0,
+          "col": 4,
+          "direction": "down",
+          "number": 2
+        },
+        {
+          "id": "bt3",
+          "question": "Elektrik birimi",
+          "answer": "VOLT",
+          "row": 2,
+          "col": 0,
+          "direction": "across",
+          "number": 3
+        },
+        {
+          "id": "bt4",
+          "question": "Yerçekimini keşfeden bilim insanı (soyad)",
+          "answer": "NEWTON",
+          "row": 2,
+          "col": 3,
+          "direction": "down",
+          "number": 4
+        },
+        {
+          "id": "bt5",
+          "question": "Işık hızının simgesi",
+          "answer": "C",
+          "row": 4,
+          "col": 6,
+          "direction": "across",
+          "number": 5
+        },
+        {
+          "id": "bt6",
+          "question": "Yapay zeka (kısaltma - İngilizce)",
+          "answer": "AI",
+          "row": 4,
+          "col": 8,
+          "direction": "down",
+          "number": 6
+        },
+        {
+          "id": "bt7",
+          "question": "DNA'nın açılımındaki 'A' harfi",
+          "answer": "ASIT",
+          "row": 6,
+          "col": 1,
+          "direction": "across",
+          "number": 7
+        },
+        {
+          "id": "bt8",
+          "question": "Güneş enerjisi paneli malzemesi",
+          "answer": "SILIKON",
+          "row": 6,
+          "col": 2,
+          "direction": "down",
+          "number": 8
+        },
+        {
+          "id": "bt9",
+          "question": "Uzay aracı",
+          "answer": "ROKET",
+          "row": 8,
+          "col": 0,
+          "direction": "across",
+          "number": 9
+        },
+        {
+          "id": "bt10",
+          "question": "İnternet tarayıcısı (örnek)",
+          "answer": "CHROME",
+          "row": 8,
+          "col": 5,
+          "direction": "down",
+          "number": 10
+        }
+      ]
+    },
+    {
+      "id": "tanzimat_1",
+      "title": "Tanzimat Edebiyatı - 1",
+      "difficulty": 2,
+      "description": "Tanzimat döneminden sorular - Kolay",
+      "gridRows": 18,
+      "gridCols": 18,
+      "words": [
+        {
+          "id": "t1_1",
+          "question": "Ziya Paşa'nın bir makalesidir. Ziya Paşa bu makalede divan edebiyatını eleştirmiştir.",
+          "answer": "SIIRVEINSA",
+          "row": 9,
+          "col": 4,
+          "direction": "across",
+          "number": 1
+        },
+        {
+          "id": "t1_2",
+          "question": "Türk edebiyatında ilk tarihî roman",
+          "answer": "CEZMI",
+          "row": 5,
+          "col": 10,
+          "direction": "down",
+          "number": 2
+        },
+        {
+          "id": "t1_3",
+          "question": "Tanzimat edebiyatı 1. dönem şairlerinden biri",
+          "answer": "ZIYAPASA",
+          "row": 3,
+          "col": 4,
+          "direction": "across",
+          "number": 3
+        },
+        {
+          "id": "t1_4",
+          "question": "Realizmin şiire uyarlanmış şekli",
+          "answer": "PARNASIZM",
+          "row": 8,
+          "col": 13,
+          "direction": "down",
+          "number": 4
+        },
+        {
+          "id": "t1_5",
+          "question": "Klasisizme tepki olarak doğan edebi akım",
+          "answer": "REALIZM",
+          "row": 16,
+          "col": 7,
+          "direction": "across",
+          "number": 5
+        },
+        {
+          "id": "t1_6",
+          "question": "Makber, Garam, Hacıe adlı eserlerin türü",
+          "answer": "SIIR",
+          "row": 9,
+          "col": 4,
+          "direction": "down",
+          "number": 6
+        },
+        {
+          "id": "t1_7",
+          "question": "Tanzimat edebiyatı döneminde şiirde .... ölçüsü kullanılmıştır",
+          "answer": "ARUZ",
+          "row": 9,
+          "col": 13,
+          "direction": "across",
+          "number": 7
+        }
+      ]
+    },
+    {
+      "id": "tanzimat_2",
+      "title": "Tanzimat Edebiyatı - 2",
+      "difficulty": 3,
+      "description": "Tanzimat döneminden sorular - Zor",
+      "gridRows": 18,
+      "gridCols": 18,
+      "words": [
+        {
+          "id": "t2_1",
+          "question": "Taaşşuk-ı Talat ve Fitnat, Kamus-ı Türki adlı eserlerin yazarı",
+          "answer": "SEMSETTINSAMI",
+          "row": 9,
+          "col": 2,
+          "direction": "across",
+          "number": 1
+        },
+        {
+          "id": "t2_2",
+          "question": "Namık Kemal'in tiyatro eserlerinden biri",
+          "answer": "KARABELA",
+          "row": 4,
+          "col": 6,
+          "direction": "down",
+          "number": 2
+        },
+        {
+          "id": "t2_4",
+          "question": "Tanzimat döneminde edebiyatımıza giren türlerden biridir.",
+          "answer": "ELESTIRI",
+          "row": 10,
+          "col": 5,
+          "direction": "across",
+          "number": 3
+        },
+        {
+          "id": "t2_6",
+          "question": "Ahmet Mithat Efendi'nin çıkardığı gazetelerden biri",
+          "answer": "TERCUMANIHAKIKAT",
+          "row": 1,
+          "col": 14,
+          "direction": "down",
+          "number": 4
+        },
+        {
+          "id": "t2_7",
+          "question": "Şinasi'nin şiirlerini topladığı eserinin adı",
+          "answer": "MUNTHEEBATISIAR",
+          "row": 3,
+          "col": 0,
+          "direction": "across",
+          "number": 5
+        }
+      ]
+    },
+    {
+      "id": "cumhuriyet_1",
+      "title": "Cumhuriyet Dönemi - 1",
+      "difficulty": 2,
+      "description": "Cumhuriyet döneminden sorular - Kolay",
+      "gridRows": 18,
+      "gridCols": 18,
+      "words": [
+        {
+          "id": "c1_1",
+          "question": "Şiirde iç ahengi üstün tutan, nazmı nesirden uzaklaştıran şair, biçim mükemmelliğini aramış, sözcükleri bir kuyumcu titizliğiyle seçmiştir. Öz şiirin öncülerinden olan şairin şiir kitaplarından biri Kendi Gök Kubbemiz'dir. Yahya Kemal ...",
+          "answer": "BEYATLI",
+          "row": 9,
+          "col": 5,
+          "direction": "across",
+          "number": 1
+        },
+        {
+          "id": "c1_2",
+          "question": "Ahmet Hamdi Tanpınar'ın \"Beş Şehir\" adlı eserinin türü",
+          "answer": "DENEME",
+          "row": 8,
+          "col": 6,
+          "direction": "down",
+          "number": 2
+        },
+        {
+          "id": "c1_3",
+          "question": "Necip Fazıl Kısakürek'in bir tiyatro eseri. BİR ADAM ...",
+          "answer": "YARATMAK",
+          "row": 6,
+          "col": 8,
+          "direction": "across",
+          "number": 3
+        },
+        {
+          "id": "c1_4",
+          "question": "Ahmet Hamdi Tanpınar'ın bir romanı",
+          "answer": "HUZUR",
+          "row": 2,
+          "col": 10,
+          "direction": "down",
+          "number": 4
+        },
+        {
+          "id": "c1_5",
+          "question": "Şiirde dizelerin hece sayılarının eşitliğine dayalı ölçü.",
+          "answer": "HECEOLCUSU",
+          "row": 13,
+          "col": 3,
+          "direction": "across",
+          "number": 5
+        },
+        {
+          "id": "c1_7",
+          "question": "Öz şiiri benimseyen şairler, sanat için . anlayışıyla yazarlar",
+          "answer": "SANAT",
+          "row": 5,
+          "col": 9,
+          "direction": "down",
+          "number": 6
+        }
+      ]
+    },
+    {
+      "id": "divan_edebiyati_1",
+      "title": "Divan Edebiyatı",
+      "difficulty": 2,
+      "description": "Divan edebiyatı döneminden sorular",
+      "gridRows": 18,
+      "gridCols": 18,
+      "words": [
+        {
+          "id": "d1_1",
+          "question": "Divan edebiyatı nazım biçimi. Bu türün ilk ve en güzel örneklerini Nedim vermiştir.",
+          "answer": "SARKI",
+          "row": 9,
+          "col": 6,
+          "direction": "across",
+          "number": 1
+        },
+        {
+          "id": "d1_2",
+          "question": "Afyon ile şarabın karşılaştırılıp şarabın üstünlüğünün anlatıldığı eser Şah İsmail'e sunulmuştur.",
+          "answer": "BENGUBADE",
+          "row": 3,
+          "col": 7,
+          "direction": "down",
+          "number": 2
+        },
+        {
+          "id": "d1_3",
+          "question": "16. yüzyılda yaşamış Şairler Sultanı olarak bilinen divan şairi",
+          "answer": "BAKI",
+          "row": 6,
+          "col": 10,
+          "direction": "across",
+          "number": 3
+        },
+        {
+          "id": "d1_4",
+          "question": "Divan edebiyatı nesrinde uyak.",
+          "answer": "SECI",
+          "row": 3,
+          "col": 13,
+          "direction": "down",
+          "number": 4
+        },
+        {
+          "id": "d1_5",
+          "question": "Hacı Bektaş-ı Veli'nin tasavvufi, dinî-ahlaki eserinin adı.",
+          "answer": "MAKALAT",
+          "row": 7,
+          "col": 9,
+          "direction": "across",
+          "number": 5
+        },
+        {
+          "id": "d1_6",
+          "question": "Sebk-i Hindi akımının 17. yüzyıldaki temsilcilerinden biri.",
+          "answer": "NEFI",
+          "row": 11,
+          "col": 6,
+          "direction": "down",
+          "number": 6
+        },
+        {
+          "id": "d1_7",
+          "question": "Lale Devri'nde yaşamış, şarkının ilk örneklerini vermiş divan şairi",
+          "answer": "NEDIM",
+          "row": 14,
+          "col": 3,
+          "direction": "across",
+          "number": 7
+        }
+      ]
+    }
+  ],
+  "lastUpdated": "2025-12-09T00:00:00.000Z"
+}

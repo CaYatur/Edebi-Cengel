@@ -1,0 +1,46 @@
+{
+  "topics": [
+    {
+      "id": "edebiyat",
+      "name": "Türk Edebiyatı",
+      "description": "Türk edebiyatından ünlü eserler ve yazarlar",
+      "puzzleSets": [
+        {
+          "id": "nazim_hikmet",
+          "title": "Nazım Hikmet - Orta",
+          "difficulty": 2,
+          "description": "Nazım Hikmet ile ilgili sorular",
+          "clues": [
+            {
+              "id": "nh_2",
+              "question": "Nazım Hikmet'in doğum yeri",
+              "answer": "SELANİK",
+              "visibleLetterCount": 2
+            }
+          ]
+        },
+        {
+          "id": "yasar_kemal",
+          "title": "Yaşar Kemal - Kolay",
+          "difficulty": 1,
+          "description": "Yaşar Kemal ile ilgili sorular",
+          "clues": [
+            {
+              "id": "yk_1",
+              "question": "Yaşar Kemal'in en ünlü romanı",
+              "answer": "INCE MEMED",
+              "visibleLetterCount": 3
+            },
+            {
+              "id": "yk_2",
+              "question": "Yaşar Kemal'in doğum yeri",
+              "answer": "ADANA",
+              "visibleLetterCount": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lastUpdated": "2025-08-29T14:50:54.697Z"
+}
